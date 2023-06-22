@@ -864,6 +864,15 @@ textarea{
         flex-direction: row;
         align-items: center;
     }
+
+    /* PORTAL SECTION */
+    .grid-wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section__greeting{
+        flex-direction: row;
+    }
 }
 
 /* -==== For medium - large devices ====- */
@@ -903,4 +912,147 @@ textarea{
 
 
 
-/* -================================= DASHBOARD CSS ================================- */
+/* -================================================== DASHBOARD CSS ================================================- */
+/* -=================================================================================================================- */
+
+/* -================================= REUSABLE CLASSES ================================- */
+.data__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.data__title{
+    font-weight: var(--font-regular);
+    font-size: var(--h1-font-size);
+}
+
+.grid-wrapper{
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.data-container{
+    display: flex;
+    background-color: var(--container-color);
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+    max-width: 100%;
+}
+
+.data-number{
+    font-size: var(--h1-font-size);
+}
+
+.data-description{
+    font-weight: var(--font-light);
+    font-size: var(--h3-font-size);
+}
+
+.data__icon{
+    font-size: 2.3rem;
+}
+
+.green{
+    color: rgb(31, 182, 31);
+}
+
+.stats__graph{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* -================================= HEADER ================================- */
+.portal__header{
+    width: 100%;
+    height: 5.5rem;
+    padding-top: 1rem;
+    position: fixed;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+}
+
+.header__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* -==================================================================================- */
+
+/* -================================= SECTION GREETING ================================- */
+.section__greeting{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-top: 7.5rem;
+    padding-bottom: 1rem;
+}
+
+.greeting{
+    font-size: var(--normal-font-size);
+    margin-bottom: .5rem;
+}
+
+.greeting span{
+    font-size: var(--h1-font-size);
+}
+
+.date-container{
+    display: flex;
+    gap: .5rem;
+}
+
+.date-container p{
+    font-size: var(--h3-font-size);
+}
+
+.domain__name{
+    font-size: var(--h2-font-size);
+}
+/* -==================================================================================- */
+
+/* -================================= SECTION DATA ================================- */
+.data-button{
+    height: 50px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 3px solid var(--primary-color);
+    padding: 1.5rem;
+}
+
+.data-button a{
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+}
+
+.monthly__container{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* -==== For medium devices ====- */
+@media screen and (min-width: 700px){
+
+    .section__greeting{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .monthly__container{
+        flex-direction: column;
+    }
+}
