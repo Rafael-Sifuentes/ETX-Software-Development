@@ -79,7 +79,6 @@ var swiper = new Swiper(".work__container", {
 const sr = ScrollReveal({
   distance: '80px',
   duration: 2800,
-  // reset: true,
 })
 
 sr.reveal(`.section__subtitle, .description, .about__description`,{
@@ -98,6 +97,12 @@ sr.reveal(`.projects__bkgr-text, .portal__bkgr-text, .button-wrapper-2`,{
   origin: 'right',
 })
 
+sr.reveal(`.layer-1, .layer-2`,{
+  origin: 'bottom',
+  distance: '150px',
+  duration: 3500
+})
+
 
 /*=============== CLIENT PORTAL LOGIN ===============*/
 
@@ -107,15 +112,15 @@ var userCredentials = {
     htmlFile : "assets/dashboards/tintdash.html"
   },
 
-  admin2: {
-    password : "El mendigo",
-    htmlFile : "assets/dashboards/tintdash.html"
-  },
+  // admin2: {
+  //   password : "El mendigo",
+  //   htmlFile : "assets/dashboards/tintdash.html"
+  // },
 
-  admin3: {
-    password : "El mendigo",
-    htmlFile : "assets/dashboards/tintdash.html"
-  },
+  // admin3: {
+  //   password : "El mendigo",
+  //   htmlFile : "assets/dashboards/tintdash.html"
+  // },
   // Add more username-password mappings as needed
 }
 
