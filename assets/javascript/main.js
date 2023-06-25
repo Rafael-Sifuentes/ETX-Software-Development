@@ -78,7 +78,7 @@ var swiper = new Swiper(".work__container", {
 /*=============== SCROLL REVEAL JS ===============*/
 const sr = ScrollReveal({
   distance: '80px',
-  duration: 2800,
+  duration: 2500,
 })
 
 sr.reveal(`.section__subtitle, .description, .about__description`,{
@@ -100,7 +100,7 @@ sr.reveal(`.projects__bkgr-text, .portal__bkgr-text, .button-wrapper-2`,{
 sr.reveal(`.layer-1, .layer-2`,{
   origin: 'bottom',
   distance: '150px',
-  duration: 3500
+  duration: 2900
 })
 
 

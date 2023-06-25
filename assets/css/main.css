@@ -158,7 +158,7 @@ img{
 
 .layer-2{
     background-image: url('/assets/images/waves-2-mobile.svg');
-    opacity: .8;
+    opacity: .9;
 }
 
 /* -======= BUTTONS ========- */
@@ -240,7 +240,7 @@ img{
     }
 
     100%{
-        transform: translateY(-15px);
+        transform: translateY(-17px);
     }
 }
 
@@ -396,6 +396,7 @@ img{
 /* -================================= HOME SECTION ================================- */
 .home{
     padding-top: 8rem;
+    background: linear-gradient(to top,var(--accent-color) 5%, #000000 95%);
 }
 
 .home__data{
@@ -471,7 +472,7 @@ img{
 }
 
 .scroll__i{
-    color: var(--accent-color);
+    color: var(--primary-color);
     font-size: var(--h3-font-size);
 }
 
@@ -511,6 +512,10 @@ img{
 
 .about__bkgr-text{
     left: 0;
+}
+
+.about__description{
+    margin-top: 1rem;
 }
 
 .about__modals-wrapper{
@@ -588,6 +593,7 @@ img{
 }
 
 .projects__description{
+    margin-top: 1.5rem;
     margin-bottom: 2.5rem;
 }
 
