@@ -33,3 +33,53 @@ const blurHeader = () => {
   }
   
   window.addEventListener('scroll' , blurHeader)
+
+
+/*=============== SCROLL SECTIONS ACTIVE ===============*/
+const sections = document.querySelectorAll('section[id]')
+    
+const scrollActive = () =>{
+  	const scrollY = window.pageYOffset
+
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link');
+		}else{
+			sectionsClass.classList.remove('active-link');
+		}                                                    
+	})
+}
+window.addEventListener('scroll', scrollActive)
+
+/*=============== CHANGE HOME BACKGROUND PHOTO ===============*/
+
+// Array of photo URLs
+const photos = [
+    'assets/IMG/home-img.png',
+    'assets/IMG/home-img-2.png',
+    'assets/IMG/home-img-3.png',
+    'assets/IMG/home-img-4.png',
+    // Add more photo URLs as needed
+  ];
+  
+  function switchBackground() {
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * photos.length);
+    // Get the random photo URL
+    const randomPhoto = photos[randomIndex];
+    // Set the background image of the container
+    document.getElementById('home-background').style.backgroundImage = `url(${randomPhoto})`;
+  }
+  
+  // Call the switchBackground function initially to set the initial background image
+  switchBackground();
+
+  // Call the switchBackground function every 5 seconds (5000 milliseconds)
+  setInterval(switchBackground, 2500);
+
+  
