@@ -574,6 +574,10 @@ img{
     font-weight: var(--font-light);
 }
 
+.gallery__container{
+    margin-bottom: 3rem;
+}
+
 .gallery__img-container{
     overflow: hidden;
     position: relative;
@@ -600,6 +604,93 @@ img{
 .gallery-row-3{
     grid-template-columns: repeat(3, 1fr);
     height: 220px;
+}
+
+.gallery__button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.gallery__button a{
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+}
+
+.card__container{
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    gap: 2.5rem;
+}
+
+.class__card{
+    width: 100%;
+    height: max-content;
+    border-radius: 1rem;
+    background: #e0e0e0;
+  box-shadow: 15px 15px 30px #b7b7b7,
+             -15px -15px 30px #ffffff;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.card__title{
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+}
+
+.card__description{
+    font-weight: var(--font-light);
+    font-size: var(--h3-font-size);
+}
+
+.bullet__points-list{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bullet__point{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.bullet__point i{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.card__button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card__button{
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    width: 100%;
+}
+
+.card__button a{
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+}
+
+.class__subtitle-alt,
+.class__title-alt{
+    text-align: center;
+}
+
+.class__subtitle-alt{
+    font-weight: var(--font-light);
 }
 /* -============================================================================- */
 
