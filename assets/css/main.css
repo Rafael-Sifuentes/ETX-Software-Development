@@ -762,6 +762,13 @@ textarea{
     font-family: var(--body-font);
 }
 
+.contact__message{
+    font-size: var(--small-font-size);
+    position: absolute;
+    bottom: 2.8rem;
+    left: 1.5rem;
+}
+
 .form__btn-cont{
     margin-top: 3rem;
     display: flex;
