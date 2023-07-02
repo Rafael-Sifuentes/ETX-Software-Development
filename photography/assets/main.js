@@ -82,4 +82,32 @@ const photos = [
   // Call the switchBackground function every 5 seconds (5000 milliseconds)
   setInterval(switchBackground, 2500);
 
-  
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+  distance: '80px',
+  duration: 2500,
+})
+
+sr.reveal(`.section__subtitle, .button__underline, .button__fill`,{
+  origin: 'top',
+})
+
+sr.reveal(`.section__title, .line, .team__member`,{
+  origin: 'bottom',
+})
+
+sr.reveal(`.description, .left`,{
+  origin: 'left',
+})
+
+sr.reveal(`.right`,{
+  origin: 'right',
+})
+
+sr.reveal(`.`,{
+  origin: 'bottom',
+  distance: '150px',
+  duration: 2900
+})

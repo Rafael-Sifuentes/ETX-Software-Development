@@ -630,7 +630,7 @@ img{
     height: max-content;
     border-radius: 1rem;
     background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
+  box-shadow: 15px 15px 30px #cfcfcf,
              -15px -15px 30px #ffffff;
     padding: 1.8rem;
     display: flex;
