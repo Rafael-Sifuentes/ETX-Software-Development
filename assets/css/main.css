@@ -288,6 +288,7 @@ img{
     color: var(--text-color);
     font-weight: var(--font-bold);
     display: flex;
+    gap: .3rem;
 }
 
 .nav__link span{
@@ -396,11 +397,15 @@ img{
 /* -================================= HOME SECTION ================================- */
 .home{
     padding-top: 8rem;
-    background: linear-gradient(to top,var(--accent-color) 5%, #000000 95%);
+    background: linear-gradient(to top,#a43acba4 1%, #000000 99%);
 }
 
 .home__data{
     margin-bottom: 4.5rem;
+}
+
+.home__title .gradient{
+    width: min-content;
 }
 
 .home__subtitle{
