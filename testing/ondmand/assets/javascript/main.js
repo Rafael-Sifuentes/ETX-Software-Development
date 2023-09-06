@@ -79,3 +79,33 @@ function closeMapOverlay() {
 openButton.addEventListener("click", toggleMapOverlay);
 closeButton.addEventListener("click", closeMapOverlay);
 
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '80px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.section__subtitle, .description, .top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.section__title, .about__img-container, .bottom, .work__box`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.home-img`,{
+	origin: 'right',
+	duration: 3500,
+	distance:'300px'
+  })
+
+  sr.reveal(`.right`,{
+	origin: 'right',
+	distance: '150px',
+  })
+
+  sr.reveal(`.left`,{
+	origin: 'left',
+	distance: '150px',
+  })
