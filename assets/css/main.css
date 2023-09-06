@@ -136,7 +136,7 @@ img{
     font-weight: var(--font-bold);
     font-size: 6rem;
     z-index: -1;
-    color: #c6c6c653;
+    color: #c6c6c622;
     position: absolute;
 }
 
@@ -501,6 +501,9 @@ img{
 /* -============================================================================- */
 
 /* -================================= ABOUT SECTION ================================- */
+.about{
+    overflow: hidden;
+}
 .about__data{
     position: relative;
     display: flex;
