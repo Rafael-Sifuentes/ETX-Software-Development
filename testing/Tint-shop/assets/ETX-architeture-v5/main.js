@@ -104,3 +104,33 @@ const toggleItem = (item) =>{
     item.classList.add('accordion-open')
   }
 }  
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '80px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.section__subtitle, .description, .top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.section__title, .bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.left, .about-list-item, .info-box`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
+
+  sr.reveal(`.car`,{
+    origin: 'right',
+    duration: 3500,
+    distance: '200px'
+  })
+
