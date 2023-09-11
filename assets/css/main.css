@@ -112,7 +112,7 @@ img{
 .section__title{
     font-size: var(--title-font-size);
     font-weight: var(--font-bold);
-    font-family: var(--title-font);
+    font-family: var(--body-font);
     margin-bottom: 1.5rem;
 }
 
@@ -404,6 +404,10 @@ img{
     margin-bottom: 4.5rem;
 }
 
+.home__title{
+    font-family: var(--title-font);
+}
+
 .home__title .gradient{
     width: min-content;
 }
@@ -547,6 +551,11 @@ img{
 }
 
 .about__modals-list li:nth-child(2){
+    align-items: flex-end;
+    text-align: end;
+}
+
+.about__modals-list li:nth-child(4){
     align-items: flex-end;
     text-align: end;
 }
@@ -884,6 +893,13 @@ textarea{
     .about__modals-list li:nth-child(2){
         align-items: flex-start;
         text-align: initial;
+    }
+
+    .about__modals-list li:nth-child(4){
+        align-items: flex-start;
+        text-align: initial;
+        grid-column: span 2;
+        grid-row: span 1;
     }
 
     .about__modal-description{
