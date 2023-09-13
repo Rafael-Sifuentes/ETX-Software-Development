@@ -140,41 +140,46 @@
                     while you can !
                 </h3>
 
-                <div class="featured__container grid">
+                <div class="featured__container swiper">
 
-                    <article class="featured__card">
+                    <div class="swiper-wrapper">
+                        <article class="featured__card swiper-slide">
 
-                        <img src="assets/IMG/season-img-1.png" alt="Image of a latte" class="card__img">
-
-                        <div class="card__footer">
-                            <h3 class="card__title">Classic PSL</h3>
-                            <p class="card__description description">This latte is everything but basic. Enjoy it hot or iced</p>
-                        </div>
-
-                    </article>
-
-                    <article class="featured__card">
-                        
-                        <img src="assets/IMG/season-img-2.png" alt="Image of a latte" class="card__img">
-
-                        <div class="card__footer">
-                            <h3 class="card__title">Apple crisp</h3>
-                            <p class="card__description description">A description about the drink here.</p>
-                        </div>
-
-                    </article>
-
-                    <article class="featured__card">
-                        
-                        <img src="assets/IMG/season-img-3.png" alt="Image of Pumpkin muffins" class="card__img">
-
-                        <div class="card__footer">
-                            <h3 class="card__title">Pumpkin muffins</h3>
-                            <p class="card__description description">The perfect complement to any
-                                fall beverage</p>
-                        </div>
-
-                    </article>
+                            <img src="assets/IMG/season-img-1.png" alt="Image of a latte" class="card__img">
+    
+                            <div class="card__footer">
+                                <h3 class="card__title">Classic PSL</h3>
+                                <div class="underline"></div>
+                                <p class="card__description description">This latte is everything but basic. Enjoy it hot or iced</p>
+                            </div>
+    
+                        </article>
+    
+                        <article class="featured__card  swiper-slide">
+                            
+                            <img src="assets/IMG/season-img-2.png" alt="Image of a latte" class="card__img">
+    
+                            <div class="card__footer">
+                                <h3 class="card__title">Apple crisp</h3>
+                                <div class="underline"></div>
+                                <p class="card__description description">A description about the drink here.</p>
+                            </div>
+    
+                        </article>
+    
+                        <article class="featured__card  swiper-slide">
+                            
+                            <img src="assets/IMG/season-img-3.png" alt="Image of Pumpkin muffins" class="card__img">
+    
+                            <div class="card__footer">
+                                <h3 class="card__title">Pumpkin muffins</h3>
+                                <div class="underline"></div>
+                                <p class="card__description description">The perfect complement to any
+                                    fall beverage</p>
+                            </div>
+    
+                        </article>
+                    </div>
 
                 </div>
 
@@ -413,7 +418,24 @@
 
                 </div>
 
-                <img src="assets/IMG/map-img.png" alt="" class="map-img">
+                <div class="map-box">
+                    <img src="assets/IMG/map-img.png" alt="" class="map-img">
+
+                    <button class="open-icon" id="map-open">
+                        Tap to get directions
+                    </button>
+
+                    <div class="map-bkgr">
+                        <div class="button-fill">
+                            <a href="https://www.google.com/maps/dir/31.6000236,-94.6760404/heritage+coffee+company+lufkin/@31.4680358,-94.9346114,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x863817c5bd4823e1:0xe9264da689b2f6f3!2m2!1d-94.7305464!2d31.3354584?entry=ttu" target="_blank">Get directions</a>
+                        </div>
+
+                        <button class="open-icon" id="map-close">
+                            <i class="ri-download-fill"></i>
+                        </button>
+                    </div>
+
+                </div>
 
             </div>
         </section>
@@ -425,6 +447,10 @@
 
     <!-- ============================ FOOTER ============================== -->
     <footer class="footer section">
+
+        <div class="footer__container container">
+            <p class="copyright">Website designed & developed by<br><span>ETX Software Development</span><br>&#169; All rights reserved</p>
+        </div>
 
     </footer>    
     <!-- ========================================================== -->

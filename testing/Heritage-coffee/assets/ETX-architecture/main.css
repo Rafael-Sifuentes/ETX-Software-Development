@@ -10,7 +10,7 @@
     --accent-color: #165525;
     --text-color: #FFFFFF;
     --container-color: #59be863d;
-    --body-color: #131918;
+    --body-color: #131819;
     /* ================= */
     /* == FONT & TYPOGRAPHY == */
     --body-font: 'Source Sans 3', sans-serif;
@@ -405,7 +405,7 @@ img{
     background-color: var(--container-color);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 
 .card__title{
@@ -416,6 +416,12 @@ img{
 
 .card__footer{
     margin-top: 1.5rem;
+    text-align: center;
+}
+
+.card__footer .underline{
+    border: 2px solid var(--accent-color);
+    margin: 1rem 0;
 }
 
 .about__section{
@@ -600,9 +606,77 @@ img{
     font-size: var(--big-font-size);
     color: var(--text-color);
 }
+
+.map-box{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+}
+
+.map-img{
+    z-index: 1;
+}
+
+.open-icon{
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: 2rem;
+    width: 300px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+}
+
+.open-icon i{
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+}
+
+.map-bkgr{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #212121c9;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    z-index: 2;
+    bottom: -100%;
+    transition: bottom 0.3s ease;
+}
 /* -============================================================================- */
 
 /* -================================= FOOTER ================================- */
+.footer{
+    background-color: #000000;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.copyright{
+    font-family: var(--body-font);
+    color: var(--text-color-white);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+    text-align: center;
+}
+
+.copyright span{
+    background: linear-gradient(to right, #A43ACB, #4717F7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-medium);
+}
 /* -=========================================================================- */
 
 
