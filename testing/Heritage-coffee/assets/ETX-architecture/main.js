@@ -37,35 +37,21 @@ window.addEventListener('scroll', scrollActive)
 var swiper = new Swiper(".featured__container", {
 
   
-    effect: "cube",
-      grabCursor: true,
-	  loop: true,
-      cubeEffect: {
-        shadow: true,
-	  },
+  effect: "cube",
+    grabCursor: true,
+  loop: true,
+    cubeEffect: {
+      shadow: true,
+      innerWidth: "200px"
+  },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-    // breakpoints:{
-    //   700: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-
-    //     coverflowEffect: {
-    //       rotate: 50,
-    //       stretch: 0,
-    //       depth: 100,
-    //       modifier: 1,
-    //       slideShadows: true,
-    //     },
-    //   },
-    // }
-
-    
-  });
+  
+});
 
   // Select the button and the map overlay element
 const openButton = document.getElementById("map-open");
@@ -89,3 +75,35 @@ function closeMapOverlay() {
 // Add click event listeners to the open and close buttons
 openButton.addEventListener("click", toggleMapOverlay);
 closeButton.addEventListener("click", closeMapOverlay);
+
+
+
+
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '80px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.section__subtitle, .description, .top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.section__title, .bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
+
+  sr.reveal(`.bottom-alt`,{
+    origin: 'bottom',
+    interval: 300,
+  })
