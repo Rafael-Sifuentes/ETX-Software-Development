@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* -=================================================================- */
 /* -================================= VARIABLE CSS ================================- */
@@ -7,13 +7,13 @@
 
     /* == MAIN COLORS == */
     --primary-color: #DCA313;
-    --accent-color: #165525;
+    --accent-color: #163755;
     --text-color: #FFFFFF;
-    --container-color: #163926;
-    --body-color: #131819;
+    --container-color: #013e5f;
+    --body-color: #0f161e;
     /* ================= */
     /* == FONT & TYPOGRAPHY == */
-    --body-font: 'Source Sans 3', sans-serif;
+    --body-font: 'Quicksand', sans-serif;
     --title-font: 'Bona Nova', serif;
     --biggest-font: 2.7rem;
     --big-font-size: 2.5rem;
@@ -160,6 +160,7 @@ img{
     left: 0;
     width: 100%;
     background-color: transparent;
+    height: calc(max-content + 2.5rem);
     z-index: var(--z-fixed);
     transition: var(--transition-time);
 }
@@ -182,7 +183,7 @@ img{
 }
 
 .nav__link span{
-    font-size: 1.25rem;
+    font-size: var(--h3-font-size);
 }
 
 .scroll-header{
@@ -211,13 +212,12 @@ img{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: max-content;
     }
 
     .nav__menu{
         position: fixed;
         bottom: 2.5rem;
-        background-color: #08150bcf;
+        background-color: #091525cf;
         width: 90%;
         max-width: 500px;
         left: 0;
@@ -493,11 +493,11 @@ img{
 }
 
 .menu__legend .legend__box:nth-child(1){
-    background-color: #165525;
+    background-color: var(--accent-color);
 }
 
 .menu__legend .legend__box:nth-child(2){
-    background-color: #103D1A;
+    background-color: #102F3D;
 }
 
 .menu__legend .legend__box:nth-child(3){
