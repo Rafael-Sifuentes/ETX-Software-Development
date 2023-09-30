@@ -77,3 +77,32 @@ rotateTownNames();
 
 // Rotate town names every 2.5 seconds
 setInterval(rotateTownNames, 2000);
+
+
+
+const images = ['assets/IMG/gallery-img-1.png', 'assets/IMG/gallery-img-2.png', 'assets/IMG/gallery-img-3.png']; // Add your image URLs
+    let currentImageIndex = 0;
+
+	const galleryImg = document.getElementById('gallery-img');
+    const imgTag = galleryImg.querySelector('img');
+
+    function showImage(index) {
+        imgTag.style.opacity = 0;
+        setTimeout(() => {
+            imgTag.src = images[index];
+            imgTag.style.opacity = 1;
+        }, 300); // Wait for the fade-out effect
+    }
+
+    document.getElementById('button-prev').addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+    });
+
+    document.getElementById('button-next').addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+    });
+
+    // Initial display
+    showImage(currentImageIndex);
