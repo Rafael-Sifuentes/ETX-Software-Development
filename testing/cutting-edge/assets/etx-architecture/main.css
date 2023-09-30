@@ -628,6 +628,21 @@ img{
 .gallery__buttons button:nth-child(2) i{
     color: var(--text-color);
 }
+
+.progress__bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: .5rem;
+    /* padding: 0 .5rem; */
+}
+
+.progress{
+    height: 100%;
+    width: 20%;
+    background-color: var(--primary-color);
+    border-radius: .5rem;
+}
 /* -============================================================================- */
 
 

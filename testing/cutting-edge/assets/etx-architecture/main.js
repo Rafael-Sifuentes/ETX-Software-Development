@@ -80,29 +80,54 @@ setInterval(rotateTownNames, 2000);
 
 
 
-const images = ['assets/IMG/gallery-img-1.png', 'assets/IMG/gallery-img-2.png', 'assets/IMG/gallery-img-3.png']; // Add your image URLs
-    let currentImageIndex = 0;
+const images = ['assets/IMG/gallery-img-1.png', 'assets/IMG/gallery-img-2.png', 'assets/IMG/gallery-img-3.png'];
+let currentImageIndex = 0;
 
-	const galleryImg = document.getElementById('gallery-img');
-    const imgTag = galleryImg.querySelector('img');
+const galleryImg = document.getElementById('gallery-img');
+const imgTag = galleryImg.querySelector('img');
 
-    function showImage(index) {
-        imgTag.style.opacity = 0;
-        setTimeout(() => {
-            imgTag.src = images[index];
-            imgTag.style.opacity = 1;
-        }, 300); // Wait for the fade-out effect
-    }
+const progressBar = document.getElementById('progress');
+const progressContainer = document.getElementById('progress-bar');
 
-    document.getElementById('button-prev').addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        showImage(currentImageIndex);
-    });
+function updateProgressBar() {
+    const containerWidth = progressContainer.offsetWidth;
+    const progressWidth = containerWidth * 0.2; // Set to 10% of the container width
+    const stepWidth = (containerWidth - progressWidth) / (images.length - 1);
 
-    document.getElementById('button-next').addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        showImage(currentImageIndex);
-    });
+    progressBar.style.width = `${progressWidth}px`;
+    progressBar.style.transform = `translateX(${currentImageIndex * stepWidth}px)`;
+}
 
-    // Initial display
+function showImage(index) {
+    imgTag.style.opacity = 0;
+    setTimeout(() => {
+        imgTag.src = images[index];
+        imgTag.style.opacity = 1;
+        updateProgressBar();
+    }, 300); // Wait for the fade-out effect
+}
+
+document.getElementById('button-prev').addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     showImage(currentImageIndex);
+});
+
+document.getElementById('button-next').addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+});
+
+// Initial display
+showImage(currentImageIndex);
+
+// CSS transition event listener
+progressBar.addEventListener('transitionend', () => {
+    progressBar.style.transition = 'none'; // Reset transition property
+});
+
+// Add transition class to trigger the animation
+setTimeout(() => {
+    progressBar.style.transition = 'width 0.3s ease'; // Set transition property
+}, 0);
+
+
