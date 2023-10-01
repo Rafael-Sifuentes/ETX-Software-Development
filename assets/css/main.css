@@ -317,10 +317,12 @@ img{
 
     .nav__menu{
         position: fixed;
-        bottom: 0;
+        bottom: 2rem;
         background-color: rgba(63, 63, 63, 0.625);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        border-radius: .5rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        width: 90%;
         max-width: 500px;
         left: 0;
         right: 0;
@@ -330,6 +332,11 @@ img{
 
     .nav__logo{
         text-align: center;
+    }
+
+    .nav__logo img{
+        width: 50px;
+        height: 50px;
     }
 
     .nav__list{
@@ -359,6 +366,10 @@ img{
 
     .nav__logo{
         font-size: 1.8rem;
+    }
+
+    .nav__logo img{
+        width: 50px;
     }
 
     .nav__menu{
@@ -406,9 +417,15 @@ img{
 
 .home__title{
     font-family: var(--title-font);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
 }
 
 .home__title .gradient{
+    text-align: center;
     width: min-content;
 }
 
@@ -523,7 +540,7 @@ img{
 }
 
 .about__img{
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .about__bkgr-text{
@@ -552,6 +569,11 @@ img{
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    background-color: rgba(32, 19, 44, 0.25);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .about__modals-list li:nth-child(2){
@@ -887,6 +909,10 @@ textarea{
     /* ABOUT SECTION */
     .about__data{
         flex-direction: row;
+    }
+
+    .about__img{
+        max-width: 500px;
     }
 
     .about__modals-list{
