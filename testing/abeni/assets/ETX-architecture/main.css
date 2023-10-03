@@ -401,6 +401,26 @@ img{
     font-weight: var(--font-semi-bold);
 }
 
+.about__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.list__item{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.list__item i{
+    color: var(--accent-color);
+}
+
+.list__item p{
+    font-weight: var(--font-medium);
+}
+
 .about__info-container{
     display: flex;
     flex-direction: column;
