@@ -384,6 +384,13 @@ img{
     text-align: center;
 }
 
+.about__subtitle{
+    background: linear-gradient(to right, var(--accent-color), var(--container-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .about__container{
     gap: 2rem;
 }

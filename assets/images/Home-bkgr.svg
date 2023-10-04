@@ -1,24 +1,17 @@
-<svg width="1944" height="1599" viewBox="0 0 1944 1599" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_356_11)">
-<path d="M634 377L104 777.753L634 1211" stroke="url(#paint0_linear_356_11)" stroke-width="66"/>
-<path d="M1310 377L1840 777.753L1310 1211" stroke="url(#paint1_linear_356_11)" stroke-width="66"/>
-<path d="M713 1538L1220 61" stroke="url(#paint2_linear_356_11)" stroke-width="66"/>
-</g>
+<svg width="519" height="433" viewBox="0 0 519 433" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 222L175 102L165 132L35 222L165 302L175 332L5 222Z" stroke="url(#paint0_linear_405_6)" stroke-width="5"/>
+<path d="M514 222L344 102L354 132L484 222L354 302L344 332L514 222Z" stroke="url(#paint1_linear_405_6)" stroke-width="5"/>
+<path d="M333.25 2L160 431H184.75L358 2H333.25Z" stroke="url(#paint2_linear_405_6)" stroke-width="4"/>
 <defs>
-<filter id="filter0_f_356_11" x="0.62207" y="0.285889" width="1942.76" height="1598.43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_356_11"/>
-</filter>
-<linearGradient id="paint0_linear_356_11" x1="369" y1="377" x2="369" y2="1211" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_405_6" x1="5" y1="217" x2="175" y2="217" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4717F7"/>
 <stop offset="1" stop-color="#A43ACB"/>
 </linearGradient>
-<linearGradient id="paint1_linear_356_11" x1="1575" y1="377" x2="1575" y2="1211" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_405_6" x1="514" y1="217" x2="344" y2="217" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4717F7"/>
 <stop offset="1" stop-color="#A43ACB"/>
 </linearGradient>
-<linearGradient id="paint2_linear_356_11" x1="713" y1="799.5" x2="1220" y2="799.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_405_6" x1="160" y1="216.5" x2="358" y2="216.5" gradientUnits="userSpaceOnUse">
 <stop stop-color="#4717F7"/>
 <stop offset="1" stop-color="#A43ACB"/>
 </linearGradient>
