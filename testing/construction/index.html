@@ -1,21 +1,32 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Luigi's Construction | Nacogdoches Tx</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon">
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/ETX Architecture/main.css">
+    <title>All N One construction | Lufkin Texas</title>
+    <meta title="description" content="">
+    <meta title="keywords" content="">
 </head>
 <body>
 
-    <!--==================== HEADER ====================-->
+    <!-- ========================================================== -->
+    <!-- =========================== HEADER / NAVIGATION =============================== -->
     <header class="header" id="header">
 
         <nav class="nav container">
             <a href="#" class="nav__logo">
-               <img src="assets/IMG/nav__logo.png" alt="Nav logo">
+               <img src="assets/IMG/Nav-logo.svg" alt="Nav logo">
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -42,191 +53,394 @@
                 </ul>
 
                 <div class="nav__close" id="nav-close">
-                    <i class='bx bx-x-circle' ></i>
+                    <i class="ri-close-fill"></i>
                 </div>
 
                 <button class="nav__button button">
-                    <a href="#contact"> GET A QUOTE</a>
+                    <a href="#contact"> GET A FREE QUOTE</a>
                 </button>
 
             </div>
 
 
             <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu-alt-right'></i>
+                <i class="ri-menu-line"></i>
             </div>
 
         </nav>
          
     </header>
 
-    <main>
+    <!-- ========================================================== -->
 
-        <!--==================== HOME ====================-->
+    <!-- ============================ MAIN ============================== -->
+    <main class="main">
+
+        <!-- =========================== HOME SECTION  =============================== -->
         <section class="home section" id="home">
 
             <div class="home__container container">
 
-                <div class="home__logo">
-                    <img src="assets/IMG/home__logo.png" alt="">
+                <div class="home__logo-container top">
+                    <img src="assets/IMG/Home-logo.svg" alt="Home logo" class="home-logo">
                 </div>
 
-                <div class="home__data">
+                <h1 class="home__subtitle section__subtitle">Construction & Contracting</h1>
+                <div class="home__underline"></div>
 
-                    <p class="home__description">
-                        Building dreams, one project at a time at Luigi's construction and remodeling services in Nacogdoches Texas.
-                        Let's bring your vision to life. Contact us today to get started !
-                    </p>
-
-                    <div class="home__buttons">
-
-                        <div class="home__button">
-                            <a href="#contact">GET A FREE QUOTE</a>
-                        </div>
-
-                        <div class="home__button-alt">
-                            <a href="#about">DISCOVER MORE</a>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <img src="assets/IMG/home__bkgr.png" alt="Home background" class="home__bkgr">
-        </section>
-
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-
-            <div class="about__container container grid">
-                <div class="about__data">
-                    <h2 class="about__title section__title">
-                        ABOUT <img src="assets/IMG/title__line.png" class="title__line">
-                    </h2>
-
-                    <p class="about__description">
-                        At <span>Luigi's construction & remodeling</span>, we are a team of experienced professionals committed to delivering top-quality
-                        construction and remodeling services to the Nacogdoches community. Our team of skilled craftsmen work tirelessly to ensure
-                        that every project is completed to the highest standard of excellence, using only the best materials and techniques. Contact
-                        us today to learn more about how we can help bring your vision to life!
-                    </p>
-
-                    <div class="about__services">
-                        <ul class="grid">
-                            <li class="service__item">
-                                <i class='bx bxs-polygon'></i> ROOFING
-                            </li>
-
-                            <li class="service__item">
-                                <i class='bx bxs-polygon'></i> HOUSE LEVELNG
-                            </li>
-
-                            <li class="service__item">
-                                <i class='bx bxs-polygon'></i> SHEETROCK
-                            </li>
-
-                            <li class="service__item">
-                                <i class='bx bxs-polygon'></i> AND MORE !
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="about__button-cont">
-                        <button class="about__button button">
-                            <a href="#services">OUR SERVICES</a>
-                        </button>
-                    </div>
-
-                </div>
-
-                <div class="about__img">
-                    <img src="assets/IMG/about__img.png" alt="">
-                </div>
-                
-            </div>
-
-            <!-- <img src="assets/IMG/hex.svg" alt="" class="about__hex"> -->
-
-            <img src="assets/IMG/about__bkgr.svg" alt="about background cut-out" class="about__bkgr">
-
-        </section>
-
-        <!--==================== SERVICES ====================-->
-        <section class="services section" id="services">
-
-            <div class="services__container container">
-                <h2 class="services__title section__title">
-                    <img src="assets/IMG/title__line.png" alt="" class="title__line">
-                    SERVICES
+                <h2 class="home__title section__title">
+                    We are building trust one project at a time
                 </h2>
 
-                <div class="services__modals">
+                <div class="home__buttons">
+                    <button class="button-main home__button-main right">
+                        <a href="#">Give us a Call !</a>
+                    </button>
 
-                    <article class="service__modal">
-                        <div class="modal__img">
-                            <img src="assets/IMG/services-1.png" alt="" class="services__img">
-                        </div>
-
-                       <div class="modal__description">
-                            <h2 class="service__name">Roofing</h2>
-                            <p class="services__description">A description about roofing goes here.</p>
-                       </div>
-                    </article>
-
-                    <article class="service__modal">
-                        <div class="modal__img">
-                            <img src="assets/IMG/services-2.png" alt="" class="services__img">
-                        </div>
-
-                       <div class="modal__description">
-                            <h2 class="service__name">Remodeling</h2>
-                            <p class="services__description">A description about remodeling goes here.</p>
-                       </div>
-                    </article>
-
-                    <article class="service__modal">
-                        <div class="modal__img">
-                            <img src="assets/IMG/services-3.png" alt="" class="services__img">
-                        </div>
-
-                       <div class="modal__description">
-                            <h2 class="service__name">Framing</h2>
-                            <p class="services__description">A description about framing goes here.</p>
-                       </div>
-                    </article>
-
+                    <button class="button-second home__button-second left">
+                        <a href="#">See our services</a>
+                    </button>
                 </div>
+
+                <div class="home__social">
+                    <p>Follow us on Facebook</p>
+                    <a href="#">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__down">
+                    See more
+                </a>
+
             </div>
             
+
+            <img src="assets/IMG/Home-img.png" alt="Home background image" class="home-background">
         </section>
+        <!-- ========================================================== -->
 
-        <!--==================== ETX ====================-->
-        <!-- <section class="etx section">
+        <!-- =========================== ABOUT SECTION  =============================== -->
+        <section class="about" id="about">
+            <div class="about__container container">
+                <div class="about__grid grid">
 
-            <div class="etx__container container">
-                <h2 class="etx__title section__title">This website was designed and developed by</h2>
+                    <div>
+                        <header class="about__header">
+                            <h2 class="about__title section__title">About <span>us</span></h2>
+                            <!-- <img src="assets/IMG/accent-line.svg" alt="Accent line"> -->
+                        </header>
+        
+                        <p class="about__description description">
+                            At All n One Construction, we bring dreams to life through
+                            expert craftsmanship and a passion for perfection.
+                            Nestled in the heart of East Texas, we are your dedicated
+                            partners in all aspects of residential construction,
+                            from the meticulous artistry of remodeling to the sturdy
+                            precision of framing. With years of experience, we take pride
+                            in delivering top-notch quality, transforming houses into
+                            homes that stand as a testament to our commitment to excellence.
+                            Discover the difference with All n One Construction — where your
+                            vision meets our skill, and extraordinary becomes ordinary.
+                        </p>
+                    </div>
 
-                <h1 class="etx__name">ETX Software Development</h1>
+                    <div class="about__img-container bottom">
+                        <img src="assets/IMG/About-img.png" alt="About image" class="about__img">
+                    </div>
 
-                <p class="etx__description">
-                    If you would like to know more about this website, please
-                    contact us here <br>
-                    or call (936) 221 - 8751
-                </p>
+                </div>
 
-                <div class="etx__btn">
-                    <button class="etx__button">
-                        <a href="https://rafael-sifuentes.dev/" target="_blank">Get in touch</a>
+                <div>
+                    <h2 class="about__subtitle section__subtitle">We can do it all !</h2>
+                    <p class="about__description-alt">From roofing to full scale re-models, we have you covered !</p>
+                </div>
+
+                <div class="about__modals-container grid">
+
+                    <div class="about__modal bottom">
+
+                        <div class="icon__container">
+                            <img src="assets/IMG/about-icon-1.png" alt="Roofing icon">
+                        </div>
+
+                        <div class="name__container">
+                            <h3 class="about__modal-title">Roofing</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="about__modal bottom">
+
+                        <div class="icon__container">
+                            <img src="assets/IMG/about-icon-2.png" alt="Roofing icon">
+                        </div>
+
+                        <div class="name__container">
+                            <h3 class="about__modal-title">Drive-ways</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="about__modal bottom">
+
+                        <div class="icon__container">
+                            <img src="assets/IMG/about-icon-3.png" alt="Roofing icon">
+                        </div>
+
+                        <div class="name__container">
+                            <h3 class="about__modal-title">Re-models</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="about__footer">
+                    <div>
+                        <div class="about__subtitle section__subtitle">And much more !</div>
+                        <p class="about__description">
+                            See what we can do for your project, and check out some of our previous work !
+                        </p>
+                    </div>
+
+                    <button class="button-main about__button">
+                        <a href="#projects">Previous jobs</a>
+                    </button>
+                </div>
+
+                <img src="assets/IMG/accent-line.svg" alt="Accent-line" class="accent-line">
+            </div>
+        </section>
+        <!-- ========================================================== -->
+
+        <!-- =========================== SERVICES SECTION  =============================== -->
+        <section class="service section" id="service">
+            <header class="service__header">
+                <div class="container">
+                    <h2 class="service__title section__title">Our Services</h2>
+                    <h3 class="service__subtitle section__subtitle">Tap on each to see more</h3>
+                </div>
+
+                <img src="assets/IMG/Services-header.png" alt="Service header background" class="service-bkgr">
+            </header>
+
+            <div class="service__container container">
+                <div class="service__cards-container grid">
+
+                    <div>
+                        <article class="service__modal">
+                            <div class="img__container">
+                                <img src="assets/IMG/service-img-1.png" alt="Remodeling image" class="service-img">
+                            </div>
+    
+                            <h2 class="service__modal-title right">Remodeling</h2>
+
+                            <div class="underline"></div>
+
+    
+                            <ul class="service__modal-list">
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Kitchen Remodeling</p>
+                                </li>
+
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Bathroom renovations</p>
+                                </li>
+
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Basement finishing</p>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="service__modal">
+                            <div class="img__container">
+                                <img src="assets/IMG/service-img-2.png" alt="Remodeling image" class="service-img">
+                            </div>
+
+    
+                            <h2 class="service__modal-title right">Framing services</h2>
+
+                            <div class="underline"></div>
+
+    
+                            <ul class="service__modal-list">
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Custom home framing</p>
+                                </li>
+
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Structural framing</p>
+                                </li>
+
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Wall and roof framing</p>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="service__modal">
+                            <div class="img__container">
+                                <img src="assets/IMG/service-img-3.png" alt="Remodeling image" class="service-img">
+                            </div>
+    
+                            <h2 class="service__modal-title right">Deck & patio construction</h2>
+
+                            <div class="underline"></div>
+
+    
+                            <ul class="service__modal-list">
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Custom deck installation</p>
+                                </li>
+
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Patio construction</p>
+                                </li>
+
+                                <li class="service__list-item">
+                                    <i class="ri-add-circle-fill"></i>
+                                    <p class="service__description description">Outdoor living spaces</p>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="service__footer">
+                    <div>
+                        <h2 class="service__subtitle">Crafting Dreams into Reality</h2>
+                        <p class="description">
+                            Revitalize your home with All n One Construction!
+                            Elevate your living space with expert remodeling,
+                            framing, and construction services. Your dream home
+                            is just a call away let's build it together!
+                        </p>
+                    </div>
+
+                    <button class="service__button button-second">
+                        <a href="tel:9362388622">Give us a call !</a>
                     </button>
                 </div>
             </div>
-        </section> -->
+        </section>
+        <!-- ========================================================== -->
 
+        <!-- =========================== PROJECTS SECTION  =============================== -->
+        <section class="projects section" id="projects">
+            <header class="projects__header">
+                <div class="container">
+                    <h2 class="projects__title section__title">Featured projects showcase</h2>
+                    <h3 class="projects__subtitle section__subtitle">Explore our finely crafted homes and more !</h3>
+                </div>
+
+                <img src="assets/IMG/projects-header-img.png" alt="Projects header image" class="projects__header-img">
+            </header>
+
+            <div class="projects__container container">
+                <div class="underline"></div>
+
+                <div class="projects__showcase-container grid">
+                    <div class="showcase__img" id="showcase-img">
+                        <img src="" alt="Gallery Image">
+                    </div>
+
+                    <div>
+                        <div class="showcase__info-container">
+                            <h2 class="showcase__title" id="showcase-title"></h2>
+                            <p class="showcase__description" id="showcase-description"></p>
+                        </div>
+
+                        <div class="showcase__buttons">
+                            <button class="showcase__prev" id="button-prev">
+                                <i class="ri-arrow-left-s-fill"></i>
+                            </button>
+
+                            <button class="showcase__next" id="button-next">
+                                <i class="ri-arrow-right-s-fill"></i>
+                            </button>
+                        </div>
+
+                        <div class="progress__bar" id="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <img src="assets/IMG/accent-line.svg" alt="Accent-line" class="line">
+
+                <div class="gallery__container grid">
+                    <div class="gallery-img g-i-1 left">
+                        <img src="assets/IMG/gallery-1.png" alt="gallery image 1">
+                    </div>
+
+                    <div class="gallery-img g-i-2 right">
+                        <img src="assets/IMG/gallery-2.png" alt="gallery image 2">
+                    </div>
+
+                    <div class="gallery-img g-i-3 bottom">
+                        <img src="assets/IMG/gallery-4.png" alt="gallery image 3">
+                    </div>
+
+                    <div class="gallery-img g-i-4 left">
+                        <img src="assets/IMG/gallery-5.png" alt="gallery image 4">
+                    </div>
+
+                    <div class="gallery-img g-i-5 right">
+                        <img src="assets/IMG/gallery-3.png" alt="gallery image 5">
+                    </div>
+
+                    <div class="gallery-img g-i-6 right">
+                        <img src="assets/IMG/gallery-6.png" alt="gallery image 6">
+                    </div>
+
+                    <div class="gallery-img g-i-7 bottom">
+                        <img src="assets/IMG/gallery-7.png" alt="gallery image 7">
+                    </div>
+                </div>
+
+                <h2 class="projects__cta top">Ready to transform your space ?</h2>
+                <button class="projects__button button-second">
+                    <a href="#contact">Get your free quote !</a>
+                </button>
+            </div>
+        </section>
+        <!-- ========================================================== -->
+
+        <!-- =========================== SECTION 5 =============================== -->
+        <!-- ========================================================== -->
     </main>
-    
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/javascript/main.js"></script>
+    <!-- ============================ FOOTER ============================== -->
+    <footer class="footer section">
+
+    </footer>    
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- =========================== JAVASCRIPT LINKS =============================== -->
+    <!-- SCROLL REVEAL JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="assets/ETX Architecture/main.js"></script>
+    <!-- ========================================================== -->
 </body>
 </html>
