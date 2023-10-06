@@ -12,7 +12,7 @@
     --text-color-w: #F0F0F0;
     --text-color-b: #000000;
     --container-color: #303030;
-    --body-color: #FFFFFF;
+    --body-color: #fbfbfb;
     /* ================= */
     /* == FONT & TYPOGRAPHY == */
     --title-font: 'Montserrat', sans-serif;
@@ -119,6 +119,7 @@ img{
 
 .description{
     font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
 }
 
 /* -======= BUTTONS ========- */
@@ -349,6 +350,7 @@ img{
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    color: var(--text-color-w);
 }
 
 .home__social span{
