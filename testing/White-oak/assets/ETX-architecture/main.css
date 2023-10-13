@@ -1,0 +1,913 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* -=================================================================- */
+/* -================================= VARIABLE CSS ================================- */
+:root{
+
+    /* == MAIN COLORS == */
+    --primary-color: #FF862E;
+    --accent-color: #163065;
+    --text-color: #000000;
+    --container-color: #18163a;
+    --body-color: #FFFFFF;
+    /* ================= */
+    /* == FONT & TYPOGRAPHY == */
+    --body-font: 'Crimson Pro', serif;
+    --title-font: 'Montserrat', sans-serif;
+    --biggest-font-size: 2.7rem;
+    --big-font-size: 2.5rem;
+    --title-font-size: 2.3rem;
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: 1.1rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    /* ================= */
+    /* =========Z INDEX======== */
+    --z-fixed: 10;
+    /* ================= */
+}
+
+/* == RESPONSIVE FONT & TYPOGRAPHY == */
+@media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --big-font-size: 3.2rem;
+      --title-size: 2.7rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1.15rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+/* -=================================================================- */
+
+/* -================================= BASE ================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3{
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* -================================= REUSABLE CSS CLASSES ================================- */
+.container{
+    max-width: 968px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.grid{
+    display: grid;
+}
+
+.section{
+    position: relative;
+    padding: 5rem 0 0;
+    overflow-x: hidden;
+}
+
+.section__title{
+    font-size: var(--title-font-size);
+    font-weight: var(--font-bold);
+    font-family: var(--title-font);
+    margin-bottom: 1.5rem;
+}
+
+.section__subtitle{
+    font-size: var(--h2-font-size);
+}
+
+.description{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+/* -======= BUTTONS ========- */
+.button-outline{
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    border: 3px solid var(--body-color);
+    min-width: 250px;
+    height: 75px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.button-outline span,
+.button-fill span{
+    font-size: var(--h2-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold);
+    color: var(--body-color);
+}
+
+.button-fill{
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    min-width: 250px;
+    height: 75px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* -=================================================================- */
+
+/* -================================= HEADER & NAVIGATION ================================- */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    transition: var(--transition-time);
+}
+
+.nav{
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    z-index: var(--z-fixed);
+}
+
+.nav__logo{
+    margin-top: 1rem;
+}
+
+.logo{
+    width: 270px;
+}
+
+.nav__link span{
+    font-size: 1.25rem;
+}
+
+.scroll-header{
+    background-color: #0e11327a;
+    height: max-content;
+    backdrop-filter: blur(10px);
+}
+
+.blur-header{
+    background-color: transparent;
+}
+
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 16, 52, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.active-link,
+.active-link i,
+.active-link span{
+    color: var(--primary-color);
+}
+
+.underline{
+    position: relative;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--container-color);
+}
+
+/* -================================= MOBILE NAVIGATION CSS ================================- */
+@media screen and (max-width: 1023px){
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: max-content;
+        padding: .5rem 0;
+    }
+
+    .nav__menu{
+        position: fixed;
+        bottom: 2.5rem;
+        background-color: var(--container-color);
+        width: 90%;
+        max-width: 500px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 1.8rem 2.8rem;
+        border-radius: 1rem;
+        box-shadow: 2px 8px 4px 0 #00000037;
+    }
+
+    .nav__logo{
+        text-align: center;
+    }
+
+    .logo{
+        height: 50px;
+        width: 50px;
+    }
+
+    .nav__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__link{
+        color: var(--body-color);
+        font-weight: var(--font-medium);
+        display: grid;
+        justify-items: center;
+        row-gap: .25rem;
+    }
+
+    .nav__link i{
+        font-size: 1.5rem;
+    }
+
+    .nav__link span{
+        display: none;
+    }
+}
+/* -================================= DESKTOP NAVIGATION CSS ================================- */
+@media screen and (min-width: 1024px){
+
+    .logo{
+        height: 50px;
+        width: 50px;
+    }
+
+    .nav__menu{
+        width: initial;
+        margin-left: auto;
+    }
+
+    .nav__list{
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav__link i{
+        display: none;
+    }
+
+    .nav__link{
+        color: var(--body-color);
+    }
+
+    .nav__link span{
+        font-size: var(--h3-font-size);
+        font-weight: 300;
+        font-family: var(--body-font);
+        display: contents;
+    }
+
+    .nav__link:hover{
+        color: var(--accent-color);
+    }
+}
+/* -======================================================================================- */
+
+
+/* -================================= SECTION 1 ================================- */
+
+.home{
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+    color: var(--body-color);
+}
+
+.home__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.home__subtitle{
+    text-align: center;
+}
+
+.home__title{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.home__title span{
+    color: var(--primary-color);
+}
+
+.home__buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.home__description{
+    font-size: var(--h2-font-size);
+}
+
+.home__location{
+    text-align: center;
+}
+
+.home__socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.home__social{
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    height: max-content;
+    width: max-content;
+    padding: 1rem;
+}
+
+.home__social i{
+    color: var(--body-color);
+    font-size: 2.5rem;
+}
+
+.home-bkgr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* -============================================================================- */
+
+
+/* -================================= SECTION 2 ================================- */
+.about{
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.about__container{
+    gap: 2.5rem;
+}
+
+.about__box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about__subtitle{
+    font-family: var(--title-font);
+    font-weight: var(--font-light);
+    color: var(--primary-color);
+}
+
+.about__title{
+    color: var(--accent-color);
+    margin-bottom: 0;
+}
+
+.about__description{
+    font-size: var(--h3-font-size);
+}
+
+.about__button{
+    width: 50%;
+    border-radius: 0;
+}
+
+.about__button span{
+    font-family: var(--title-font);
+    color: var(--text-color);
+}
+
+.about__modals{
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.about__modal{
+    position: relative;
+}
+
+.about__modal img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about__modal-title{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    color: var(--body-color);
+    font-family: var(--title-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+.about__modal-button{
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    display: grid;
+    place-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--body-color);
+    border: none;
+}
+
+.about__modal-button i{
+    font-size: var(--h2-font-size);
+}
+
+.about__popup{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #16306559;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: ease-in .3s;
+}
+
+.about__popup.active{
+    width: 100%;
+    opacity: 1;
+}
+
+.popup__container{
+    background-color: var(--body-color);
+    width: 100%;
+    height: max-content;
+    padding: 3rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.close__icon{
+    position: absolute;
+    top: 30%;
+    right: 3rem;
+}
+
+.close__icon i{
+    font-size: var(--big-font-size);
+    color: var(--primary-color);
+}
+
+.about__popup-title{
+    font-size: var(--h1-font-size);
+    font-family: var(--title-font);
+}
+
+.about__popup-description{
+    text-align: center;
+}
+/* -============================================================================- */
+
+
+/* -================================= SECTION 3 ================================- */
+.sermon{
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.sermon__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sermon__subtitle{
+    color: var(--primary-color);
+    font-family: var(--title-font);
+    font-weight: var(--font-light);
+}
+
+.sermon__title{
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 0;
+}
+
+.sermon__description{
+    text-align: center;
+}
+
+.sermon__modal-container{
+    gap: 2rem;
+}
+
+.sermon__modal{
+    background-color: var(--container-color);
+    color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 2.5rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.sermon__info{
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sermon__info-title{
+    font-size: var(--h2-font-size);
+}
+
+.sermon__info-description{
+    font-size: var(--h3-font-size);
+}
+
+.sermon__button{
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+}
+
+.sermon__button i{
+    font-size: var(--h2-font-size);
+    color: var(--body-color);
+}
+
+.sermon__modal-popup.active{
+    width: 100%;
+    opacity: 1;
+}
+
+.sermon__modal-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #16306589;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: ease-in .3s;
+}
+
+.sermon__close{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--text-color);
+    display: grid;
+    place-items: center;
+}
+
+.sermon__close i{
+    font-size: 2rem;
+}
+
+.sermon__modal-popup-container{
+    width: 100%;
+    height: max-content;
+    max-height: 500px;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--text-color);
+}
+
+.sermon__img-container{
+    position: relative;
+    display: grid;
+    place-items: center;
+    max-height: 300px;
+    width: 100%;
+}
+
+.sermon__img-container button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50% 50%);
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    color: var(--body-color);
+}
+
+.popup-img{
+    box-shadow: 0 2px 6px 0;
+}
+
+.donation__container{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 4rem 1rem;
+    color: var(--body-color);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.donation__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.donation__title{
+    color: var(--body-color);
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: var(--font-medium);
+}
+
+.donation__subtitle{
+    font-weight: var(--font-regular);
+}
+
+.donation__description{
+    text-align: center;
+}
+/* -============================================================================- */
+
+
+/* -================================= SECTION 4 ================================- */
+.location{
+    padding-top: 4rem;
+    color: var(--body-color);
+}
+
+.location__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.location__info-container{
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.container-alt{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location__subtitle{
+    font-family: var(--title-font);
+    font-weight: var(--font-regular);
+    color: var(--primary-color);
+    font-size: var(--h3-font-size);
+}
+
+.location__title{
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 0;
+}
+
+.contact__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__item{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact__icon{
+    height: 45px;
+    width: 45px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--body-color);
+}
+
+.contact__icon i{
+    font-size: 1.5rem;
+}
+
+.contact__item span{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+}
+/* -============================================================================- */
+
+/* -================================= FOOTER ================================- */
+.footer{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    background-color: #000000;
+}
+.copyright{
+    font-family: var(--title-font);
+    color: var(--body-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-light);
+    text-align: center;
+}
+
+.copyright span{
+    background: linear-gradient(to right, #A43ACB, #4717F7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-medium);
+}
+/* -=========================================================================- */
+
+
+
+/* -================================= CSS BREAKPOINTS ================================- */
+
+/* -==== For medium devices ====- */
+@media screen and (min-width: 700px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-left: 3rem;
+        margin-left: 3rem;
+    }
+
+    .button-outline{
+        width: 80%;
+    }
+
+    .button-fill{
+        width: 80%;
+    }
+
+    /* HOME SECTION */
+    .home__buttons{
+        flex-direction: row;
+    }
+
+    /* ABOUT SECTION */
+    .about__container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about__modals{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__modal{
+        max-height: 300px;
+    }
+
+    /* SERMON SECTION */
+
+    .sermon__modal-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* LOCATION SECTION */
+    .location__container{
+        flex-direction: row;
+    }
+
+}
+
+/* -==== For medium - large devices ====- */
+@media screen and (min-width: 1024px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ABOUT SECTION */
+    .about__modals{
+        grid-template-columns: repeat(4, 1fr);
+        height: 400px;
+    }
+
+    /* SERMON SECTION */
+    .sermon__modal-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* -==================================================================================- */
