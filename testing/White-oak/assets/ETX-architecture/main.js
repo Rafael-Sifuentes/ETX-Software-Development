@@ -1,5 +1,4 @@
 
-
 /*=============== SCROLL HEADER ===============*/
 const scrollHeader = () =>{
     const header = document.getElementById('header')
@@ -32,111 +31,84 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== ABOUT POP-UP ===============*/
-
-// Get references to the modal elements
-const popupContainer = document.getElementById('about-popup');
-const popupTitle = document.getElementById('about-title');
-const popupDescription = document.getElementById('about-description');
-const closeIcon = document.getElementById('close-icon');
-
-// Get references to the buttons
-const button1 = document.getElementById('button-1');
-const button2 = document.getElementById('button-2');
-const button3 = document.getElementById('button-3');
-const button4 = document.getElementById('button-4');
-
-// Define the data for each button
-const bibleStudy = {
-    title: 'Bible Study',
-    description: 'A description about Bible Study',
-};
-
-const upcomingEvents = {
-    title: 'Upcoming Events',
-    description: 'A description or list about upcoming events',
-};
-
-const sundaySchool = {
-    title: 'Sunday School',
-    description: 'A description about Sunday School',
-};
-
-const donate = {
-    title: 'Donate',
-    description: 'A description about donations goes here',
-};
-
-// Function to open the popup with the specified data
-function openPopup(data) {
-    popupTitle.textContent = data.title;
-    popupDescription.textContent = data.description;
-     popupContainer.classList.add('active'); // Add the 'active' class
-}
-
-// Function to close the popup
-function closePopup() {
-    popupContainer.classList.remove('active'); // Remove the 'active' class
-}
-
-// Add event listeners to the buttons
-button1.addEventListener('click', () => openPopup(bibleStudy));
-button2.addEventListener('click', () => openPopup(upcomingEvents));
-button3.addEventListener('click', () => openPopup(sundaySchool));
-button4.addEventListener('click', () => openPopup(donate));
-
-// Add event listener to close icon
-closeIcon.addEventListener('click', closePopup);
 
 
 
 
+    // Function to open the specified popup
+    function openAboutPopup(popupId) {
+        const popup = document.getElementById(popupId);
+        popup.classList.add('about-active');
+    }
 
-/*=============== SERMON POP-UP ===============*/
-const sermonItems = document.querySelectorAll('.sermon__modal');
-const sermonOpens = document.querySelectorAll('.sermon__button');
-const sermonCloses = document.querySelectorAll('.sermon__close');
+    // Function to close the popup
+    function closeAboutPopup(popupId) {
+        const popup = document.getElementById(popupId);
+        popup.classList.remove('about-active');
+    }
 
-function openSermon(index) {
-    const sermonPopup = sermonItems[index].querySelector('.sermon__modal-popup');
-    sermonPopup.classList.add('active');
-}
+    // Event listeners for each button
+    document.getElementById('about-1').addEventListener('click', function () {
+        openAboutPopup('about-popup-1');
+    });
 
-function closeSermon(index) {
-    const sermonPopup = sermonItems[index].querySelector('.sermon__modal-popup');
-    sermonPopup.classList.remove('active');
-}
+    document.getElementById('about-2').addEventListener('click', function () {
+        openAboutPopup('about-popup-2');
+    });
 
-sermonOpens.forEach((sermonOpen, index) => {
-    sermonOpen.addEventListener('click', () => openSermon(index));
-});
+    document.getElementById('about-3').addEventListener('click', function () {
+        openAboutPopup('about-popup-3');
+    });
 
-sermonCloses.forEach((sermonClose, index) => {
-    sermonClose.addEventListener('click', () => closeSermon(index));
-});
+    document.getElementById('about-4').addEventListener('click', function () {
+        openAboutPopup('about-popup-4');
+    });
 
+    // Event listener for the close button in each popup
+    document.getElementById('about-close-1').addEventListener('click', function () {
+        closeAboutPopup('about-popup-1');
+    });
 
-/*=============== SCROLL REVEAL JS ===============*/
-const sr = ScrollReveal({
-	distance: '90px',
-	duration: 2500,
-  })
-  
-  sr.reveal(`.top`,{
-	origin: 'top',
-  })
+    document.getElementById('about-close-2').addEventListener('click', function () {
+        closeAboutPopup('about-popup-2');
+    });
 
-  sr.reveal(` .bottom`,{
-	origin: 'bottom',
-  })
+    document.getElementById('about-close-3').addEventListener('click', function () {
+        closeAboutPopup('about-popup-3');
+    });
 
-  sr.reveal(`.left`,{
-    origin: 'left',
-  })
-
-  sr.reveal(`.right`,{
-    origin: 'right',
-  })
-
+    document.getElementById('about-close-4').addEventListener('click', function () {
+        closeAboutPopup('about-popup-4');
+    });
 
 
+
+    // Get all elements with class 'open-sermon'
+    const openSermonButtons = document.querySelectorAll('.open-sermon');
+
+    // Get all elements with class 'sermon-close'
+    const closeSermonButtons = document.querySelectorAll('.sermon__close');
+
+    // Get all elements with class 'sermon-popup'
+    const sermonPopups = document.querySelectorAll('.sermon__popup');
+
+    // Function to open the sermon popup
+    function openSermon(button) {
+        const popup = button.closest('.sermon__card').querySelector('.sermon__popup');
+        popup.classList.add('sermon-active');
+    }
+
+    // Function to close the sermon popup
+    function closeSermon(popup) {
+        popup.classList.remove('sermon-active');
+    }
+
+    // Attach event listeners dynamically to each 'open-sermon' button
+    openSermonButtons.forEach((button) => {
+        button.addEventListener('click', () => openSermon(button));
+    });
+
+    // Attach event listeners dynamically to each 'sermon-close' button
+    closeSermonButtons.forEach((button) => {
+        button.addEventListener('click', () => closeSermon(button.closest('.sermon__popup')));
+    });
