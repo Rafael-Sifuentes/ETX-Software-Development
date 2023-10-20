@@ -569,12 +569,38 @@ button {
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   border-radius: 1rem;
+  color: var(--text-color);
 }
 
 .about__popup-title {
   font-family: var(--title-font);
+}
+
+.upcoming__events-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.upcoming__event-item{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upcoming__event-item i{
+  color: var(--accent-color);
+}
+
+.event__description span{
+  font-weight: var(--font-bold);
+}
+
+.donate__button{
+  background-color: var(--accent-color);
 }
 /* -============================================================================- */
 
@@ -792,6 +818,7 @@ button {
 
 .location__container {
   gap: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .location__box-1,
