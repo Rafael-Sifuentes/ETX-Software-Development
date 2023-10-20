@@ -112,3 +112,27 @@ window.addEventListener('scroll', scrollActive)
     closeSermonButtons.forEach((button) => {
         button.addEventListener('click', () => closeSermon(button.closest('.sermon__popup')));
     });
+
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '80px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.section__subtitle, .description, .top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.section__title, .bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
