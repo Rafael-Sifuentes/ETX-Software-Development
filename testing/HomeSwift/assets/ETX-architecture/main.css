@@ -22,7 +22,7 @@
     --h1-font-size: 1.8rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 1.15rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
@@ -46,7 +46,7 @@
       --h1-font-size: 2.25rem;
       --h2-font-size: 1.5rem;
       --h3-font-size: 1.25rem;
-      --normal-font-size: 1rem;
+      --normal-font-size: 1.15rem;
       --small-font-size: .875rem;
       --smaller-font-size: .813rem;
     }
@@ -118,6 +118,7 @@ img{
 
 .description{
     font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
 }
 
 /* -======= BUTTONS ========- */
@@ -504,6 +505,7 @@ img{
 /* -================================= CONTACT SECTION ================================- */
 .contact{
     padding-top: 5rem;
+    padding-bottom: 4rem;
 }
 
 .contact__container{
@@ -534,11 +536,11 @@ img{
     padding: 1rem;
     background-color: var(--container-color);
     color: var(--text-color-w);
-    border-radius: .5rem;
 }
 
 .contact__list-item i{
     font-size: 2rem;
+    color: var(--accent-color);
 }
 
 .contact__list-item span{
@@ -546,9 +548,58 @@ img{
     font-weight: var(--font-semi-bold);
     font-size: var(--h3-font-size);
 }
+
+.contact__form{
+    gap: 3rem;
+}
+
+.form__group label{
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+}
+
+input,
+textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid var(--container-color);
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.contact-button{
+    background-color: var(--primary-color);
+    border: none;
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+}
 /* -============================================================================- */
 
 /* -================================= FOOTER ================================- */
+.footer{
+    background-color: #000000;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.copyright{
+    font-family: var(--body-font);
+    color: var(--body-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-regular);
+    text-align: center;
+}
+
+.copyright span{
+    background: linear-gradient(to right, #A43ACB, #4717F7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-medium);
+}
 /* -=========================================================================- */
 
 
