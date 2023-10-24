@@ -1,0 +1,557 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Condensed:wght@500;600;700&display=swap');
+
+/* -=================================================================- */
+/* -================================= VARIABLE CSS ================================- */
+:root{
+
+    /* == MAIN COLORS == */
+    --primary-color: #FF8E26;
+    --accent-color: #26CBFF;
+    --text-color-w: #CCE7FF;
+    --text-color-b: #000000;
+    --container-color: #002235;
+    --body-color: #CCE7FF;
+    /* ================= */
+    /* == FONT & TYPOGRAPHY == */
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'Roboto Condensed', sans-serif;
+    --biggest-font-size: 2.7rem;
+    --big-font-size: 2.5rem;
+    --title-font-size: 2.3rem;
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    /* ================= */
+    /* =========Z INDEX======== */
+    --z-fixed: 10;
+    /* ================= */
+}
+
+/* == RESPONSIVE FONT & TYPOGRAPHY == */
+@media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --big-font-size: 3.2rem;
+      --title-size: 2.7rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+/* -=================================================================- */
+
+/* -================================= BASE ================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3{
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* -================================= REUSABLE CSS CLASSES ================================- */
+.container{
+    max-width: 968px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.grid{
+    display: grid;
+}
+
+.section{
+    position: relative;
+    padding: 5rem 0 0;
+    overflow-x: hidden;
+}
+
+.section__title{
+    font-size: var(--title-font-size);
+    font-weight: var(--font-bold);
+    font-family: var(--title-font);
+    margin-bottom: 1.5rem;
+}
+
+.section__subtitle{
+    font-size: var(--h3-font-size);
+}
+
+.description{
+    font-size: var(--normal-font-size);
+}
+
+/* -======= BUTTONS ========- */
+.button{
+    width: 250px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.button span{
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+}
+
+.button i{
+    font-size: var(--h2-font-size);
+}
+
+/* -=================================================================- */
+
+/* -================================= HEADER & NAVIGATION ================================- */
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: 5.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    width: 155px;
+    height: 45px;
+}
+
+.nav__toggle,
+.nav__close{
+    display: flex;
+    font-size: 1.5rem;
+    color: var(--text-color-w);
+    cursor: pointer;
+}
+
+/* -================================= MOBILE NAVIGATION CSS ================================- */
+@media screen and (max-width: 1023px){
+
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: rgba(7, 32, 50, 0.619);
+        width: 75%;
+        height: 100%;
+        padding: 8.5rem 0 0 3rem;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition: right .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+.nav__link{
+    color: var(--text-color-w);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h3-font-size);
+    transition: color .4s;
+}
+
+.nav__link:hover{
+    color: var(--primary-color);
+}
+
+.nav__close{
+    position: absolute;
+    top: 2.5rem;
+    right: 1.5rem;
+    font-size: 2.2rem;
+}
+
+/* SHOW MENU */
+.show-menu{
+    right: 0;
+}
+
+/* ADD BLUR TO HEADER */
+.blur-header{
+    background-color: transparent;
+}
+
+/* Active link */
+.active-link{
+    color: var(--primary-color);
+}
+
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: rgba(8, 33, 64, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 8px 0 #0000009a;
+}
+
+/* -================================= DESKTOP NAVIGATION CSS ================================- */
+@media screen and (min-width: 1023px){
+
+    .nav{
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__close,
+    .nav__toggle{
+        display: none;
+    }
+
+    .nav__list{
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .nav__menu{
+        width: initial;
+    }
+
+    .blur-header::after{
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+    }
+
+}
+/* -======================================================================================- */
+
+
+/* -================================= HOME SECTION ================================- */
+.home{
+    padding-top: 8rem;
+    padding-bottom: 0;
+    background-color: var(--container-color);
+    color: var(--text-color-w);
+}
+
+.home__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    z-index: 1;
+    position: relative;
+}
+
+.home__title{
+    margin-bottom: 0;
+}
+
+.home__title span{
+    color: var(--accent-color);
+}
+
+.home__list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.home__list-item{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.home__button{
+    background-color: var(--primary-color);
+    color: var(--text-color-w);
+}
+
+.home__button i{
+    color: var(--container-color);
+}
+
+.home__logo{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.home__img{
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+/* -============================================================================- */
+
+
+/* -================================= ABOUT SECTION ================================- */
+.about{
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.about__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__title{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.about__title span{
+    color: var(--primary-color);
+}
+
+.about__subtitle{
+    text-align: center;
+}
+
+.line{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.about__modals-container{
+    gap: 2rem;
+}
+
+.about__modal{
+    width: 100%;
+    height: max-content;
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--container-color);
+    color: var(--text-color-w);
+    box-shadow: 0 3px 5px 3px #0000009a;
+}
+
+.about__modal i{
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
+.about__modal-title{
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+}
+/* -============================================================================- */
+
+
+/* -================================= PROCESS SECTION ================================- */
+.process{
+    padding-top: 5rem;
+    background-color: #033147;
+    color: var(--text-color-w);
+}
+
+.process__container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 5rem;
+}
+
+.process__title{
+    margin-bottom: 0;
+}
+
+.process__title span{
+    color: var(--primary-color);
+}
+
+.process__steps-container{
+    gap: 2rem;
+}
+
+.process__step{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step__title{
+    margin-bottom: 1rem;
+    font-size: var(--h2-font-size);
+}
+
+.step__arrow{
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+
+.step__arrow-alt{
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.process__steps-container .process__step:nth-child(3){
+    flex-direction: row;
+    align-items: center;
+}
+
+.process__button{
+    color: var(--text-color-b);
+    background-color: var(--accent-color);
+}
+
+.process__button-alt{
+    background-color: var(--primary-color);
+    color: var(--text-color-w);
+}
+
+.process__bottom{
+    background-color: var(--body-color);
+}
+
+.process__bottom-container{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.question__title{
+    color: var(--text-color-b);
+}
+
+.question__description{
+    color: var(--text-color-b);
+}
+
+.process__button-3{
+    background-color: var(--primary-color);
+}
+
+.process__button-3 span{
+    color: var(--text-color-w);
+}
+
+.process__button-3 i{
+    color: var(--container-color);
+}
+/* -============================================================================- */
+
+
+/* -================================= CONTACT SECTION ================================- */
+.contact{
+    padding-top: 5rem;
+}
+
+.contact__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact__title{
+    margin-bottom: 0;
+}
+
+.contact__title span{
+    color: var(--primary-color);
+}
+
+.contact__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__list-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: max-content;
+    padding: 1rem;
+    background-color: var(--container-color);
+    color: var(--text-color-w);
+    border-radius: .5rem;
+}
+
+.contact__list-item i{
+    font-size: 2rem;
+}
+
+.contact__list-item span{
+    font-family: var(--title-font);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h3-font-size);
+}
+/* -============================================================================- */
+
+/* -================================= FOOTER ================================- */
+/* -=========================================================================- */
+
+
+
+/* -================================= CSS BREAKPOINTS ================================- */
+/* -==================================================================================- */
