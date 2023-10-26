@@ -128,42 +128,42 @@ sr.reveal(`.layer-1, .layer-2`,{
 
 /*=============== CLIENT PORTAL LOGIN ===============*/
 
-var userCredentials = {
-  tint_shoptx: {
-    password : "tint-0310",
-    htmlFile : "assets/dashboards/tintdash.html"
-  },
+// var userCredentials = {
+//   tint_shoptx: {
+//     password : "tint-0310",
+//     htmlFile : "assets/dashboards/tintdash.html"
+//   },
 
-  // admin2: {
-  //   password : "El mendigo",
-  //   htmlFile : "assets/dashboards/tintdash.html"
-  // },
+//   // admin2: {
+//   //   password : "El mendigo",
+//   //   htmlFile : "assets/dashboards/tintdash.html"
+//   // },
 
-  // admin3: {
-  //   password : "El mendigo",
-  //   htmlFile : "assets/dashboards/tintdash.html"
-  // },
-  // Add more username-password mappings as needed
-}
+//   // admin3: {
+//   //   password : "El mendigo",
+//   //   htmlFile : "assets/dashboards/tintdash.html"
+//   // },
+//   // Add more username-password mappings as needed
+// }
 
-function authenticateUser(event) {
-  event.preventDefault(); // Prevent form submission
+// function authenticateUser(event) {
+//   event.preventDefault(); // Prevent form submission
 
-  // Retrieve username and password from the form
-  var username = document.getElementById("id").value;
-  var password = document.getElementById("password").value;
+//   // Retrieve username and password from the form
+//   var username = document.getElementById("id").value;
+//   var password = document.getElementById("password").value;
 
-  // Check if the entered credentials exist in the userCredentials object
-  if (username in userCredentials && password === userCredentials[username].password) {
-    alert("Authentication successful! Redirecting to the dashboard...");
+//   // Check if the entered credentials exist in the userCredentials object
+//   if (username in userCredentials && password === userCredentials[username].password) {
+//     alert("Authentication successful! Redirecting to the dashboard...");
 
-    // Redirect to the corresponding HTML file
-    window.location.href = userCredentials[username].htmlFile;
-  } else {
-    alert("Invalid username or password. Please try again.");
-  }
-}
+//     // Redirect to the corresponding HTML file
+//     window.location.href = userCredentials[username].htmlFile;
+//   } else {
+//     alert("Invalid username or password. Please try again.");
+//   }
+// }
 
-var form = document.getElementById("login-form");
-form.addEventListener("submit", authenticateUser);
+// var form = document.getElementById("login-form");
+// form.addEventListener("submit", authenticateUser);
 
