@@ -35,19 +35,29 @@
                 <ul class="nav__list">
 
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
+                        <a href="#home" class="nav__link english-text">Home</a>
+                        <a href="#home" class="nav__link spanish-text">Inicio</a>
                     </li>
-
+                    
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
+                        <a href="#about" class="nav__link english-text">About</a>
+                        <a href="#about" class="nav__link spanish-text">Acerca de</a>
                     </li>
-
+                    
                     <li class="nav__item">
-                        <a href="#process" class="nav__link">The process</a>
+                        <a href="#process" class="nav__link english-text">The process</a>
+                        <a href="#process" class="nav__link spanish-text">El proceso</a>
                     </li>
-
+                    
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
+                        <a href="#contact" class="nav__link english-text">Contact</a>
+                        <a href="#contact" class="nav__link spanish-text">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <button id="language-toggle" class="nav__link">
+                            <span class="english-text">Español</span>
+                            <span class="spanish-text">English</span>
+                        </button>
                     </li>
 
                 </ul>
@@ -74,23 +84,36 @@
         <!-- =========================== HOME SECTION =============================== -->
         <section class="home section" id="home">
             <div class="home__container container">
-                <h1 class="home__title section__title">Solutions for your home <br> Fast and <span>Easy</span> !</h1>
-
+                <h1 class="home__title section__title english-text bottom">Solutions for your home <br> Fast and <span>Easy</span>!</h1>
+            
+                <h1 class="home__title section__title spanish-text">Soluciones para tu casa <br> Rápidas y <span>Fáciles</span>!</h1>
+            
                 <ul class="home__list">
-                    <li class="home__list-item">No Fee's</li>
-                    <li class="home__list-item">In Cash</li>
-                    <li class="home__list-item">Any Condition</li>
+                    <li class="home__list-item english-text right">No Fees</li>
+                    <li class="home__list-item english-text right">In Cash</li>
+                    <li class="home__list-item english-text right">Any Condition</li>
+            
+                    <li class="home__list-item spanish-text">Sin cargos</li>
+                    <li class="home__list-item spanish-text">En efectivo</li>
+                    <li class="home__list-item spanish-text">Cualquier condición</li>
                 </ul>
-
-                <p class="home__description description">
+            
+                <p class="home__description description english-text left">
                     At Home Swift we understand the urgency of saving your home. Facing foreclosure is
                     overwhelming, but we're here to help with a quick and hassle-free solution.
                 </p>
-
-                <a href="#contact" class="home__button button">
-                    <span>Get a estimate</span>
+            
+                <p class="home__description description spanish-text">
+                    En Home Swift entendemos la urgencia de salvar tu hogar. Enfrentar el embargo es abrumador,
+                    pero estamos aquí para ayudar con una solución rápida y sin complicaciones.
+                </p>
+            
+                <a href="#contact" class="home__button button top">
+                    <span class="english-text">Get Your Estimate</span>
+                    <span class="spanish-text">Obtén tu Presupuesto</span>
                     <i class="ri-arrow-right-circle-fill"></i>
                 </a>
+            
             </div>
 
             <img src="assets/IMG/Home-logo.svg" alt="Home background logo" class="home__logo">
@@ -102,12 +125,16 @@
         <!-- =========================== ABOUT SECTION =============================== -->
         <section class="about section" id="about">
             <div class="about__container container">
-                <h2 class="about__title section__title">
+                <h2 class="about__title section__title english-text bottom">
                     Welcome to the <span>Lifeline</span> your
                     home needs.
                 </h2>
 
-                <h3 class="about__subtitle section__subtitle">
+                <h2 class="about__title section__title spanish-text">
+                    Bienvenido a la <span>Línea de Vida</span> que tu hogar necesita.
+                </h2>
+
+                <h3 class="about__subtitle section__subtitle english-text left">
                     Our mission is simple:
                     to provide cash solutions for
                     homeowners on the brink of
@@ -118,22 +145,34 @@
                     mind.
                 </h3>
 
+                <h3 class="about__subtitle section__subtitle spanish-text">
+                    Nuestra misión es simple:
+                    proporcionar soluciones en efectivo para
+                    propietarios al borde de la
+                    ejecución hipotecaria. Creemos en la acción
+                    rápida y procesos directos,
+                    asegurando que puedas seguir adelante con tranquilidad.
+                </h3>
+
                 <div class="line"></div>
 
                 <div class="about__modals-container grid">
-                    <div class="about__modal">
+                    <div class="about__modal left">
                         <i class="ri-money-dollar-circle-line"></i>
-                        <h2 class="about__modal-title">Instant Cash offer</h2>
+                        <h2 class="about__modal-title english-text">Instant Cash offer</h2>
+                        <h2 class="about__modal-title spanish-text">Oferta de Efectivo Instantánea</h2>
                     </div>
 
-                    <div class="about__modal">
+                    <div class="about__modal top">
                         <i class="ri-close-circle-line"></i>
-                        <h2 class="about__modal-title">No hidden Fee's</h2>
+                        <h2 class="about__modal-title english-text">No hidden Fee's</h2>
+                        <h2 class="about__modal-title spanish-text">Sin cargos ocultos</h2>
                     </div>
 
-                    <div class="about__modal">
+                    <div class="about__modal right">
                         <i class="ri-home-4-line"></i>
-                        <h2 class="about__modal-title">Any condition</h2>
+                        <h2 class="about__modal-title english-text">In any condition</h2>
+                        <h2 class="about__modal-title spanish-text">En cualquier condición</h2>
                     </div>
                 </div>
             </div>
@@ -142,145 +181,209 @@
 
         <!-- =========================== PROCESS SECTION =============================== -->
         <section class="process section" id="process">
-            <div class="process__container container">
-                <h2 class="process__title section__title">How it works in <span>3 Easy</span> steps</h2>
 
-                <div class="process__steps-container grid">
-
-                    <div class="process__step">
-                        <div>
-                            <h3 class="step__title">Submit your details</h3>
-
-                            <p class="step__description description">
-                                Fill out a simple form with your property details.
-                                The more information, the quicker we can provide
-                                assistance.
-                            </p>
+            <div class="process__background">
+                <div class="process__container container">
+                    <h2 class="process__title section__title english-text bottom">How it works in <span>3 Easy</span> steps</h2>
+            
+                    <h2 class="process__title section__title spanish-text">Cómo funciona en <span>3 Sencillos</span> pasos</h2>
+            
+                    <div class="process__steps-container grid">
+            
+                        <div class="process__step top">
+                            <div>
+                                <h3 class="step__title english-text">Submit your details</h3>
+                                <h3 class="step__title spanish-text">Envía tus detalles</h3>
+            
+                                <p class="step__description description english-text">
+                                    Fill out a simple form with your property details.
+                                    The more information, the quicker we can provide
+                                    assistance.
+                                </p>
+            
+                                <p class="step__description description spanish-text">
+                                    Completa un formulario simple con los detalles de tu propiedad.
+                                    Cuanta más información, más rápido podemos proporcionar
+                                    asistencia.
+                                </p>
+                            </div>
+            
+                            <i class="ri-arrow-down-line step__arrow"></i>
                         </div>
-
-                        <i class="ri-arrow-down-line step__arrow"></i>
+            
+                        <div class="process__step top">
+                            <div>
+                                <h3 class="step__title english-text">Swift evaluation</h3>
+                                <h3 class="step__title spanish-text">Evaluación rápida</h3>
+            
+                                <p class="step__description description english-text">
+                                    We conduct a rapid evaluation
+                                    of your property, considering
+                                    all relevant factors.
+                                </p>
+            
+                                <p class="step__description description spanish-text">
+                                    Realizamos una evaluación rápida
+                                    de tu propiedad, teniendo en cuenta
+                                    todos los factores relevantes.
+                                </p>
+                            </div>
+            
+                            <i class="ri-arrow-down-line step__arrow"></i>
+                        </div>
+            
+                        <div class="process__step top">
+                            <div>
+                                <h3 class="step__title english-text">Instant cash offer</h3>
+                                <h3 class="step__title spanish-text">Oferta de efectivo instantánea</h3>
+            
+                                <p class="step__description description english-text">
+                                    Receive a fair, all-cash offer
+                                    within hours. No waiting, no
+                                    uncertainties, just a straightforward
+                                    solution.
+                                </p>
+            
+                                <p class="step__description description spanish-text">
+                                    Recibe una oferta justa de efectivo
+                                    en horas. Sin esperas, sin
+                                    incertidumbres, solo una solución
+                                    directa.
+                                </p>
+                            </div>
+            
+                            <i class="ri-cash-line step__arrow-alt"></i>
+                        </div>
                     </div>
-
-                    <div class="process__step">
-                        <div>
-                            <h3 class="step__title">Swift evaluation</h3>
-
-                            <p class="step__description description">
-                                We conduct a rapid evaluation
-                                of your property, considering
-                                all relevant factors.
-                            </p>
-                        </div>
-
-                        <i class="ri-arrow-down-line step__arrow"></i>
-                    </div>
-
-                    <div class="process__step">
-                        <div>
-                            <h3 class="step__title">Instant cash offer</h3>
-
-                            <p class="step__description description">
-                                Receive a fair, all-cash offer
-                                within hours. No waiting, no
-                                uncertainties, just straight
-                                forward solution.
-                            </p>
-                        </div>
-
-                        <i class="ri-cash-line step__arrow-alt"></i>
+            
+                    <div class="line"></div>
+            
+                    <div class="process__buttons-container">
+            
+                        <a href="#contact" class="process__button button left">
+                            <span class="english-text">Get Started</span>
+                            <span class="spanish-text">Comenzar</span>
+                            <i class="ri-arrow-right-circle-fill"></i>
+                        </a>
+            
+                        <a href="tel:8322706213" class="process__button-alt button right">
+                            <span>(832) 270-6213</span>
+                            <i class="ri-phone-fill"></i>
+                        </a>
+            
                     </div>
                 </div>
-
-                <a href="#contact" class="process__button button">
-                    <span>Get Started</span>
-                    <i class="ri-arrow-right-circle-fill"></i>
-                </a>
-
-                <a href="tel:8322706213" class="process__button-alt button">
-                    <span>(832) 270 6213</span>
-                    <i class="ri-phone-fill"></i>
-                </a>
-
-                
             </div>
-
+            
             <div class="process__bottom">
                 <div class="process__bottom-container container">
                     <div>
-                        <h2 class="question__title section__title">Why should I act now?</h2>
-                        <p class="question__description description">
+                        <h2 class="question__title section__title english-text left">Why should I act now?</h2>
+                        <h2 class="question__title section__title spanish-text">¿Por qué debo actuar ahora?</h2>
+            
+                        <p class="question__description description english-text bottom">
                             Don't wait until it's too late. Foreclosure moves
                             quickly, but so do we. Take the first step towards
                             financial relief and secure your home's future.
                         </p>
+            
+                        <p class="question__description description spanish-text">
+                            No esperes hasta que sea demasiado tarde. La ejecución hipotecaria avanza
+                            rápidamente, pero nosotros también. Da el primer paso hacia el
+                            alivio financiero y asegura el futuro de tu hogar.
+                        </p>
                     </div>
-
+            
                     <div class="line"></div>
-
+            
                     <div>
-                        <h2 class="question__title section__title">Contact us today !</h2>
-                        <p class="question__description description">
+                        <h2 class="question__title section__title english-text right">Contact us today!</h2>
+                        <h2 class="question__title section__title spanish-text">¡Contáctanos hoy!</h2>
+            
+                        <p class="question__description description english-text top">
                             Ready to take control? Contact us today to start the process.
                             Your home deserves a fighting chance, and
                             we're here to provide it.
                         </p>
+            
+                        <p class="question__description description spanish-text">
+                            ¿Listo para tomar el control? Contáctanos hoy para comenzar el proceso.
+                            Tu hogar merece una oportunidad de lucha, y
+                            estamos aquí para proporcionarla.
+                        </p>
                     </div>
-
+            
                     <a href="#contact" class="button process__button-3">
-                        <span>Take Action</span>
+                        <span class="english-text">Take Action</span>
+                        <span class="spanish-text">Tomar Acción</span>
                         <i class="ri-arrow-right-circle-fill"></i>
                     </a>
                 </div>
-
+            
                 <img src="assets/IMG/Process-img.png" alt="Process image" class="process__img">
             </div>
+            
         </section>
         <!-- ========================================================== -->
 
         <!-- =========================== CONTACT SECTION =============================== -->
         <section class="contact section" id="contact">
             <div class="contact__container container">
-                <h2 class="contact__title section__title">Get your <span>Quick</span> evaluation</h2>
-                <h3 class="contact__subtitle section__subtitle">
+                <h2 class="contact__title section__title english-text right">Get your <span>Quick</span> evaluation</h2>
+                <h2 class="contact__title section__title spanish-text">Obtén tu evaluación <span>Rápida</span></h2>
+            
+                <h3 class="contact__subtitle section__subtitle english-text bottom">
                     Ready to take the first step
-                    toward saving your home ?
-                    Fill out the form below to 
+                    toward saving your home?
+                    Fill out the form below to
                     receive a rapid
                     evaluation and a cash offer
                     within hours.
                 </h3>
-
+            
+                <h3 class="contact__subtitle section__subtitle spanish-text">
+                    ¿Listo para dar el primer paso
+                    para salvar tu hogar?
+                    Completa el formulario a continuación para
+                    recibir una evaluación rápida y una oferta de efectivo
+                    en pocas horas.
+                </h3>
+            
                 <ul class="contact__list">
-                    <li class="contact__list-item">
+                    <a href="tel:8322706213" class="contact__list-item right">
                         <i class="ri-phone-fill"></i>
                         <span>(832) 270 6213</span>
-                    </li>
-
-                    <li class="contact__list-item">
+                    </a>
+            
+                    <a href="javascript:window.open('mailto:raulg@homeswifthouston.com', '_blank');" target="_blank" class="contact__list-item left">
                         <i class="ri-mail-send-fill"></i>
-                        <span>raul@homeswifthouston.com</span>
-                    </li>
+                        <span>raulg@homeswifthouston.com</span>
+                    </a>
                 </ul>
-
+            
                 <form class="contact__form grid" id="contact-form">
-
+            
                     <div class="form__group">
-                        <label for="contact-name">Name</label>
+                        <label for="contact-name" class="english-text">Name</label>
+                        <label for="contact-name" class="spanish-text">Nombre</label>
                         <input type="text" class="form__text" required id="contact-name">
                     </div>
-
+            
                     <div class="form__group">
-                        <label for="contact-info">Email or Phone number</label>
+                        <label for="contact-info" class="english-text">Email or Phone number</label>
+                        <label for="contact-info" class="spanish-text">Correo electrónico o número de teléfono</label>
                         <input type="text" class="form__text" required id="contact-info">
                     </div>
-
+            
                     <div class="form__group">
-                        <label for="contact-property">Property Address</label>
+                        <label for="contact-property" class="english-text">Property Address</label>
+                        <label for="contact-property" class="spanish-text">Dirección de la propiedad</label>
                         <input type="text" class="form__text" required id="contact-property">
                     </div>
-
+            
                     <button type="send" class="button contact-button">
-                        Send form
+                        <span class="english-text">Send form</span>
+                        <span class="spanish-text">Enviar formulario</span>
                         <i class="ri-send-plane-fill"></i>
                     </button>
                 </form>

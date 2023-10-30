@@ -56,3 +56,66 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
+
+
+
+document.getElementById('language-toggle').addEventListener('click', function() {
+    // Toggle visibility of English and Spanish text
+    var englishElements = document.querySelectorAll('.english-text');
+    var spanishElements = document.querySelectorAll('.spanish-text');
+
+    // Function to hide English and show Spanish text
+    function switchToSpanish() {
+        englishElements.forEach(function(el) {
+            el.style.display = 'none';
+        });
+
+        spanishElements.forEach(function(el) {
+            el.style.display = 'block';
+        });
+    }
+
+    // Function to hide Spanish and show English text
+    function switchToEnglish() {
+        englishElements.forEach(function(el) {
+            el.style.display = 'block';
+        });
+
+        spanishElements.forEach(function(el) {
+            el.style.display = 'none';
+        });
+    }
+
+    // Check if English text is currently visible
+    var isEnglishVisible = (englishElements[0].style.display !== 'none' && englishElements[0].style.display !== '');
+
+    // Toggle between English and Spanish based on current visibility
+    if (isEnglishVisible) {
+        switchToSpanish();
+    } else {
+        switchToEnglish();
+    }
+});
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '80px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })

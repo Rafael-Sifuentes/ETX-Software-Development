@@ -121,6 +121,15 @@ img{
     font-weight: var(--font-medium);
 }
 
+.english-text{
+    transition: ease-in-out .3s;
+}
+
+.spanish-text {
+    display: none;
+    transition: ease-in-out .3s;
+}
+
 /* -======= BUTTONS ========- */
 .button{
     width: 250px;
@@ -173,6 +182,11 @@ img{
     font-size: 1.5rem;
     color: var(--text-color-w);
     cursor: pointer;
+}
+
+.nav__item button{
+    background-color: transparent;
+    border: none;
 }
 
 /* -================================= MOBILE NAVIGATION CSS ================================- */
@@ -266,6 +280,11 @@ img{
         width: initial;
     }
 
+    .nav__link{
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+    }
+
     .blur-header::after{
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
@@ -335,7 +354,7 @@ img{
     width: 100%;
     object-fit: cover;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 /* -============================================================================- */
 
@@ -344,6 +363,7 @@ img{
 .about{
     padding-top: 6rem;
     padding-bottom: 3rem;
+    background-color: var(--body-color);
 }
 
 .about__container{
@@ -407,9 +427,13 @@ img{
 
 /* -================================= PROCESS SECTION ================================- */
 .process{
-    padding-top: 5rem;
-    background-color: #033147;
+    padding-top: 0;
     color: var(--text-color-w);
+}
+
+.process__background{
+    background-color: var(--container-color);
+    padding-top: 6rem;
 }
 
 .process__container{
@@ -457,6 +481,12 @@ img{
     align-items: center;
 }
 
+.process__buttons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .process__button{
     color: var(--text-color-b);
     background-color: var(--accent-color);
@@ -468,24 +498,21 @@ img{
 }
 
 .process__bottom{
-    background-color: var(--body-color);
+    background-color: transparent;
+    position: relative;
 }
 
 .process__bottom-container{
+    position: relative;
     padding-top: 5rem;
     padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     align-items: center;
-}
-
-.question__title{
-    color: var(--text-color-b);
-}
-
-.question__description{
-    color: var(--text-color-b);
+    z-index: 1;
+    color: var(--text-color-w);
+    background-color: transparent;
 }
 
 .process__button-3{
@@ -499,6 +526,16 @@ img{
 .process__button-3 i{
     color: var(--container-color);
 }
+
+.process__img{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 /* -============================================================================- */
 
 
@@ -506,6 +543,7 @@ img{
 .contact{
     padding-top: 5rem;
     padding-bottom: 4rem;
+    background-color: var(--body-color);
 }
 
 .contact__container{
@@ -605,4 +643,76 @@ textarea{
 
 
 /* -================================= CSS BREAKPOINTS ================================- */
+
+/* -==== For medium devices ====- */
+@media screen and (min-width: 700px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+
+    /* HOME SECTION */
+    .home{
+        overflow: hidden;
+    }
+
+    .home__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        filter: opacity(.5);
+    }
+
+    /* ABOUT SECTION */
+    .about__modals-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__modal{
+        text-align: center;
+    }
+
+    /* PROCESS SECTION */
+    .process__buttons-container{
+        flex-direction: row;
+    }
+
+    /* CONTACT SECTION */
+    .contact__list{
+        flex-direction: row;
+    }
+}
+
+/* -==== For medium - large devices ====- */
+@media screen and (min-width: 1024px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* PROCESS SECTION */
+    .process__steps-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .process__step{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .step__arrow{
+        transform: rotate(-90deg);
+    }
+
+    /* CONTACT SECTION */
+    .contact__form{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /* -==================================================================================- */
