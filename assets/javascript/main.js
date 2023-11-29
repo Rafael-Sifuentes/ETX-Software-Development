@@ -32,7 +32,6 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-
 /*==================== SWIPER ====================*/
 var swiper = new Swiper(".work__container", {
 

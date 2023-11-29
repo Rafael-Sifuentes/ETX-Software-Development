@@ -313,6 +313,7 @@ img{
     .nav{
         display: flex;
         justify-content: space-around;
+        overflow: hidden;
     }
 
     .nav__menu{
@@ -359,6 +360,11 @@ img{
 
     .nav__link span{
         display: none;
+    }
+
+    .nav__link button{
+        color: transparent;
+        border: none;
     }
 }
 /* -================================= DESKTOP NAVIGATION CSS ================================- */
