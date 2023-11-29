@@ -57,6 +57,12 @@ const scrollActive = () =>{
 
 window.addEventListener('scroll', scrollActive)
 
+/*=============== ABOUT PARALLAX ===============*/
+document.addEventListener('DOMContentLoaded', function () {
+	// Initialize Rellax
+	var rellax = new Rellax('.parallax-img-container-1, .parallax-img-container-2');
+});
+
 /*=============== SWIPER ===============*/
 
 
@@ -64,6 +70,8 @@ var swiper = new Swiper(".about-featured-box", {
 	spaceBetween: 30,
 	centeredSlides: true,
 	loop: true,
+
+
 	autoplay: {
 	  delay: 2000,
 	  disableOnInteraction: true,

@@ -104,8 +104,15 @@
         <section class="about section" id="about">
             <div class="about__container">
 
-                <div class="about-image-box container">
-                    <img src="assets/IMG/About-image.png" alt="Two images of smoked brisket" class="about-image">
+                <div class="about-scroll-container">
+                    <div class="about-image-box container" id="parallax-container">
+                        <div class="parallax-img-container-1" data-rellax-speed="-0.9">
+                            <img src="assets/IMG/parallax-image-1.png" alt="" class="parallax-img-1">
+                        </div>
+                        <div class="parallax-img-container-2" data-rellax-speed="0.5">
+                            <img src="assets/IMG/parallax-image-2.png" alt="" class="parallax-img-2">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="about-contents-box container">
@@ -147,6 +154,8 @@
                 </div>
 
             </div>
+
+            
 
             <div class="about-featured-box swiper">
 
@@ -413,7 +422,6 @@
                     </button>
                 </div>
 
-
             </div>
 
             <img src="assets/IMG/Sauce-background-img.svg" alt="" class="sauce-background-image">
@@ -435,6 +443,8 @@
     <!-- =========================== JAVASCRIPT LINKS =============================== -->
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- PARALLAX JS -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- MAIN JS -->
