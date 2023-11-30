@@ -67,27 +67,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 var swiper = new Swiper(".about-featured-box", {
-	spaceBetween: 30,
-	centeredSlides: true,
-	loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
 
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: true,
+    },
 
-	autoplay: {
-	  delay: 2000,
-	  disableOnInteraction: true,
-	},
+    speed: 2500,
 
-	navigation: {
-	  nextEl: ".button-next",
-	  prevEl: ".button-prev",
-	},
-  });
+    freeMode: true, // Enable free mode
+	sticky: false,
 
+    breakpoints: {
+        700: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+
+		1024: {
+			slidesPerView: 3,
+		},
+    },
+
+    navigation: {
+        nextEl: ".button-next",
+        prevEl: ".button-prev",
+    },
+});
 
 var sauceSwiper = new Swiper(".sauce__container", {
 	spaceBetween : 30,
 	centeredSlides: true,
 	loop: true,
+	spped: 3500,
 
 	effect: "creative",
       creativeEffect: {
@@ -102,5 +117,6 @@ var sauceSwiper = new Swiper(".sauce__container", {
 
 	navigation: {
 		nextEl: ".next-sauce-btn",
+		prevEl: ".prev-sauce-btn",
 	  },
 })
