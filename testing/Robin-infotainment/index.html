@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/ETX-architecture/main.css">
+    <title>Infotainment</title>
+</head>
+<body>
+
+    <header class="header" id="header">
+
+        <h1 class="header__username">Rafael's 2017 Challenger</h1>
+
+        <div class="header__direction">
+            <i class="ri-arrow-up-s-fill direction__arrow" id="direction-arrow"></i>
+            <p class="directon__indication" id="direction-indicator">S</p>
+        </div>
+
+        <div class="header__info">
+
+            <p class="header__temp">57° out</p>
+
+            <i class="ri-lock-line system__symbol"></i>
+
+            <i class="ri-bluetooth-fill system__symbol"></i>
+
+            <div class="header__date">
+                <p id="month">November</p>
+                <p id="date">28</p>
+                <p id="year">2023</p>
+            </div>
+
+            <div class="header__time">
+                <p id="time">9:41</p>
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav class="navigation">
+        <a href="#" class="nav-button">
+            <img src="assets/IMG/Home-icon.png" alt="home icon" class="nav-button-icon">
+        </a>
+
+        <a href="#" class="nav-button">
+            <img src="assets/IMG/Navigation-icon.png" alt="home icon" class="nav-button-icon">
+        </a>
+
+        <a href="#" class="nav-button">
+            <img src="assets/IMG/Fan-icon.png" alt="home icon" class="nav-button-icon">
+        </a>
+
+        <a href="#" class="nav-button">
+            <img src="assets/IMG/Music-icon.png" alt="home icon" class="nav-button-icon">
+        </a>
+
+        <a href="#" class="nav-button">
+            <img src="assets/IMG/Phone-icon.png" alt="home icon" class="nav-button-icon">
+        </a>
+
+        <a href="#" class="nav-button">
+            <img src="assets/IMG/Settings-icon.png" alt="home icon" class="nav-button-icon">
+        </a>
+    </nav>
+
+    <main class="main-view grid">
+
+        <div class="container-left">
+
+            <div class="driving-info">
+
+                <div class="tachometer">
+                    <h1 class="mph">0</h1>
+                    <h3 class="mph__word">mph</h3>
+                </div>
+
+                <div class="driving-stats">
+                    <img src="assets/IMG/Headlight-icon.png" alt="Headlight icon" class="driving-stats-icon">
+
+                    <div class="gas__indicator">
+                        <i class="ri-gas-station-fill driving-stats-icon"></i>
+                        <p class="driving-stats-indicatior" id="gas-level">87%</p>
+                    </div>
+
+                    <div class="temp__indicatior">
+                        <i class="ri-temp-cold-line driving-stats-icon"></i>
+                        <div class="temp__guage"></div>
+                    </div>
+
+                    <div class="temp__indicator"></div>
+                </div>
+
+            </div>
+
+            <img src="assets/IMG/robin-img.png" alt="" class="car-image">
+
+            <div class="drive__select">
+
+                <h3 class="drive-mode">P</h3>
+                <h3 class="drive-mode">R</h3>
+                <h3 class="drive-mode">N</h3>
+                <h3 class="drive-mode">D</h3>
+                <h3 class="drive-mode active">M<span>6</span></h3>
+            </div>
+        </div>
+
+        <div class="container-right">
+
+            <div class="now-playing-container">
+                <div class="now-playing-image">
+                    <img src="assets/IMG/Album-art.png" alt="album-art" class="album-image">
+                </div>
+
+                <div class="now-playing-info">
+                    <h2 class="now-playing-heading">Now playing</h2>
+
+                    <div>
+                        <h1 class="song-name">Y LLORO</h1>
+                        <h3 class="song-artist">Junior H</h3>
+                    </div>
+
+                    <div class="song-controls">
+                        <a href="#">
+                            <i class="ri-skip-left-line song-control-icon"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-pause-line song-control-icon"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ri-skip-right-line song-control-icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="song-length"></div>
+                </div>
+            </div>
+
+            <div class="hvac-container">
+
+                <div class="hvac-adjust">
+                    <i class="ri-add-fill"></i>
+                    <i class="ri-subtract-fill"></i>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="hvac-temp">
+                    <img src="assets/IMG/Fan-icon.png" alt="Fan icon" class="hvac-icon">
+                    <h3 class="hvac-temp-read">67°</h3>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="hvan-sync">
+                    <p>Sync on</p>
+                </div>
+
+            </div>
+
+            <div class="nav-container"></div>
+        </div>
+
+    </main>
+
+
+    <img src="assets/IMG/Background-img.svg" alt="background image" class="background-image">
+    
+</body>
+</html>
