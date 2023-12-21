@@ -362,7 +362,7 @@ img{
 
 /* -================================= ABOUT SECTION ================================- */
 .about{
-    padding-top: 10rem;
+    padding-top: 0;
     color: var(--container-color);
     overflow: hidden;
 }
@@ -381,7 +381,7 @@ img{
 }
 
 .about-header-container{
-    background-color: #B2C5B2;
+    background-color: var(--container-color);
     padding: 2rem;
     width: 100%;
     height: 100%;
@@ -528,7 +528,7 @@ img{
 
 .about-background-img{
     position: absolute;
-    top: 5%;
+    top: 30%;
     right: 5%;
     z-index: -1;
     height: 200px;
