@@ -32,6 +32,31 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
+
+
+// Get all elements with the class "about__modal-description"
+const descriptions = document.querySelectorAll('.about__modal-description');
+
+// Get all elements with the class "about-modal-button"
+const buttons = document.querySelectorAll('.about-modal-button');
+
+// Set initial text for the buttons and hide descriptions
+buttons.forEach((button, index) => {
+  button.querySelector('span').innerText = 'Open';
+  descriptions[index].style.display = 'none';
+
+  // Add click event listener to each button
+  button.addEventListener('click', () => {
+    // Toggle the "display" property of the corresponding description
+    descriptions[index].style.display = descriptions[index].style.display === 'none' ? 'block' : 'none';
+
+    // Change the text inside the span based on the visibility
+    const spanText = descriptions[index].style.display === 'none' ? 'Open' : 'Close';
+    button.querySelector('span').innerText = spanText;
+  });
+});
+
+
 /*==================== SWIPER ====================*/
 var swiper = new Swiper(".work__container", {
 

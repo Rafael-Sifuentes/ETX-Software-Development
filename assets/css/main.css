@@ -574,12 +574,13 @@ img{
 .about__modal{
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
     background-color: rgba(32, 19, 44, 0.25);
     padding: 1.5rem;
     border-radius: .5rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: ease-in-out .3s;
 }
 
 .about__modals-list li:nth-child(2){
@@ -592,12 +593,37 @@ img{
     text-align: end;
 }
 
+.about__modals-list li:nth-child(5){
+    align-items: center;
+    justify-content: center;
+}
+
 .about__modal-title{
     font-size: var(--h3-font-size);
 }
 
 .about__modal-description{
     font-size: var(--normal-font-size);
+    transition: ease-in-out .3s;
+    display: none;
+}
+
+.about-modal-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: 100%;
+    padding: .5rem;
+    border: 3px solid var(--accent-color);
+    border-radius: .5rem;
+    background-color: transparent;
+}
+
+.about-modal-button p{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
 }
 
 .about__button{
