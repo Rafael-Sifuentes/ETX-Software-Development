@@ -619,6 +619,24 @@ img{
 /* -============================================================================- */
 
 /* -================================= FOOTER ================================- */
+.footer{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+.copyright{
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-light);
+    text-align: center;
+}
+
+.copyright span{
+    background: linear-gradient(to right, #A43ACB, #4717F7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-medium);
+}
 /* -=========================================================================- */
 
 
