@@ -60,5 +60,29 @@ window.addEventListener('scroll', scrollActive)
 document.addEventListener('DOMContentLoaded', function () {
 	// Initialize Rellax
 	var rellax = new Rellax('.parallax-img-container-1, .parallax-img-container-2, .parallax-img-container-3');
+	var imgCardInfo = new Rellax('.img-info-card')
 
 });
+
+
+var gallerySwiper = new Swiper(".gallery-swiper-container",{
+
+    centeredSlides: true,
+	loop: true,
+    slidesPerView: 1,
+    spaceBetween: 32,
+	parallax: true,
+
+	autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+    },
+
+
+    breakpoints: {
+        700: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+    },
+})
