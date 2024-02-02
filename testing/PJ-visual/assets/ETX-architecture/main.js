@@ -60,7 +60,7 @@ window.addEventListener('scroll', scrollActive)
 document.addEventListener('DOMContentLoaded', function () {
 	// Initialize Rellax
 	var rellax = new Rellax('.parallax-img-container-1, .parallax-img-container-2, .parallax-img-container-3');
-	var imgCardInfo = new Rellax('.img-info-card')
+	// var imgCardInfo = new Rellax('.img-info-card')
 
 });
 
@@ -70,7 +70,7 @@ var gallerySwiper = new Swiper(".gallery-swiper-container",{
     centeredSlides: true,
 	loop: true,
     slidesPerView: 1,
-    spaceBetween: 32,
+    spaceBetween: 0,
 	parallax: true,
 	speed: 1000,
 
@@ -82,8 +82,31 @@ var gallerySwiper = new Swiper(".gallery-swiper-container",{
 
     breakpoints: {
         700: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
         },
     },
 })
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '80px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
