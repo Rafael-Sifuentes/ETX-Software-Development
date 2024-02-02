@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var gallerySwiper = new Swiper(".gallery-swiper-container",{
 
-    centeredSlides: true,
+  centeredSlides: false,
 	loop: true,
-    slidesPerView: 1,
-    spaceBetween: 0,
+  slidesPerView: 1,
+  spaceBetween: 0,
 	parallax: true,
 	speed: 1000,
 
@@ -81,9 +81,17 @@ var gallerySwiper = new Swiper(".gallery-swiper-container",{
 
 
     breakpoints: {
-        700: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 32,
+        },
+
+        1000: {
+          slidesPerView: 3,
+        },
+
+        1440: {
+          slidesPerView: 4,
         },
     },
 })
