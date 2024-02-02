@@ -72,6 +72,7 @@ var gallerySwiper = new Swiper(".gallery-swiper-container",{
     slidesPerView: 1,
     spaceBetween: 32,
 	parallax: true,
+	speed: 1000,
 
 	autoplay: {
         delay: 2500,
