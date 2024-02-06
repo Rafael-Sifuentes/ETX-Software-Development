@@ -1,4 +1,5 @@
 
+/*=============== NAVIGATION CONTROLS ===============*/
 
 const navMenu = document.getElementById('nav-menu'),
 navToggle = document.getElementById('nav-toggle'),
@@ -25,6 +26,7 @@ navMenu.classList.remove('show-menu')
 navlink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+
 const blurHeader = () => {
     const header = document.getElementById('header')
   
@@ -36,6 +38,7 @@ const blurHeader = () => {
 
 
 /*=============== SCROLL SECTIONS ACTIVE ===============*/
+
 const sections = document.querySelectorAll('section[id]')
     
 const scrollActive = () =>{
@@ -59,47 +62,48 @@ window.addEventListener('scroll', scrollActive)
 /*=============== ABOUT PARALLAX ===============*/
 document.addEventListener('DOMContentLoaded', function () {
 	// Initialize Rellax
-	var rellax = new Rellax('.parallax-img-container-1, .parallax-img-container-2, .parallax-img-container-3');
-	// var imgCardInfo = new Rellax('.img-info-card')
+	var rellax = new Rellax('.about-parallax-img');
 
 });
 
 
+/*=============== GALLERY SWIPER JS ===============*/
 var gallerySwiper = new Swiper(".gallery-swiper-container",{
 
-  centeredSlides: false,
-	loop: true,
-  slidesPerView: 1,
-  spaceBetween: 0,
-	parallax: true,
-	speed: 1000,
+    centeredSlides: false,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    parallax: true,
+    speed: 800,
+  
+      autoplay: {
+          delay: 2000,
+          disableOnInteraction: true,
+      },
+  
+  
+      breakpoints: {
+          600: {
+              slidesPerView: 2,
+              spaceBetween: 32,
+          },
+  
+          1000: {
+            slidesPerView: 3,
+          },
+  
+          1440: {
+            slidesPerView: 4,
+          },
+      },
+  })
 
-	autoplay: {
-        delay: 2500,
-        disableOnInteraction: true,
-    },
-
-
-    breakpoints: {
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 32,
-        },
-
-        1000: {
-          slidesPerView: 3,
-        },
-
-        1440: {
-          slidesPerView: 4,
-        },
-    },
-})
 
 
 /*=============== SCROLL REVEAL JS ===============*/
 const sr = ScrollReveal({
-	distance: '80px',
+	distance: '50px',
 	duration: 2500,
   })
   
@@ -109,6 +113,13 @@ const sr = ScrollReveal({
 
   sr.reveal(`.bottom`,{
 	origin: 'bottom',
+  })
+
+  sr.reveal(`.bottom-delayed`,{
+    origin: 'bottom',
+    delay: 500,
+    interval: 250,
+
   })
 
   sr.reveal(`.left`,{
