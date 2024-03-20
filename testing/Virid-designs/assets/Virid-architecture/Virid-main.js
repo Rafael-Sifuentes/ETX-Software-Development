@@ -36,3 +36,10 @@ const blurHeader = () => {
   }
   
   window.addEventListener('scroll' , blurHeader)
+
+  /*=============== HOME PARALLAX ===============*/
+document.addEventListener('DOMContentLoaded', function () {
+	// Initialize Rellax
+	var rellax = new Rellax('.home-background-img');
+
+});

@@ -36,15 +36,15 @@
                 <ul class="nav-list" id="nav--list">
 
                     <li class="nav-item">
-                        <a href="#" class="nav__link">Services</a>
+                        <a href="#about" class="nav__link">Services</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="#" class="nav__link">Projects</a>
+                        <a href="#projects" class="nav__link">Projects</a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="#" class="nav__link">About</a>
+                        <a href="#services" class="nav__link">About</a>
                     </li>
     
                     <li class="nav-item">
@@ -132,7 +132,9 @@
             </div>
 
 
-            <img src="assets/IMG/Home-background-img.png" alt="Home background image" class="home-background-img">
+            <div class="home-img-container">
+                <img src="assets/IMG/Home-background-img.png" alt="Home background image" class="home-background-img">
+            </div>
         </section>
         <!-- ========================================================== -->
 
@@ -273,7 +275,57 @@
         </section>
         <!-- ========================================================== -->
 
-        <!-- =========================== SECTION 4 =============================== -->
+        <!-- =========================== SERVICES SECTION =============================== -->
+        <section class="services section" id="services">
+            <div class="services-container container">
+
+                <div class="services-header">
+                    <h2 class="services-title">Software development in <span>motion</span></h2>
+                    <p class="services-description description">
+                        Dolor magna eget est lorem ipsum. Urna condimentum mattis pellentesque id nibh tortor id. Iaculis nunc sed augue lacus viverra vitae.
+                    </p>
+                </div>
+
+                <ul class="services-cards-container grid">
+
+                    <li class="services-card">
+                        <div class="services-card-icon-container">
+                            <img src="assets/IMG/Services-card-icon-1.svg" alt="Services card icon" class="services-card-icon">
+                        </div>
+
+                        <h3 class="services-card-title">Code oriented design</h3>
+                    </li>
+
+                    <li class="services-card">
+                        <div class="services-card-icon-container">
+                            <img src="assets/IMG/Services-card-icon-2.svg" alt="Services card icon" class="services-card-icon">
+                        </div>
+
+                        <h3 class="services-card-title">Multi device optimization</h3>
+                    </li>
+
+                    <li class="services-card">
+                        <div class="services-card-icon-container">
+                            <img src="assets/IMG/Services-card-icon-3.svg" alt="Services card icon" class="services-card-icon">
+                        </div>
+
+                        <h3 class="services-card-title">Reliable servers for 99% up-time</h3>
+                    </li>
+
+                    <li class="services-card">
+                        <div class="services-card-icon-container">
+                            <img src="assets/IMG/Services-card-icon-4.svg" alt="Services card icon" class="services-card-icon">
+                        </div>
+
+                        <h3 class="services-card-title">40% more client engagement</h3>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="services-bkgr"></div>
+        </section>
         <!-- ========================================================== -->
 
         <!-- =========================== SECTION 5 =============================== -->
@@ -291,6 +343,8 @@
     <!-- =========================== JAVASCRIPT LINKS =============================== -->
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- PARALLAX JS -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- MAIN JS -->
