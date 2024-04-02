@@ -38,16 +38,8 @@ const blurHeader = () => {
   window.addEventListener('scroll' , blurHeader)
 
   /*=============== HOME PARALLAX ===============*/
-// document.addEventListener('DOMContentLoaded', function () {
-// 	// Initialize Rellax
-// 	var rellax = new Rellax('.home-background-img');
+document.addEventListener('DOMContentLoaded', function () {
+	// Initialize Rellax
+	var rellax = new Rellax('.home-background-img');
 
-// });
-
-const homeImg = document.getElementsByClassName('home-img-container')
-
-var image = document.getElementById('home-bkgr-img')
-
-new simpleParallax(homeImg, {
-  // scale: 1.5,
 });

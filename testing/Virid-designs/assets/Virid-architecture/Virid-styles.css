@@ -5,14 +5,25 @@
 :root{
 
     /* == MAIN COLORS == */
-    --primary-color: #00FF0D;
-    --accent-color: #00FFA9;
+    --primary-color: #AE44D5;
+    --accent-color: #4717F7;
+    --text-color-w: #E9DFE0;
+    --text-color-b: #0E0A18;
+    --container-color: #1A132C;
+    --body-color-b: #0E0A18;
+    --body-color-w: #E9DFE0;
+    /* ================= */
+
+    /* == MAIN COLORS ALT == */
+    /* --primary-color: #4717F7;
+    --accent-color: #A43ACB;
     --text-color-w: #ECF3EF;
     --text-color-b: #030705;
-    --container-color: #006B27;
+    --container-color: #1A132C;
     --body-color-b: #030705;
-    --body-color-w: #ECF3EF;
-    /* ================= */
+    --body-color-w: #ECF3EF; */
+
+
     /* == FONT & TYPOGRAPHY == */
     --body-font: 'Montserrat', sans-serif;
     --title-font: 'Montserrat', sans-serif;
@@ -180,7 +191,7 @@ img{
     bottom: 2rem;
     right: 2rem;
     font-size: var(--icon-size);
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .nav-menu.show-nav{
@@ -291,6 +302,7 @@ img{
 
 .home-info-bottom{
     gap: 2rem;
+    box-sizing: border-box;
 }
 
 .home-info-1,
@@ -298,6 +310,10 @@ img{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.home-info-2{
+    overflow-x: hidden;
 }
 
 .home-subtitle span{
@@ -503,6 +519,7 @@ img{
 }
 
 .services-card-title{
+    color: var(--text-color-w);
     font-weight: var(--font-semi-bold);
 }
 
@@ -517,7 +534,7 @@ img{
     content: "";
     height: 30%;
     width: 100%;
-    background-color: #071B0D;
+    background-color: #150927;
     z-index: -1;
     border-radius: 0 0 3rem 3rem;
 }

@@ -1,11 +1,11 @@
 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_82_77)">
-<path d="M55 77.5H35L37.5 62.5H52.5L55 77.5Z" stroke="#030705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M27.5 77.5H62.5" stroke="#030705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M37.5 17.5H72.5C73.826 17.5 75.098 18.0268 76.0357 18.9645C76.9733 19.9021 77.5 21.1739 77.5 22.5V57.5C77.5 58.826 76.9733 60.098 76.0357 61.0357C75.098 61.9733 73.826 62.5 72.5 62.5H17.5C16.1739 62.5 14.9021 61.9733 13.9645 61.0357C13.0268 60.098 12.5 58.826 12.5 57.5V52.5" stroke="#030705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.5 52.5H77.5" stroke="#030705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.5 2.5H22.5C22.5 2.5 27.5 2.5 27.5 7.5V37.5C27.5 37.5 27.5 42.5 22.5 42.5H7.5C7.5 42.5 2.5 42.5 2.5 37.5V7.5C2.5 7.5 2.5 2.5 7.5 2.5Z" stroke="#030705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.5 32.5H27.5" stroke="#030705" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M55 77.5H35L37.5 62.5H52.5L55 77.5Z" stroke="#E9DFE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.5 77.5H62.5" stroke="#E9DFE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M37.5 17.5H72.5C73.826 17.5 75.098 18.0268 76.0357 18.9645C76.9733 19.9021 77.5 21.1739 77.5 22.5V57.5C77.5 58.826 76.9733 60.098 76.0357 61.0357C75.098 61.9733 73.826 62.5 72.5 62.5H17.5C16.1739 62.5 14.9021 61.9733 13.9645 61.0357C13.0268 60.098 12.5 58.826 12.5 57.5V52.5" stroke="#E9DFE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5 52.5H77.5" stroke="#E9DFE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.5 2.5H22.5C22.5 2.5 27.5 2.5 27.5 7.5V37.5C27.5 37.5 27.5 42.5 22.5 42.5H7.5C7.5 42.5 2.5 42.5 2.5 37.5V7.5C2.5 7.5 2.5 2.5 7.5 2.5Z" stroke="#E9DFE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.5 32.5H27.5" stroke="#E9DFE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <clipPath id="clip0_82_77">
