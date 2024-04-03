@@ -33,5 +33,46 @@ navlink.forEach(n => n.addEventListener('click', linkAction))
 
 
 
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '100px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.bottom-delayed`,{
+    origin: 'bottom',
+    delay: 500,
+    interval: 250,
+
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.left-delayed`,{
+    origin: 'left',
+    delay: 500,
+    interval: 250
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
+
+  sr.reveal(`.left-motion`,{
+    origin: 'left',
+    distance: '300px',
+    duration: 2000,
+  })
+
 
 

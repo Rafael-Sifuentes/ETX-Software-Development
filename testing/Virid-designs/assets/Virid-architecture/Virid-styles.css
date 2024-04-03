@@ -9,7 +9,7 @@
     --accent-color: #4717F7;
     --text-color-w: #E9DFE0;
     --text-color-b: #0E0A18;
-    --container-color: #1A132C;
+    --container-color: #3a207b;
     --body-color-b: #0E0A18;
     --body-color-w: #E9DFE0;
     /* ================= */
@@ -246,9 +246,9 @@ img{
         width: max-content;
         height: max-content;
         background-color: #0e0a18ad;
-        border: 2px solid var(--text-color-w);
+        /* border: 2px solid var(--accent-color); */
         border-radius: 100vw;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 4rem;
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
     }
@@ -280,6 +280,10 @@ img{
     height: 100%;
 }
 
+.contact-btn-container{
+    display: none;
+}
+
 .home-container{
     display: flex;
     flex-direction: column;
@@ -305,6 +309,10 @@ img{
     color: var(--primary-color);
     font-weight: var(--font-bold);
 
+}
+
+.home-description{
+    font-weight: var(--font-semi-bold);
 }
 
 .home-info-bottom{
@@ -440,7 +448,7 @@ img{
 .projects-container{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .projects-title span{
@@ -501,9 +509,25 @@ img{
     gap: 1rem;
 }
 
-.services-title span{
+.left-motion{
     font-style: italic;
     color: var(--accent-color);
+}
+
+.services-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    height: max-content;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    width: 250px;
+}
+
+.services-button p{
+    font-weight: var(--font-bold);
+    color: var(--text-color-w);
 }
 
 .services-cards-container{
@@ -589,6 +613,24 @@ img{
     /* HOME SECTION */
     .logo-container{
         left: 4rem;
+    }
+
+    .contact-btn-container{
+        position: absolute;
+        top: 3rem;
+        right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-contact-btn{
+        padding: 1rem 2rem;
+        border-radius: var(--border-radius);
+        background-color: var(--accent-color);
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+        color: var(--text-color-w);
     }
 
     /* ABOUT SECTION */
