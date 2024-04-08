@@ -29,6 +29,8 @@ navlink.forEach(n => n.addEventListener('click', linkAction))
  	// Initialize Rellax
  	var rellax = new Rellax('.home-background-img');
 
+  var contactParallax = new Rellax('.contact-img')
+
  });
 
 
