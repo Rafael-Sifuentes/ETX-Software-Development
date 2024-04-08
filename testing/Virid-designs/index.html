@@ -33,6 +33,8 @@
                 <li class="nav-list-item"><a href="#about">About</a></li>
                 <li class="nav-list-item"><a href="#projects">Projects</a></li>
                 <li class="nav-list-item"><a href="#services">Services</a></li>
+                <li class="nav-list-item"><a href="#contact">Contact</a></li>
+
             </ul>
         </nav>
         
@@ -264,6 +266,10 @@
 
                     <a href="#" class="services-button">
                         <p>Get started</p>
+
+                        <div>
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
                     </a>
                 </div>
 
@@ -309,7 +315,60 @@
         </section>
         <!-- ========================================================== -->
 
-        <!-- =========================== SECTION 5 =============================== -->
+        <!-- =========================== CONTACT SECTION =============================== -->
+        <section class="contact section" id="contact">
+
+            <div class="contact-container container">
+
+                <div class="contact-container-1">
+                    <h2 class="contact-title section-title">Connect <br> with <span>Us</span></h2>
+
+                    <h3 class="contact-subtitle">
+                        Have a question or
+                        need assistance? 
+                        Drop us a
+                        message and we'll 
+                        get back to you as
+                        soon as possible.
+                    </h3>
+
+                    <h3 class="contact-info-email">rafaelsifuentes <br>etxsoftware.com</h3>
+                    <h3 class="contact-info-number">(936) 221 - 8751</h3>
+                </div>
+
+                <form action="#" class="contact-form" id="contact-form">
+
+                    <div class="contact-form-group">
+                        <label for="">Name</label>
+                        <input type="text" placeholder="First name" class="contact-form-text" name="name">
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="">Email</label>
+                        <input type="text" placeholder="example@email.com" class="contact-form-text" name="email">
+                    </div>
+
+                    <div class="contact-form-group">
+                        <label for="">Message</label>
+                        <textarea class="contact-form-text" id="contact-project" placeholder="Questions ?" name="message" required></textarea>
+                    </div>
+
+                    <div class="align-self">
+                        <button type="submit" class="contact-button" id="contact-button">Send</button>
+                    </div>
+
+                    <div class="contact-message" id="contact-message"></div>
+
+                    
+                </form>
+
+            </div>
+
+            <div class="contact-img-container">
+                <img src="assets/IMG/Contact-background-img.png" alt="Contact background img" class="contact-img">
+            </div>
+
+        </section>
         <!-- ========================================================== -->
     </main>
 
@@ -322,6 +381,8 @@
 
     <!-- ========================================================== -->
     <!-- =========================== JAVASCRIPT LINKS =============================== -->
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- PARALLAX JS -->
