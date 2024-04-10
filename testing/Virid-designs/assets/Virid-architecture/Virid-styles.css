@@ -375,11 +375,18 @@ img{
 
 /* -================================= ABOUT SECTION ================================- */
 .about{
+    position: relative;
     background-color: var(--body-color-w);
     color: var(--text-color-w);
     border-radius: 3rem 3rem 0 0;
     padding-top: 8rem;
     padding-bottom: 6rem;
+}
+
+.about-logo{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
 }
 
 .about-cards-container{
@@ -445,15 +452,24 @@ img{
 
 /* -================================= PROJECTS SECTION ================================- */
 .projects{
+    position: relative;
     background-color: var(--body-color-w);
     color: var(--text-color-b);
     border-radius: 0 0 3rem 3rem;
+    overflow: hidden;
 }
 
 .projects-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    z-index: 1;
+}
+
+.projects-title,
+.projects-description{
+    text-align: center;
 }
 
 .projects-title span{
@@ -461,7 +477,7 @@ img{
 }
 
 .projects-list-container{
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     justify-content: center;
 }
@@ -473,13 +489,6 @@ img{
     gap: 1rem;
 }
 
-/* .projects-list-item:hover{
-    background-color: var(--container-color);
-    border-radius: var(--border-radius);
-    transition: ease all .3s;
-    color: var(--text-color-w);
-} */
-
 .projects-item-button{
     /* width: 100%; */
     height: max-content;
@@ -490,6 +499,33 @@ img{
     color: var(--text-color-b);
     border: 4px solid var(--container-color);
     border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.projects-bkgr,
+.projects-bkgr-2{
+    position: absolute;
+    z-index: 0;
+    opacity: .5;
+}
+
+.projects-bkgr{
+    top: 170%;
+    right: 0;
+    width: 750px;
+}
+
+.projects-bkgr-2{
+    top: 40%;
+    left: 5%;
+    width: 300px;
+}
+
+.projects-logo{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
 }
 /* -============================================================================- */
 
@@ -505,7 +541,7 @@ img{
 .services-container{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .services-header{
@@ -779,6 +815,10 @@ textarea{
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .projects-bkgr-2{
+        top: 50%;
+    }
+
     /* SERVICES SECTION */
     .services-header{
         max-width: 50%;
@@ -850,10 +890,26 @@ textarea{
         padding-left: 0;
     }
 
+    .about-logo{
+        right: 3rem;
+    }
+
     /* PROJECTS SECTION */
     .projects-list-container{
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+    }
+
+    .projects-bkgr{
+        top: 150%;
+    }
+
+    .projects-bkgr-2{
+        width: 400px;
+    }
+
+    .projects-logo{
+        left: 3rem;
     }
 
     /* SERVICES SECTION */

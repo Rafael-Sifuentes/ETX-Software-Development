@@ -31,6 +31,10 @@ navlink.forEach(n => n.addEventListener('click', linkAction))
 
   var contactParallax = new Rellax('.contact-img')
 
+  var projectsParallax = new Rellax('.projects-bkgr')
+
+  var projectsParallaxalt = new Rellax('.projects-bkgr-2')
+
  });
 
 
