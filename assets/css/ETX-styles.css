@@ -169,20 +169,12 @@ img{
     font-weight: var(--font-semi-bold);
 }
 
-.active-link{
-    color: var(--accent-color);
-}
-
 .nav-list.show-nav{
     right: 2rem;
 }
 
 .nav-toggle-btn.rotate{
     transform: rotate(45deg);
-}
-
-.active-link{
-    color: var(--accent-color);
 }
 
 /* -================================= MOBILE NAVIGATION CSS ================================- */
