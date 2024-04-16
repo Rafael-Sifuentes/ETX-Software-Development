@@ -21,6 +21,19 @@ const navMenu = document.getElementById('nav-list')
 }
 navlink.forEach(n => n.addEventListener('click', linkAction))
 
+const orderContainer = document.getElementById("order-container")
+const orderToggleOpen = document.getElementById("order-toggle-open")
+const orderToggleClose = document.getElementById("order-toggle-close")
+
+orderToggleOpen.addEventListener('click', function() {
+    orderContainer.classList.add('active');
+});
+
+orderToggleClose.addEventListener('click', function() {
+    orderContainer.classList.remove('active');
+});
+
+
 /*=============== SCROLL REVEAL JS ===============*/
 const sr = ScrollReveal({
 	distance: '100px',
