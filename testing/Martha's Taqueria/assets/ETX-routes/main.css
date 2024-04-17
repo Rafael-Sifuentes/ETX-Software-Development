@@ -178,7 +178,7 @@ img{
 }
 
 .nav-toggle-btn.rotate{
-    transform: translate(0, 1100%) rotate(0.5turn);
+    transform: translate(0, 1400%) rotate(0.5turn);
 }
 
 /* -================================= MOBILE NAVIGATION CSS ================================- */
@@ -188,14 +188,26 @@ img{
         position: absolute;
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 3.5rem;
         background-color: var(--accent-color);
         padding: 7rem 2rem 12rem;
-        top: -1000%;
+        top: -1100%;
         right: 0;
         transition: top .5s;
         width: 100%;
         border-radius: var(--border-radius);
+    }
+
+    .nav-list-item{
+        border-bottom: 4px dashed var(--primary-color);
+    }
+
+    .nav-list-item:nth-child(1){
+        border-bottom: none;
+    }
+
+    .nav-list-item:nth-child(7){
+        border-bottom: none;
     }
 
     .nav-toggle-btn{
@@ -215,6 +227,17 @@ img{
     .nav-toggle-btn i{
         font-size: var(--icon-size);
         color: var(--text-color-w);
+    }
+
+    .nav-social-list{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-icon{
+        font-size: 3rem;
+        color: var(--secondary-color);
     }
 
 }
@@ -246,12 +269,20 @@ img{
         height: max-content;
     }
 
+    .nav-logo-alt{
+        display: none;
+    }
+
     .nav-list-item a{
         font-size: var(--small-font-size);
     }
 
     .nav-list-item a{
         font-weight: var(--font-regular);
+    }
+
+    .nav-social-list{
+        display: none;
     }
     
 }
