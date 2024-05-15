@@ -1,0 +1,617 @@
+/* Root CSS for IntelliNova-RD */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* -=================================================================- */
+/* -================================= VARIABLE CSS ================================- */
+:root{
+
+    /* == MAIN COLORS == */
+    --primary-color: #E8B100;
+    --text-color-b: #090505;
+    --text-color-w: #F2EFF3;
+    --container-color: #393939;
+    --body-color: #E4E4E4;
+    --body-color-alt: #090505;
+    /* ================= */
+    /* == FONT & TYPOGRAPHY == */
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+
+    --h1-font-size: 2.986rem;
+    --h2-font-size: 2.488rem;
+    --h3-font-size: 2.074rem;
+    --h4-font-size: 1.728rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .75em;
+
+    --icon-size: 2rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* ================= */
+
+    /* =========Z INDEX======== */
+    --z-fixed: 10;
+    --border-radius: 0rem;
+    /* ================= */
+
+}
+
+
+/* -=================================================================- */
+
+/* -================================= BASE ================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color-w);
+}
+
+h1{
+    font-size: var(--h1-font-size);	
+}
+
+h2{
+    font-size: var(--h2-font-size);	
+}
+
+h3{
+    font-size: var(--h3-font-size);	
+}
+
+h4{
+    font-size: var(--h4-font-size);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* -================================= REUSABLE CSS CLASSES ================================- */
+.container{
+    max-width: 968px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.grid{
+    display: grid;
+}
+.align-self{
+    display: flex;
+    flex-direction: column;
+}
+
+.section{
+    position: relative;
+    padding: 9rem 0;
+    overflow-x: hidden;
+}
+
+.section-title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+}
+
+.section-subtitle{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.description{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-light);
+}
+
+.title-line{
+    content: '';
+    margin-top: .5rem;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color-b);
+}
+
+.description-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.description-container-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* -======= BUTTONS ========- */
+
+/* -=================================================================- */
+
+/* -================================= HEADER & NAVIGATION ================================- */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1023px;
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-list-item a{
+    font-family: var(--title-font);
+    color: var(--text-color-w);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-regular);
+}
+
+.nav-list.show-nav{
+    right: 0;
+}
+
+.nav-toggle-btn.rotate{
+    transform: rotate(0.5turn);
+}
+
+.nav-list-item:nth-child(5){
+    width: 240px;
+    height: 64px;
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
+}
+
+/* ADD BLUR TO HEADER */
+.blur-header{
+    background-color: transparent;
+}
+
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: var(--body-color-alt);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
+    transition: ease-in-out .4s;
+    z-index: -1;
+    /* box-shadow: 0 0 8px 0 #0000009a; */
+}
+
+/* -================================= MOBILE NAVIGATION CSS ================================- */
+@media screen and (max-width: 1023px){
+
+    .nav-list{
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3rem;
+        background-color: var(--body-color-alt);
+        padding: 12rem 2rem;
+        right: -100%;
+        top: 0;
+        transition: right .5s;
+        width: 100%;
+        border-radius: var(--border-radius);
+    }
+
+    .nav-toggle-btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        height: 32px;
+        width: 32px;
+        display: grid;
+        place-items: center;
+        transition: .35s;
+        z-index: var(--z-fixed);
+    }
+
+    .nav-toggle-btn i{
+        font-size: var(--icon-size);
+        color: var(--text-color-w);
+    }
+
+    .nav-social-list{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-icon{
+        font-size: 3rem;
+        color: var(--secondary-color);
+    }
+
+}
+
+/* -================================= DESKTOP NAVIGATION CSS ================================- */
+@media screen and (min-width: 1023px){
+
+    .header{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1rem;
+        padding: 1rem 0;
+        background-color: var(--primary-color);
+    }
+
+    .nav-toggle-btn{
+        display: none;
+    }
+
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-list{
+        gap: 2rem;
+        width: max-content;
+        height: max-content;
+    }
+
+    .nav-logo-alt{
+        display: none;
+    }
+
+    .nav-list-item a{
+        font-size: var(--small-font-size);
+    }
+
+    .nav-list-item a{
+        font-weight: var(--font-regular);
+    }
+
+    .nav-social-list{
+        display: none;
+    }
+    
+}
+
+/* -======================================================================================- */
+
+
+/* -================================= HOME SECTION ================================- */
+.home{
+    padding-top: 16rem;
+    padding-bottom: 5rem;
+}
+
+.home-container{
+    gap: 2rem;
+}
+
+.home-titles-container{
+    gap: 2rem;
+}
+
+.home-subtitle{
+    font-weight: var(--font-light);
+}
+
+.home-title{
+    font-weight: var(--font-regular);
+}
+
+.home-title span{
+    font-weight: var(--font-semi-bold);
+}
+
+.home-buttons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home-button{
+    width: 240px;
+    height: 64px;
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+}
+
+.home-button span{
+    color: var(--text-color-b);
+    font-weight: var(--font-bold);
+}
+
+.bkgr-progress-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.home-prev,
+.home-next{
+    height: 64px;
+    width: 64px;
+    border: 2px solid var(--body-color);
+    display: grid;
+    place-items: center;
+}
+
+.home-prev i{
+    font-size: var(--icon-size);
+}
+
+.home-next i{
+    font-size: var(--icon-size);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+   width: max-content;
+}
+
+.home-progress-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    align-self: flex-end;
+    margin-top: 6rem;
+}
+
+.home-bkgr-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.home-bkgr-img{
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet{
+    position: relative;
+    height: 8px;
+    width: 8px;
+    border-radius: 0;
+    background-color: #949494;
+}
+
+.swiper-pagination-bullet-active{
+    height: 13px;
+    width: 13px;
+    transition: ease-in-out .4s;
+    background-color: var(--text-color-w);
+}
+/* -============================================================================- */
+
+
+/* -================================= ABOUT SECTION ================================- */
+.about{
+    color: var(--text-color-b);
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about-img-container{
+    position: relative;
+    width: 323px;
+    height: 496px;
+    overflow: hidden;
+    align-self: center;
+}
+
+.about-img{
+    position: absolute;
+    object-fit: cover;
+}
+
+.about-img-1{
+    bottom: 0;
+    right: 0;
+    width: 157px;
+    height: 408px;
+}
+
+.about-img-2{
+    top: 0;
+    left: 0;
+    width: 157px;
+    height: 408px;
+}
+
+.about-button{
+    width: 170px;
+    height: 64px;
+    border: 4px solid var(--primary-color);
+    display: grid;
+    place-items: center;
+}
+
+.about-button span{
+    color: var(--text-color-b);
+}
+/* -============================================================================- */
+
+
+/* -================================= SERVICES SECTION ================================- */
+.services{
+    background-color: var(--body-color-alt);
+    color: var(--text-color-w);
+    padding-bottom: 0;
+}
+
+.services-container{
+    gap: 5rem;
+    align-items: center;
+    padding-bottom: 9rem;
+}
+
+.services-description-container .title-line{
+    background-color: var(--text-color-w);
+}
+
+.services-card-container{
+    gap: 32px;
+}
+
+.services-card{
+    padding: 2rem;
+    gap: 2rem;
+    border: 4px solid var(--container-color);
+    height: 304px;
+    transition: ease-in-out .4s;
+}
+
+.services-card:hover{
+    border: 8px solid var(--text-color-w);
+}
+
+.service-card-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.service-card-title{
+    font-weight: var(--font-medium);
+}
+
+.service-card-description{
+    font-weight: var(--font-light);
+    font-size: var(--small-font-size);
+}
+
+.showcase-card{
+    position: relative;
+}
+
+.card-overlay{
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0905057e;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase-card:hover .card-overlay{
+    bottom: 0;
+    transition: bottom ease-in .4s;
+}
+
+.card-overlay i{
+    font-size: 5rem;
+}
+
+.showcase-card-title{
+    font-weight: var(--font-semi-bold);
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    z-index: 2;
+}
+/* -============================================================================- */
+
+
+/* -================================= PROJECTS SECTION ================================- */
+.projects{
+    color: var(--text-color-b);
+}
+
+.projects-container{
+    gap: 4rem;
+}
+
+.projects-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projects-img-container{
+    position: relative;
+    width: 323px;
+    height: 528px;
+    overflow: hidden;
+}
+
+.project-card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* -============================================================================- */
+
+/* -================================= CONTACT SECTION ================================- */
+.contact-container{
+    gap: 2rem;
+    align-items: center;
+    text-align:  center;
+}
+
+.contact-button{
+    width: 240px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    border: 4px solid var(--primary-color);
+}
+
+.contact-button span{
+    color: var(--text-color-w);
+    font-weight: var(--font-bold);
+}
+
+.contact-bkgr-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* -=========================================================================- */
+
+
+
+/* -================================= CSS BREAKPOINTS ================================- */
+/* -==================================================================================- */
