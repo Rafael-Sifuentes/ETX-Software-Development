@@ -33,6 +33,27 @@ const blurHeader = () => {
   window.addEventListener('scroll' , blurHeader)
 
 
+/*=============== SCROLL SECTIONS ACTIVE ===============*/
+
+const sections = document.querySelectorAll('section[id]')
+    
+const scrollActive = () =>{
+  	const scrollY = window.pageYOffset
+
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.nav-list a[href*=' + sectionId + ']')
+
+		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link');
+		}else{
+			sectionsClass.classList.remove('active-link');
+		}                                                    
+	})
+}
+window.addEventListener('scroll', scrollActive)
 
 
 
@@ -67,6 +88,16 @@ var swiper = new Swiper('.services-showcase-container', {
         delay: 2000,
         disableOnInteraction: true,
       },
+    
+      breakpoints: {
+        600: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+          slidesPerView: 3,
+        },
+    },
 });
 
 

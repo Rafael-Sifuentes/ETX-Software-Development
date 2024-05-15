@@ -17,6 +17,7 @@
     --body-font: 'Montserrat', sans-serif;
     --title-font: 'Montserrat', sans-serif;
 
+    --big-font-size: 4rem;
     --h1-font-size: 2.986rem;
     --h2-font-size: 2.488rem;
     --h3-font-size: 2.074rem;
@@ -131,7 +132,7 @@ img{
 .title-line{
     content: '';
     margin-top: .5rem;
-    width: 100%;
+    /* width: 100%; */
     height: 2px;
     background-color: var(--text-color-b);
 }
@@ -157,18 +158,18 @@ img{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: 100%;
-    max-width: 1023px;
 }
 
 .nav-list{
     display: flex;
+    position: relative;
 }
 
 .nav-list-item a{
     font-family: var(--title-font);
-    color: var(--text-color-w);
+    color: var(--container-color);
     font-size: var(--h4-font-size);
     font-weight: var(--font-regular);
 }
@@ -210,8 +211,21 @@ img{
     /* box-shadow: 0 0 8px 0 #0000009a; */
 }
 
+.nav-list-item .active-link{
+    color: var(--text-color-w);
+}
+
+.nav-list-item:nth-child(5) .nav-button{
+    color: var(--text-color-b);
+    font-weight: var(--font-bold);
+}
+
 /* -================================= MOBILE NAVIGATION CSS ================================- */
 @media screen and (max-width: 1023px){
+
+    .header{
+        padding: 2rem 0;
+    }
 
     .nav-list{
         position: absolute;
@@ -244,29 +258,11 @@ img{
         color: var(--text-color-w);
     }
 
-    .nav-social-list{
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .nav-icon{
-        font-size: 3rem;
-        color: var(--secondary-color);
-    }
-
 }
 
 /* -================================= DESKTOP NAVIGATION CSS ================================- */
 @media screen and (min-width: 1023px){
 
-    .header{
-        left: 50%;
-        transform: translateX(-50%);
-        top: 1rem;
-        padding: 1rem 0;
-        background-color: var(--primary-color);
-    }
 
     .nav-toggle-btn{
         display: none;
@@ -275,29 +271,25 @@ img{
     .navigation{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .nav-list{
+        flex-direction: row;
         gap: 2rem;
-        width: max-content;
-        height: max-content;
-    }
-
-    .nav-logo-alt{
-        display: none;
+        align-items: center;
     }
 
     .nav-list-item a{
-        font-size: var(--small-font-size);
-    }
-
-    .nav-list-item a{
+        font-size: var(--normal-font-size);
         font-weight: var(--font-regular);
     }
 
-    .nav-social-list{
-        display: none;
+    .nav-list-item:nth-child(5){
+        width: 128px;
+        height: 48px;
+        margin-top: 0;
+        margin-left: 6rem;
     }
     
 }
@@ -324,6 +316,7 @@ img{
 }
 
 .home-title{
+    font-size: var(--big-font-size);
     font-weight: var(--font-regular);
 }
 
@@ -517,6 +510,10 @@ img{
     position: relative;
 }
 
+.showcase-img{
+    height: 688px;
+}
+
 .card-overlay{
     content: '';
     position: absolute;
@@ -614,4 +611,87 @@ img{
 
 
 /* -================================= CSS BREAKPOINTS ================================- */
+
+/* -==== For medium devices ====- */
+@media screen and (min-width: 700px){
+
+    /* HOME SECTION */
+    .home-buttons-container{
+        flex-direction: row;
+    }
+
+    /* ABOUT SECTION */
+    .about-img-container{
+        width: 400px;
+    }
+
+    .about-img{
+        width: 200px;
+    }
+
+    /* SERVICES SECTION */
+    .services-card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROJECTS SECTION */
+    .projects-card-container{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .projects-img-container{
+        width: 529px;
+    }
+
+    .projects-description-container{
+        max-width: 50%;
+    }
+
+}
+
+/* -==== For medium - large devices ====- */
+@media screen and (min-width: 1024px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* ABOUT SECTION */
+
+    .about-container{
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .about-description-container{
+        max-width: 500px;
+    }
+
+    .about-img-container{
+        width: 655px;
+        height: 640px;
+    }
+
+    .about-img{
+        width: 200px;
+        height: 528px;
+    }
+
+    /* SERVICES SECTION */
+    .services-description-container{
+        align-self: flex-start;
+    }
+
+    .services-card{
+        width: 304px;
+    }
+
+    .services-card-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 /* -==================================================================================- */
