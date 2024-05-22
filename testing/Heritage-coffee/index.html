@@ -1,6 +1,4 @@
-
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,8 +11,8 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="assets/ETX-architecture/main.css">
-    <title>Heritage Coffee co. | Lufkin Tx</title>
+    <link rel="stylesheet" href="assets/ETX-routes/style.css">
+    <title>Heritage-coffee</title>
     <meta title="description" content="">
     <meta title="keywords" content="">
 </head>
@@ -27,7 +25,7 @@
         <nav class="nav container">
 
             <a href="#home" class="nav__logo">
-                <img src="assets/IMG/Logo.svg" alt="Main logo" class="logo">
+                <img src="assets/IMG/logo.svg" alt="Main logo" class="logo">
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -36,29 +34,29 @@
 
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
-                            <i class="ri-home-2-line"></i>
+                            <img src="assets/IMG/Nav-icon-1.svg" alt="Home button" class="nav-icon">
                             <span>Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#season" class="nav__link">
-                            <i class="ri-leaf-fill"></i>
-                            <span>Seasonal</span>
+                        <a href="#about" class="nav__link">
+                            <img src="assets/IMG/Nav-icon-2.svg" alt="About button" class="nav-icon">
+                            <span>About</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#menu" class="nav__link">
-                            <i class="ri-cup-line"></i>
-                            <span>Menu</span>
+                            <img src="assets/IMG/Nav-icon-3.svg" alt="Menu button" class="nav-icon">
+                            <span>Previous work</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#location" class="nav__link">
-                            <i class="ri-map-pin-2-fill"></i>
-                            <span>Location</span>
+                            <img src="assets/IMG/Nav-icon-4.svg" alt="Location button" class="nav-icon">
+                            <span>Contact us</span>
                         </a>
                     </li>
 
@@ -69,382 +67,283 @@
         </nav>
 
     </header>
-
     <!-- ========================================================== -->
 
     <!-- ============================ MAIN ============================== -->
     <main class="main">
 
-        <!-- =========================== SECTION 1 =============================== -->
+        <!-- =========================== HOME SECTION =============================== -->
         <section class="home section" id="home">
-            <div class="home__container container">
-                <div class="home__box">
 
-                    <h1 class="home__title section__title">
-                        Where Quality meets coziness at your
-                        local coffee haven
-                    </h1>
+            <div class="home-container container align-self">
+                <h1 class="home-title" id="home-title">Good <span id="greeting-text"></span></h1>
 
-                    <h3 class="home__subtitle section__subtitle">
-                        Indulge in the rich flavors of Lufkin, Texas, one cup at a time. At <span>Heritage coffee co</span>,
-                        we're passionate about brewing your perfect moment.
-                    </h3>
+                <div class="home-info-container">
 
-                    <div class="home__buttons">
+                    <a href="#menu" class="home-button button">
+                        <h2>Go to menu</h2>
+                    </a>
 
-                        <button class="button-fill left">
-                            <a href="#season">Just in for fall</a>
-                        </button>
+                    <div class="home-responsive-container">
 
-                        <button class="button-outline right">
-                            <a href="#menu">See our menu</a>
-                        </button>
+                        <div class="home-hours-container">
+                            <p class="home-hours-description">420 S First St <br>Lufkin Texas</p>
+                            <div class="home-hours-line"></div>
+                            <p class="home-hours-description">Mon - Fri <br>7:00am - 5:00pm</p>
+                        </div>
 
-                    </div>
 
-                </div>
+                        <div class="home-buttons-container">
+                            <a href="#location" class="home-button-2 button"><h3>Order now</h3></a>
 
-                <div class="home__footer">
-
-                    <div class="home__info">
-                        <p class="description">Come visit us at</p>
-                        <h2 class="info__text">420 S First St. Lufkin TX.</h2>
-                    </div>
-
-                    <div>
-                        <div class="underline"></div>
-                    </div>
-                    
-                    <div class="home__info">
-                        <p class="description">We are open</p>
-                        <h2 class="info__text">Monday - Friday | 7am - 4pm</h2>
+                            <a href="#about" class="home-button-3 button"><img src="assets/IMG/Arrow-down-filled.svg" alt="Down button"></a>
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-            <img src="assets/IMG/Home-img.png" alt="2 cups of coffee on a wooden table" class="home-background">
+            <img src="assets/IMG/Home-background.png" alt="Home background image" class="home-background-img">
+
         </section>
         <!-- ========================================================== -->
 
-        <!-- =========================== SECTION 2 =============================== -->
-        <section class="season section" id="season">
+        <!-- =========================== ABOUT SECTION =============================== -->
+        <section class="about section" id="about">
+            <div class="about-container container">
 
-            <div class="season__container container">
+                <div class="about-responsive-container">
 
-                <h2 class="season__title section__title">
-                    <img src="assets/IMG/Leaf.png" alt="a leaf icon to represent fall time" class="title-img">
-                    We are falling for these flavors
-                </h2>
+                    <div class="about-image-container">
+                        <div class="about-parallax-1"  data-rellax-speed="1.5">
+                            <img src="assets/IMG/About-image-1.png" alt="About image one" class="about-img">
+                        </div>
 
-                <h3 class="season__subtitle section__subtitle">
-                    These items are here for a good time not a long time, so make sure to stop by and get them
-                    while you can ! Swipe on the image to see more.
-                </h3>
+                        <div class="about-parallax-2"  data-rellax-speed="-1.5">
+                            <img src="assets/IMG/About-image-2.png" alt="About image one" class="about-img">
+                        </div>
+                    </div>
 
-                <div class="featured__container swiper">
-
-                    <div class="swiper-wrapper">
-                        <article class="featured__card swiper-slide">
-
-                            <img src="assets/IMG/season-img-1.png" alt="Image of a latte" class="card__img">
+                    <div class="about-box-1">
+                        <div class="about-title-container">
+                            <h2 class="about-title section-title">All about us</h2>
+                            <div class="about-title-line"></div>
+                        </div>
     
-                            <div class="card__footer">
-                                <h3 class="card__title">Classic PSL</h3>
-                                <div class="underline"></div>
-                                <p class="card__description">This latte is everything but basic. Enjoy it hot or iced</p>
-                            </div>
+                        <p class="about-description description">
+                            <b>Welcome to Heritage Coffee Co!</b> Nestled in the heart of Lufkin, Texas, our faith-based, family-run coffee shop is your cozy haven for savoring
+                            handcrafted brews and homemade pastries. Step inside, and let the rich aroma of heritage, tradition, and a warm cup of joe fill your soul.
+                        </p>
     
-                        </article>
-    
-                        <article class="featured__card  swiper-slide">
-                            
-                            <img src="assets/IMG/season-img-2.png" alt="Image of a latte" class="card__img">
-    
-                            <div class="card__footer">
-                                <h3 class="card__title">Apple crisp</h3>
-                                <div class="underline"></div>
-                                <p class="card__description">Crisp apple notes dance gracefully with a smooth espresso blend</p>
-                            </div>
-    
-                        </article>
-    
-                        <article class="featured__card  swiper-slide">
-                            
-                            <img src="assets/IMG/season-img-3.png" alt="Image of Pumpkin muffins" class="card__img">
-    
-                            <div class="card__footer">
-                                <h3 class="card__title">Pumpkin muffins</h3>
-                                <div class="underline"></div>
-                                <p class="card__description">The perfect complement to any
-                                    fall beverage</p>
-                            </div>
-    
-                        </article>
+                        <p class="about-description description">
+                            We use only the finest ethically sourced coffee beans, roasted to perfection to highlight their unique flavor profiles. We craft
+                            delectable pastries daily using fresh, high-quality ingredients, ensuring a delicious treat to complement your cup. Whether you're seeking
+                            a quiet corner to catch up with a friend, a vibrant space to fuel your workday, or a place to connect with like-minded individuals,
+                            Heritage Coffee Co. is your warm and welcoming escape.
+                        </p>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="about__section">
-                <div class="about__header container">
-                    <h2 class="about__title section__title">About us</h2>
+            <div class="swiper about-cards-container container">
 
-                    <div class="underline"></div>
+                <h2 class="about-title-alt section-title">Our <span>Seasonal</span> favorites</h2>
+                <div class="swiper-wrapper">
 
-                    <p class="about__description description">
-                        Welcome to Heritage Coffee Co, where every cup tells a story.
-                        Nestled in the heart of Lufkin, Texas, our family-run coffee
-                        shop is your cozy haven for savoring handcrafted brews and
-                        homemade pastries. Step inside, and let the rich aroma of
-                        heritage and tradition warm your soul.
-                    </p>
+                    <article class="about-card align-self swiper-slide">
+                        <img src="assets/IMG/about-card-1.png" alt="About card image 1" class="about-card-img">
 
-                    <div class="button-fill left">
-                        <a href="#menu">See our menu</a>
-                    </div>
+                        <div class="about-card-info">
+                            <h3 class="card-title">Heritage Original</h3>
+
+                            <a href="#" class="about-card-button button"><img src="assets/IMG/About-card-arrow.svg" alt="about-card-button"></a>
+                        </div>
+                    </article>
+
+                    <article class="about-card align-self swiper-slide">
+
+                        <img src="assets/IMG/about-card-2.png" alt="About card image " class="about-card-img">
+
+                        <div class="about-card-info">
+                            <h3 class="card-title">Name here</h3>
+
+                            <a href="#" class="about-card-button button"><img src="assets/IMG/About-card-arrow.svg" alt="about-card-button"></a>
+                        </div>
+                    </article>
+
+                    <article class="about-card align-self swiper-slide">
+                        <img src="assets/IMG/about-card-3.png" alt="About card image 1" class="about-card-img">
+
+                        <div class="about-card-info">
+                            <h3 class="card-title">Name here</h3>
+
+                            <a href="#" class="about-card-button button"><img src="assets/IMG/About-card-arrow.svg" alt="about-card-button"></a>
+                        </div>
+                    </article>
+
+                    <article class="about-card align-self swiper-slide">
+                        <img src="assets/IMG/about-card-4.png" alt="About card image 1" class="about-card-img">
+
+                        <div class="about-card-info">
+                            <h3 class="card-title">Name here</h3>
+
+                            <a href="#" class="about-card-button button"><img src="assets/IMG/About-card-arrow.svg" alt="about-card-button"></a>
+                        </div>
+                    </article>
+
+                    <article class="about-card align-self swiper-slide">
+                        <img src="assets/IMG/about-card-5.png" alt="About card image 1" class="about-card-img">
+
+                        <div class="about-card-info">
+                            <h3 class="card-title">Name here</h3>
+
+                            <a href="#" class="about-card-button button"><img src="assets/IMG/About-card-arrow.svg" alt="about-card-button"></a>
+                        </div>
+                    </article>
+
+                    <article class="about-card align-self swiper-slide">
+                        <img src="assets/IMG/about-card-6.png" alt="About card image 1" class="about-card-img">
+
+                        <div class="about-card-info">
+                            <h3 class="card-title">Name here</h3>
+
+                            <a href="#" class="about-card-button button"><img src="assets/IMG/About-card-arrow.svg" alt="about-card-button"></a>
+                        </div>
+                    </article>
+
                 </div>
 
-                <img src="assets/IMG/About-img-bottom.png" alt="" class="about-img-bottom">
+                <div class="about-cards-nav">
+                    <button class="about-prev about-card-nav-button"><img src="assets/IMG/Arrow-left-filled.svg" alt=""></button>
+                    <button class="about-next about-card-nav-button"><img src="assets/IMG/Arrow-right-outline.svg" alt=""></button>
+                </div>
             </div>
-
-            <img src="assets/IMG/About-img.png" alt="Two pictures of the inside of the coffee shop" class="about-img-top">
         </section>
         <!-- ========================================================== -->
 
-        <!-- =========================== SECTION 3 =============================== -->
+        <!-- =========================== MENU SECTION =============================== -->
         <section class="menu section" id="menu">
+            <div class="menu-container container align-self">
 
-            <div class="menu__header">
-                <div class="container">
-                    <h2 class="menu__title section__title">Heritage Menu</h2>
-                    <h3 class="menu__subtitle section__subtitle">
-                        Take a look at our diverse range of hand crafted coffee
-                        and other drinks and specialties.
-                    </h3>
-
-                    <div class="menu__legend grid">
-                        <div class="legend__box bottom-alt">
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="legend-icon">
-                            <p class="legend-description">Seasonal</p>
-                        </div>
-
-                        <div class="legend__box bottom-alt">
-                            <img src="assets/IMG/legend-icon-2.png" alt="" class="legend-icon">
-                            <p class="legend-description">Original</p>
-                        </div>
-
-                        <div class="legend__box bottom-alt">
-                            <img src="assets/IMG/legend-icon-3.png" alt="" class="legend-icon">
-                            <p class="legend-description">Iced</p>
-                        </div>
-                    </div>
+                <div class="menu-title-container">
+                    <div class="menu-title-line"></div>
+                    <h2 class="menu-title">Our <span>Menu</span></h2>
+                    <div class="menu-title-line"></div>
                 </div>
 
-                <img src="assets/IMG/Menu-img.png" alt="" class="menu-img-top">
+                <div class="menu-cards-container grid">
+
+                    <div class="menu-card align-self">
+
+                        <h3 class="menu-card-title">Espresso Drinks</h3>
+
+                        <div class="menu-line"></div>
+
+                        <ul class="menu-items-list align-self">
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card align-self">
+
+                        <h3 class="menu-card-title">Espresso Drinks</h3>
+
+                        <div class="menu-line"></div>
+
+                        <ul class="menu-items-list align-self">
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card align-self">
+
+                        <h3 class="menu-card-title">Espresso Drinks</h3>
+
+                        <div class="menu-line"></div>
+
+                        <ul class="menu-items-list align-self">
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-card align-self">
+
+                        <h3 class="menu-card-title">Espresso Drinks</h3>
+
+                        <div class="menu-line"></div>
+
+                        <ul class="menu-items-list align-self">
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                            <li class="menu-item">
+                                <h4 class="menu-item-title">Title here</h4>
+                                <p class="menu-item-price">0.00</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="menu__container container">
-
-                <div class="items__container">
-                    <h2 class="items__title section__title">Coffee</h2>
-                    <div class="underline"></div>
-
-                    <div class="menu__items-container grid">
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-1.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Latte</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-                            <img src="assets/IMG/legend-icon-3.png" alt="" class="item__icon">
-
-                            <p class="item__price">$5.75</p>
-                        </div>
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-2.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Americano</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-
-                            <p class="item__price">$3.00</p>
-                        </div>
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-3.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Nena latte</h3>
-
-                            <img src="assets/IMG/legend-icon-2.png" alt="" class="item__icon">
-
-                            <p class="item__price">$4.75</p>
-                        </div>
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-4.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Iced coffee</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-                            <img src="assets/IMG/legend-icon-3.png" alt="" class="item__icon">
-
-                            <p class="item__price">$5.75</p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div class="items__container">
-                    <h2 class="items__title section__title">Fall Latte's</h2>
-                    <div class="underline"></div>
-
-                    <div class="menu__items-container grid">
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-5.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Pumpkin Spice</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-                            <img src="assets/IMG/legend-icon-3.png" alt="" class="item__icon">
-
-                            <p class="item__price">$5.95</p>
-                        </div>
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-6.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Sopapilla Cheesecake</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-
-                            <p class="item__price">$5.95</p>
-                        </div>
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-7.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Banana nut latte</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-
-                            <p class="item__price">$5.95</p>
-                        </div>
-
-                        <div class="menu__item">
-                            <div class="item-img">
-                                <img src="assets/IMG/item-8.png" alt="">
-                            </div>
-
-                            <h3 class="item__title">Peach cobbler</h3>
-
-                            <img src="assets/IMG/legend-icon-1.png" alt="" class="item__icon">
-                            <img src="assets/IMG/legend-icon-3.png" alt="" class="item__icon">
-
-                            <p class="item__price">$5.95</p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div class="menu__footer">
-                    <h2 class="menu__footer-title section__title">Specials</h2>
-                    <div class="underline"></div>
-
-                    <div class="specials__container">
-                        <h3 class="special">Any Drink + Pastry for $8.00</h3>
-
-                        <h3 class="special">Add any flavor cold foam to your drink for $2.00</h3>
-                    </div>
-                </div>
-
-            </div>
-
         </section>
         <!-- ========================================================== -->
 
         <!-- =========================== SECTION 4 =============================== -->
-        <section class="location section" id="location">
-            <div class="location__container container grid">
-
-                <div class="location__box">
-
-                    <h2 class="location__title section__title">Come and visit !</h2>
-
-                    <h3 class="location__subtitle section__subtitle">
-                        Discover our charming coffee shop nestled in the heart of Lufkin,
-                        Texas. A welcoming haven where you can savor artisanal coffee,
-                        indulge in delectable treats, and unwind in a cozy, community-focused'
-                        atmosphere. Join us for a warm cup of comfort and a taste of local
-                        hospitality.
-                    </h3>
-
-                    <p class="location__info right"><span>We are located at</span> <br> 420 S First St. Lufkin TX.</p>
-
-                    <p class="location__info right"><span>We are Open on </span><br> Monday - Friday | 7am - 4pm</p>
-
-                    <div class="location__buttons">
-                        <button class="button-fill left">
-                            <a href="tel:9364657621">Give us a call</a>
-                        </button>
-
-                        <ul class="socials bottom">
-                            <li class="social-link">
-                                <a href="#"><i class="ri-instagram-fill"></i></a>
-                            </li>
-
-                            <li class="social-link">
-                                <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <div class="map-box right">
-                    <img src="assets/IMG/map-img.png" alt="" class="map-img">
-
-                    <button class="open-icon" id="map-open">
-                        Tap to get directions
-                    </button>
-
-                    <div class="map-bkgr">
-                        <div class="button-fill">
-                            <a href="https://www.google.com/maps/dir/31.6000236,-94.6760404/heritage+coffee+company+lufkin/@31.4680358,-94.9346114,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x863817c5bd4823e1:0xe9264da689b2f6f3!2m2!1d-94.7305464!2d31.3354584?entry=ttu" target="_blank">Get directions</a>
-                        </div>
-
-                        <button class="open-icon" id="map-close">
-                            <i class="ri-download-fill"></i>
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
         <!-- ========================================================== -->
 
         <!-- =========================== SECTION 5 =============================== -->
@@ -454,11 +353,7 @@
     <!-- ============================ FOOTER ============================== -->
     <footer class="footer section">
 
-        <div class="footer__container container">
-            <p class="copyright">Website designed & developed by<br><span>ETX Software Development</span><br>&#169; All rights reserved</p>
-        </div>
-
-    </footer>    
+    </footer> 
     <!-- ========================================================== -->
 
 
@@ -466,10 +361,12 @@
     <!-- =========================== JAVASCRIPT LINKS =============================== -->
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- PARALLAX JS -->
+    <script src="assets/ETX-routes/rellax.min.js"></script>
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- MAIN JS -->
-    <script src="assets/ETX-architecture/main.js"></script>
+    <script src="assets/ETX-routes/main.js"></script>
     <!-- ========================================================== -->
 </body>
 </html>
