@@ -549,6 +549,7 @@ button{
     padding: 3rem 1rem;
     border-radius: 0 1rem 0 1rem;
     color: var(--text-color-w);
+    justify-self: center;
 }
 
 .menu-card-title{
