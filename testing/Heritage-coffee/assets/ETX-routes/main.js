@@ -77,3 +77,34 @@ var swiper = new Swiper('.about-cards-container', {
         prevEl: '.about-prev',
     },
 });
+
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '50px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.bottom-delayed`,{
+    origin: 'bottom',
+    delay: 500,
+    interval: 250,
+
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
