@@ -1,0 +1,622 @@
+/* Root CSS for Heritage-coffee-1.5 */
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+/* -=================================================================- */
+/* -================================= VARIABLE CSS ================================- */
+:root{
+
+    /* == MAIN COLORS == */
+    --primary-color: #C29D3E;
+    --accent-color: #294841;
+    --text-color-w: #E0E0E0;
+    --text-color-b: #333333;
+    --container-color: #333333;
+    --body-color: #f5e7d5;
+    /* ================= */
+    /* == FONT & TYPOGRAPHY == */
+    --body-font: "Yanone Kaffeesatz", sans-serif;
+    --title-font: "Yanone Kaffeesatz", sans-serif;
+
+    --big-font-size: 4rem;
+    --h1-font-size: 2.986rem;
+    --h2-font-size: 2.488rem;
+    --h3-font-size: 2.074rem;
+    --h4-font-size: 1.728rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .75em;
+
+    --icon-size: 2rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* ================= */
+
+    /* =========Z INDEX======== */
+    --z-fixed: 10;
+    --border-radius: 1rem;
+
+}
+
+
+/* -=================================================================- */
+
+/* -================================= BASE ================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color-b);
+}
+
+h1{
+    font-size: var(--h1-font-size);	
+}
+
+h2{
+    font-size: var(--h2-font-size);	
+}
+
+h3{
+    font-size: var(--h3-font-size);	
+}
+
+h4{
+    font-size: var(--h4-font-size);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* -================================= REUSABLE CSS CLASSES ================================- */
+.container{
+    max-width: 968px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.grid{
+    display: grid;
+}
+
+.section{
+    position: relative;
+    padding: 0 0 11rem;
+    overflow-x: hidden;
+}
+
+.section-title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    font-family: var(--title-font);
+}
+
+.section-subtitle{
+    font-size: var(--h3-font-size);
+}
+
+.description{
+    font-size: var(--normal-font-size);
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-container{
+    display: flex;
+}
+
+/* -======= BUTTONS ========- */
+.button{
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    max-width: 323px;
+}
+
+.button-content-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 213px;
+    height: 64px;
+}
+
+.button-icon-holder{
+    width: 110px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-primary{
+    background-color: var(--primary-color);
+}
+
+.button-primary .button-content-holder{
+    color: var(--text-color-w);
+    border-right: 2px solid var(--text-color-w);
+}
+
+.button-primary .button-icon-holder{
+    border-left: 2px solid var(--text-color-w);
+}
+
+.button-second{
+    background-color: transparent;
+    border: 4px solid var(--accent-color);
+}
+
+.button-second .button-content-holder{
+    color: var(--text-color-b);
+    border-right: 2px solid var(--accent-color);
+}
+
+.button-second .button-icon-holder{
+    border-left: 2px solid var(--accent-color);
+}
+
+/* -=================================================================- */
+
+/* -================================= HEADER & NAVIGATION ================================- */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nav-list{
+    display: flex;
+    position: relative;
+}
+
+.nav-list-item a{
+    font-family: var(--title-font);
+    color: var(--container-color);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-regular);
+}
+
+.nav-list.show-nav{
+    right: 0;
+}
+
+.nav-toggle-btn.rotate{
+    transform: rotate(0.5turn);
+}
+
+.nav-list-item:nth-child(5){
+    margin-top: 5rem;
+}
+
+/* ADD BLUR TO HEADER */
+.blur-header{
+    background-color: var(--body-color);
+}
+
+.blur-header::after{
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: var(--body-color);
+    top: 0;
+    left: 0;
+    transition: ease-in-out .4s;
+    z-index: -1;
+    /* box-shadow: 0 0 8px 0 #0000009a; */
+}
+
+.nav-list-item .active-link{
+    color: var(--primary-color);
+}
+
+.nav-list-item:nth-child(5) .nav-button{
+    color: var(--text-color-b);
+    font-weight: var(--font-bold);
+}
+
+/* -================================= MOBILE NAVIGATION CSS ================================- */
+@media screen and (max-width: 1023px){
+
+    .header{
+        padding: 1rem 0;
+    }
+
+    .nav-list{
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3rem;
+        background-color: var(--body-color);
+        padding: 12rem 2rem;
+        right: -100%;
+        top: 0;
+        transition: right .5s;
+        width: 100%;
+    }
+
+    .nav-list-item a{
+        color: var(--text-color-b);
+        font-size: var(--h2-font-size);
+    }
+
+    .nav-toggle-btn{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        height: 32px;
+        width: 32px;
+        display: grid;
+        place-items: center;
+        transition: .35s;
+        z-index: var(--z-fixed);
+    }
+
+    .nav-toggle-btn i{
+        font-size: var(--icon-size);
+        color: var(--text-color-w);
+    }
+
+}
+
+/* -================================= DESKTOP NAVIGATION CSS ================================- */
+@media screen and (min-width: 1023px){
+
+    :root{
+        --big-font-size: 8rem;
+    }
+
+
+    .nav-toggle-btn{
+        display: none;
+    }
+
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-list{
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-list-item a{
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-regular);
+    }
+
+    .nav-list-item:nth-child(5){
+        width: 128px;
+        height: 48px;
+        margin-top: 0;
+        margin-left: 6rem;
+    }
+    
+}
+/* -======================================================================================- */
+
+
+/* -================================= HOME SECTION ================================- */
+.home{
+    padding-top: 8.5rem;
+}
+
+.home-container{
+    gap: 2rem;
+}
+
+.home-title-one{
+    line-height: 48px;
+    font-size: 6rem;
+}
+
+.home-title-two{
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+    text-align: end;
+}
+
+.home-images-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.home-image-1{
+    border-radius: var(--border-radius);
+}
+
+.mobile-hidden{
+    display: none;
+    gap: 1rem;
+}
+
+.home-box-two{
+    gap: 2rem;
+}
+
+.home-button-container{
+    gap: 1rem;
+}
+
+.home-socials-list{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.home-hours-container{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.home-hours-line{
+    content: '';
+    width: 2px;
+    height: 48px;
+    background-color: var(--text-color-b);
+}
+
+.home-hours-description{
+    font-size: var(--h4-font-size);
+}
+
+.home-hours-description span{
+    font-weight: var(--font-bold);
+}
+/* -============================================================================- */
+
+
+/* -================================= SEASONAL SECTION ================================- */
+.seasonal-title,
+.seasonal-subtitle{
+    text-align: center;
+}
+
+.seasonal-subtitle{
+    margin-bottom: 2rem;
+    font-size: var(--h4-font-size);
+}
+
+.seasonal-title span{
+    font-weight: 400;
+}
+
+.seasonal-card{
+    position: relative;
+    width: 323px;
+    height: 496px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.seasonal-card-image{
+    border-radius: var(--border-radius);
+}
+
+.seasonal-card-info{
+    width: 221px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.seasonal-card-title{
+    color: var(--text-color-w);
+}
+
+.seasonal-card-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.button-prev,
+.button-next{
+    width: 118px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-prev{
+    border-radius: 1rem 0 0 1rem;
+    border: 4px solid var(--accent-color);
+}
+
+.button-next{
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--primary-color);
+    border: none;
+}
+/* -============================================================================- */
+
+
+/* -================================= ABOUT SECTION ================================- */
+.about-container{
+    gap: 2rem;
+}
+
+.about-box-one{
+    gap: 2rem;
+}
+
+.about-title{
+    font-size: var(--big-font-size);
+}
+
+.about-title span{
+    font-weight: var(--font-regular);
+}
+
+.about-subtitle{
+    font-weight: var(--font-regular);
+    margin-bottom: 1rem;
+}
+
+.about-box-two{
+    gap: 1rem;
+}
+
+.about-image-container-one{
+    width: 100%;
+    height: 255px;
+}
+
+.about-image-container-one img{
+    border-radius: 1rem 1rem 0 0 ;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-image-container-incepted{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.about-image-container-two,
+.about-image-container-three{
+    height: 225px;
+}
+
+.about-image-container-two img{
+    border-radius: 0 0 0 1rem;
+}
+
+.about-image-container-three img{
+    border-radius: 0 0 1rem 0;
+}
+/* -============================================================================- */
+
+
+/* -================================= MENU SECTION ================================- */
+.menu-subtitle,
+.menu-title{
+    text-align: center;
+}
+
+.menu-subtitle{
+    font-weight: var(--font-regular);
+}
+
+.menu-title{
+    font-size: var(--big-font-size);
+}
+
+.menu-title span{
+    color: var(--primary-color);
+}
+
+.menu-container{
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.menu-section-card{
+    gap: 3rem;
+}
+
+.menu-section-card-title{
+    text-align: end;
+}
+
+.menu-flex-wrap-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.menu-items-card{
+    gap: 2rem;
+}
+
+.menu-items-card-title{
+    font-weight: var(--font-regular);
+}
+
+.menu-items-list{
+    gap: 1rem;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.menu-item-title{
+    font-weight: var(--font-bold);
+    min-width: 60px;
+}
+
+.menu-item-line{
+    content: '';
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed var(--text-color-b);
+}
+/* -============================================================================- */
+
+/* -================================= FOOTER ================================- */
+/* -=========================================================================- */
+
+
+
+/* -================================= CSS BREAKPOINTS ================================- */
+
+@media screen and (max-width: 1023px){
+    .responsive-container{
+        flex-direction: column;
+    }
+}
+/* -==================================================================================- */
