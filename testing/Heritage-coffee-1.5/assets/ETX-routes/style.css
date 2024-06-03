@@ -23,7 +23,7 @@
     --h2-font-size: 2.488rem;
     --h3-font-size: 2.074rem;
     --h4-font-size: 1.728rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 1.2rem;
     --small-font-size: .75em;
 
     --icon-size: 2rem;
@@ -195,6 +195,10 @@ img{
     width: 100%;
 }
 
+.nav-logo img{
+    z-index: var(--z-fixed);
+}
+
 .nav-list{
     display: flex;
     position: relative;
@@ -215,8 +219,12 @@ img{
     transform: rotate(0.5turn);
 }
 
-.nav-list-item:nth-child(5){
-    margin-top: 5rem;
+.nav-list-item:nth-child(6){
+    margin-top: 3rem;
+}
+
+.nav-button{
+    background-color: var(--accent-color);
 }
 
 /* ADD BLUR TO HEADER */
@@ -241,11 +249,6 @@ img{
     color: var(--primary-color);
 }
 
-.nav-list-item:nth-child(5) .nav-button{
-    color: var(--text-color-b);
-    font-weight: var(--font-bold);
-}
-
 /* -================================= MOBILE NAVIGATION CSS ================================- */
 @media screen and (max-width: 1023px){
 
@@ -259,7 +262,7 @@ img{
         align-items: flex-end;
         gap: 3rem;
         background-color: var(--body-color);
-        padding: 12rem 2rem;
+        padding: 10rem 2rem;
         right: -100%;
         top: 0;
         transition: right .5s;
@@ -286,6 +289,10 @@ img{
     .nav-toggle-btn i{
         font-size: var(--icon-size);
         color: var(--text-color-w);
+    }
+
+    .nav-button-container{
+        gap: 1rem;
     }
 
 }
@@ -319,11 +326,8 @@ img{
         font-weight: var(--font-regular);
     }
 
-    .nav-list-item:nth-child(5){
-        width: 128px;
-        height: 48px;
-        margin-top: 0;
-        margin-left: 6rem;
+    .nav-button-container{
+        display: none;
     }
     
 }
@@ -340,6 +344,7 @@ img{
 }
 
 .home-title-one{
+    color: var(--accent-color);
     line-height: 48px;
     font-size: 6rem;
 }
@@ -353,10 +358,12 @@ img{
 .home-images-container{
     display: flex;
     gap: 1rem;
+    z-index: 5;
 }
 
 .home-image-1{
     border-radius: var(--border-radius);
+    width: 100%;
 }
 
 .mobile-hidden{
@@ -369,6 +376,7 @@ img{
 }
 
 .home-button-container{
+    align-self: center;
     gap: 1rem;
 }
 
@@ -467,6 +475,7 @@ img{
 .button-prev{
     border-radius: 1rem 0 0 1rem;
     border: 4px solid var(--accent-color);
+    background-color: transparent;
 }
 
 .button-next{
@@ -501,6 +510,7 @@ img{
 
 .about-box-two{
     gap: 1rem;
+    max-width: 450px;
 }
 
 .about-image-container-one{
@@ -524,7 +534,7 @@ img{
 
 .about-image-container-two,
 .about-image-container-three{
-    height: 225px;
+    height: 100%;
 }
 
 .about-image-container-two img{
@@ -605,18 +615,201 @@ img{
     height: 1px;
     border-bottom: 1px dashed var(--text-color-b);
 }
+
+.menu-button{
+    background-color: var(--accent-color);
+    align-self: center;
+}
 /* -============================================================================- */
 
-/* -================================= FOOTER ================================- */
+/* -================================= LOCATION SECTION ================================- */
+.location-container{
+    gap: 3rem;
+}
+
+.location-box-one{
+    gap: 1rem;
+}
+
+.location-title{
+    font-size: var(--big-font-size);
+    margin-bottom: 2rem;
+}
+
+.location-title span{
+    color: var(--primary-color);
+}
+
+.location-subtitle{
+    font-weight: var(--font-regular);
+}
+
+.location-box-two{
+    gap: 1rem;
+}
+
+.location-info-card{
+    gap: 1rem;
+}
+
+.location-info-card-description{
+    font-weight: var(--font-regular);
+}
+
+.location-info-card:nth-child(1){
+    align-items: flex-end;
+}
+
+.location-info-card:nth-child(3){
+    align-items: flex-end;
+}
+
+.location-box-three{
+    height: 512px;
+}
+
+.location-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.location-buttons-container{
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.location-button-one{
+    background-color: var(--accent-color);
+}
+
+.location-button-two{
+    background-color: var(--primary-color);
+}
 /* -=========================================================================- */
 
 
 
 /* -================================= CSS BREAKPOINTS ================================- */
 
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 700px){
     .responsive-container{
         flex-direction: column;
     }
+}
+
+/* -==== For medium devices ====- */
+@media screen and (min-width: 700px){
+
+    /* HOME SECTION */
+    .home-container{
+        align-items: center;
+    }
+
+    /* ABOUT SECTION  */
+    .about-container{
+        align-items: center;
+    }
+
+    .about-box-one{
+        max-width: 350px;
+    }
+
+    /* MENU SECTION */
+
+    .menu-flex-wrap-container{
+        flex-direction: row;
+    }
+
+    .menu-items-card{
+        width: 100%;
+    }
+
+    /* LOCATION SECTION */
+    .location-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .location-info-card:nth-child(1){
+        align-items: flex-start;
+    }
+
+    .location-info-card:nth-child(3){
+        align-items: flex-start;
+    }
+
+    .grid-span-1{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+/* -==== For medium - large devices ====- */
+@media screen and (min-width: 1024px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* HOME SECTION */
+    .home-container{
+        justify-content: center;
+    }
+
+    .home-image-1{
+        width: 544px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .mobile-hidden{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .home-image-2,
+    .home-image-3{
+        height: 192px;
+        width: 224px;
+        object-fit: cover;
+    }
+
+    .home-image-1{
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .home-image-2{
+        border-radius: 0 1rem 0 0 ;
+    }
+
+    .home-image-3{
+        border-radius: 0 0 1rem 0;
+    }
+
+    /* ABOUT SECTION */
+    .about-container{
+        justify-content: space-between;
+    }
+
+    .about-box-one{
+        max-width: 500px;
+    }
+
+    /* LOCATION SECTION */
+    .location-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-span-1{
+        grid-column: span 1;
+    }
+
 }
 /* -==================================================================================- */

@@ -69,4 +69,51 @@ var swiper = new Swiper('.seasonal-container', {
         nextEl: '.button-next',
         prevEl: '.button-prev',
     },
+
+    breakpoints: {
+      600: {
+          slidesPerView: 2,
+      },
+
+      1000: {
+        slidesPerView: 3,
+      },
+  },
 });
+
+
+/*=============== SCROLL REVEAL JS ===============*/
+const sr = ScrollReveal({
+	distance: '50px',
+	duration: 2500,
+  })
+  
+  sr.reveal(`.top`,{
+	origin: 'top',
+  })
+
+  sr.reveal(`.bottom`,{
+	origin: 'bottom',
+  })
+
+  sr.reveal(`.bottom-delayed`,{
+    origin: 'bottom',
+    delay: 400,
+    interval: 250,
+
+  })
+
+  sr.reveal(`.left-delayed`,{
+    origin: 'left',
+    delay: 400,
+    interval: 250,
+
+  })
+
+  sr.reveal(`.left`,{
+    origin: 'left',
+  })
+
+  sr.reveal(`.right`,{
+    origin: 'right',
+  })
