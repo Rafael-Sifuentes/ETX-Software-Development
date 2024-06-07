@@ -310,6 +310,7 @@ img{
 
     .nav-list-item a{
         font-size: var(--normal-font-size);
+        color: var(--text-color-w);
     }
     
 }
@@ -398,6 +399,7 @@ img{
 
 .about-image-container{
     position: relative;
+    max-width: 576px;
     margin-bottom: 15rem;
 }
 
@@ -407,6 +409,7 @@ img{
 
 .about-image{
     height: 336px;
+    width: 576px;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
@@ -447,6 +450,7 @@ img{
 
 .about-box-two{
     gap: 4rem;
+    max-width: 400px;
 }
 
 .about-content-container{
@@ -492,6 +496,7 @@ img{
     color: var(--text-color-w);
     background-color: var(--container-color);
     width: 100%;
+    justify-content: center;
 }
 
 .service-subtitle{
@@ -555,6 +560,7 @@ img{
 
 .review-header-box-one{
     gap: 1rem;
+    max-width: 306px;
 }
 
 .CTA-title{
@@ -593,15 +599,18 @@ img{
 
 .review-box-one{
     gap: 1rem;
+    max-width: 400px;
 }
 
 .review-image-container{
     position: relative;
+    max-width: 576px;
     margin-bottom: 15rem;
 }
 
 .review-image{
     height: 336px;
+    width: 576px;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
@@ -705,4 +714,63 @@ img{
 
 
 /* -================================= CSS BREAKPOINTS ================================- */
+/* -==== For medium devices ====- */
+@media screen and (min-width: 700px){
+
+    /* HOME SECTION */
+    .home-footer-container{
+        background-color: var(--body-color);
+    }
+    .home-footer-list{
+        flex-direction: row;
+    }
+    .home-footer-list-item p{
+        color: var(--text-color-b);
+    }
+
+    /* SERVICES SECTION */
+    .services-container{
+        align-items: center;
+        flex-direction: row;
+    }
+    .services-box-one{
+        border-radius: 1rem 0 0 1rem;
+    }
+    .service-box-two{
+        border-radius: 0 1rem 1rem 0;
+    }
+    .service-image{
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    /* REVIEW SECTION */
+    .review-header-container{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+/* -==== For medium - large devices ====- */
+@media screen and (min-width: 1024px){
+
+    /* REUSABLE CSS CLASSES */
+    .container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .responsive-container{
+        flex-direction: row;
+    }
+
+    /* REVIEW SECTION */
+    .review-header{
+        height: 420px;
+    }
+    .testemonial-card-description{
+        font-size: var(--h4-font-size);
+        max-width: 500px;
+    }
+
+}
 /* -==================================================================================- */
