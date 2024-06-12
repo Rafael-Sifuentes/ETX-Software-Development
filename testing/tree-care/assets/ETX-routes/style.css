@@ -445,9 +445,9 @@ img{
     width: 100%;
     object-fit: cover;
     border-radius: var(--border-radius);
-    animation: appear-one 4s linear;
+    /* animation: appear-one 4s linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 40%; */
 }
 
 .g-i-1{
@@ -522,10 +522,10 @@ img{
     border-radius: var(--border-radius);
     box-shadow:  0 16px 16px #07080861;
     object-fit: cover;
-    animation: appear-two 4s linear;
+    /* animation: appear-two 4s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-}
+} */
 /* -============================================================================- */
 
 
