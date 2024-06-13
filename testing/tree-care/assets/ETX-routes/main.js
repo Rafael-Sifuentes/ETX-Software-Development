@@ -59,6 +59,23 @@ var rellax = new Rellax('.home-image-container',{
 	center:true
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to('.service-img', {
+      opacity: 1,
+      duration: 1,
+      scale: 1,
+      x: 0,
+      scrollTrigger: {
+          trigger: '.service-image-box',
+          start: 'top 50%', // Adjust the start point as needed
+          toggleActions: 'play none none none'
+      }
+  });
+});
+
+
 
 
 /*=============== SCROLL REVEAL JS ===============*/
@@ -89,3 +106,18 @@ const sr = ScrollReveal({
   sr.reveal(`.right`,{
     origin: 'right',
   })
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('.service-img').forEach(element => {
+        observer.observe(element);
+    });
+});
