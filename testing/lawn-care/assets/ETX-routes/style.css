@@ -263,7 +263,7 @@ img{
         align-items: flex-end;
         gap: 3rem;
         background-color: var(--container-color);
-        padding: 8rem 2rem 40rem;
+        padding: 14rem 2rem 20rem;
         right: -100%;
         top: 0;
         transition: right .3s;
@@ -726,6 +726,10 @@ img{
     }
     .home-footer-list-item p{
         color: var(--text-color-b);
+    }
+
+    .about-services-list-item p{
+        font-size: var(--normal-font-size);
     }
 
     /* SERVICES SECTION */
