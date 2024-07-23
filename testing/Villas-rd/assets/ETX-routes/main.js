@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
     gsap.registerPlugin(ScrollTrigger);
   });
 
+  gsap.to(".home-background-image", {
+    y: "300px",
+    scrollTrigger: {
+        trigger: "#home",
+        start: "top bottom",
+        end : "bottom top",
+        scrub: true
+    }
+  })
+
   gsap.to(".about-img", {
     // Set the parallax effect properties here
     x: "200px", // Move the image by 100px downwards when it comes into view

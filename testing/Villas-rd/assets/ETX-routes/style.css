@@ -192,7 +192,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 4px 4px 16px #0000002c;
+    box-shadow: 4px 4px 16px #0000006d;
     padding: 1rem 3rem;
     z-index: var(--z-fixed);
     transition: all .4s ease-in-out;
@@ -356,8 +356,8 @@ img{
 
 /* -================================= HOME SECTION 1 ================================- */
 .home{
-    height: 984px;
-    /* height: 100vh; */
+    /* height: 984px; */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -409,14 +409,15 @@ img{
 
 .home-background-image{
     position: absolute;
+    /* bottom: 400px; */
     bottom: 0;
     left: 0;
-    /* height: 100%; */
+    /* height: 110%; */
     height: 572px;
     width: 100%;
     z-index: -1;
     object-fit: cover;
-    filter: brightness(90%);
+    filter: saturate(0);
 }
 /* -============================================================================- */
 
@@ -792,6 +793,10 @@ img{
 
     .home-title{
         font-size: var(--big-font-size);
+    }
+
+    .home-background-image{
+        height: 900px;
     }
 
     /* .home-info-container{
