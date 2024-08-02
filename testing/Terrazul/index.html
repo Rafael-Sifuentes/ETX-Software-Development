@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon">
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- COMPONENT CSS -->
+    <link rel="stylesheet" href="assets/Components/styles.css">
+    <!-- PAGES SPECIFIC CSS -->
+    <link rel="stylesheet" href="assets/Home/home.css">
+    <title>TerraAzul Luxury Pools | Home</title>
+    <meta title="description" content="Custom luxury pool builders located in the greater Houston area">
+    <meta title="keywords" content="Custom pool builders">
+</head>
+<body>
+
+    <!-- SITE NAVIGATION ========================================================== -->
+    <header class="header" id="header">
+        <img src="assets/IMG/Logo.svg" class="header-logo" alt="TerraAzul logo">
+
+        <nav class="mobile-nav" id="mobile-nav">
+
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-list-item"><a href="#" class="mobile-nav-link flex-column"><i class="ri-home-2-line"></i><p>Home</p></a></li>
+                <li class="mobile-nav-list-item"><a href="#" class="mobile-nav-link flex-column"><i class="ri-camera-lens-fill"></i><p>Gallery</p></a></li>
+                <li class="mobile-nav-list-item"><a href="#" class="mobile-nav-link flex-column"><i class="ri-blaze-fill"></i><p>Features</p></a></li>
+                <li class="mobile-nav-list-item"><a href="#" class="mobile-nav-link flex-column"><i class="ri-contrast-drop-2-line"></i><p>Pools</p></a></li>
+            
+                <div class="mobile-nav-card-container" id="mobile-nav-card">
+                    <div class="mobile-nav-card-info flex-column isHidden" id="mobile-card-home">
+                        <h4 class="mobile-nav-card-title">Home</h4>
+                        <ul class="mobile-nav-card-list">
+                            <li class="mobile-nav-card-link"><a href="#sec2">Pool Types</a></li>
+                            <li class="mobile-nav-card-link"><a href="#sec3">Features</a></li>
+                            <li class="mobile-nav-card-link"><a href="#sec4">Gallery</a></li>
+                            <li class="mobile-nav-card-link"><a href="#sec5">Testimonials</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">About us</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="mobile-nav-card-info flex-column isHidden" id="mobile-card-gallery">
+                        <h4 class="mobile-nav-card-title">Gallery</h4>
+                        <ul class="mobile-nav-card-list">
+                            <li class="mobile-nav-card-link"><a href="#">Recent Projects</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Featured Pools</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">River Pools</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Spas</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Mini Pools</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="mobile-nav-card-info flex-column isHidden" id="mobile-card-features">
+                        <h4 class="mobile-nav-card-title">Features</h4>
+                        <ul class="mobile-nav-card-list">
+                            <li class="mobile-nav-card-link"><a href="#">Lazy rivers</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Water & Fire features</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Lighting</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Automation</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Safety features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="mobile-nav-card-info flex-column isHidden" id="mobile-card-pools">
+                        <h4 class="mobile-nav-card-title">Pool Types</h4>
+                        <ul class="mobile-nav-card-list">
+                            <li class="mobile-nav-card-link"><a href="#">Gunite</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Vinyl</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Fiberglass</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Spas & Hot Tubs</a></li>
+                            <li class="mobile-nav-card-link"><a href="#">Remodeling</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+            
+
+        </nav>
+
+        <nav class="desktop-nav" id="desktop-nav">
+            <ul class="desktop-nav-list">
+                <li class="desktop-nav-list-item"><a href="#" class="desktop-nav-link">Home<i class="ri-arrow-up-s-line"></i></a></li>
+                <li class="desktop-nav-list-item"><a href="#" class="desktop-nav-link">Gallery<i class="ri-arrow-up-s-line"></i></a></li>
+                <li class="desktop-nav-list-item"><a href="#" class="desktop-nav-link">Features<i class="ri-arrow-up-s-line"></i></a></li>
+                <li class="desktop-nav-list-item"><a href="#" class="desktop-nav-link">Pools<i class="ri-arrow-up-s-line"></i></a></li>
+                <li class="desktop-nav-list-item"><a href="#" class="nav-button"><p>Contact</p></a></li>
+
+                <div class="desktop-nav-card-container" id="desktop-nav-card">
+
+                    <div class="desktop-nav-card-info isHidden" id="desktop-card-home">
+                        <ul class="desktop-nav-links">
+                            <li class="desktop-nav-card-link"><a href="#">Pool Types</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Features</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Gallery</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Testemonials</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">About us</a></li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="desktop-nav-card-info isHidden" id="desktop-card-gallery">
+                        <ul class="desktop-nav-links">
+                            <li class="desktop-nav-card-link"><a href="#">Recent Projects</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Featured pools</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">River pools</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Spas</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Mini pools</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="desktop-nav-card-info isHidden" id="desktop-card-features">
+                        <ul class="desktop-nav-links">
+                            <li class="desktop-nav-card-link"><a href="#">Lazy rivers</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Water / Fire features</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Lighting</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Automation</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Safety features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="desktop-nav-card-info isHidden" id="desktop-card-pools">
+                        <ul class="desktop-nav-links">
+                            <li class="desktop-nav-card-link"><a href="#">Gunite</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Vinyl</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Fiberglass</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Spas & Hot tubs</a></li>
+                            <li class="desktop-nav-card-link"><a href="#">Remodeling</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- ========================================================================== -->
+
+    <!-- MAIN ===================================================================== -->
+    <main class="main">
+
+        <!-- HOME SECTION ========================================================= -->
+        <section class="home section" id="home">
+
+            <div class="home-container container flex-column">
+                <div class="home-logo-container"><img src="assets/IMG/Home-logo.svg" alt="Terrazul logo" class="home-logo"></div>
+                <h1 class="home-title">Find your <span>OASIS</span></h1>
+                <h3 class="home-subtitle">Custom luxury pools by <b>Terrazul</b></h3>
+
+                <div class="home-buttons-container responsive-container">
+                    <a href="assets/Gallery/gallery.html" class="home-button-secondary"><p>View our gallery</p></a>
+                    <a href="assets/Gallery/gallery.html" class="home-button-primary"><p>Play video</p><i class="ri-play-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="section-background-container home-background-image-container">
+                <img src="assets/IMG/Home-background-image.png" alt="Home background image" class="section-background-image home-background-image parallax-image">
+            </div>
+
+        </section>
+        <!-- ====================================================================== -->
+
+        <!-- GALLERY SECTION ====================================================== -->
+        <section class="gallery section">
+
+            <div class="gallery-container container flex-column swiper">
+
+                <div class="gallery-header responsive-container">
+                    <h2 class="gallery-title section-title">Discover our masterclass<br>pool gallery</h2>
+                    <div class="gallery-swiper-buttons">
+                        <button class="gallery-prev"><i class="ri-arrow-left-s-line"></i></button>
+                        <button class="gallery-next"><i class="ri-arrow-right-s-line"></i></button>
+                    </div>
+                </div>
+
+                <div class="swiper-wrapper">
+
+                    <article class="gallery-card swiper-slide">
+                        <img src="assets/IMG/Gallery-image-1.png" alt="Gallery image 1" class="gallery-card-image">
+                        <div class="gallery-card-info isBlurred"><a href="#" class="gallery-card-info-title"><p>Recent pools</p></a><i class="ri-arrow-right-s-line"></i></div>
+                    </article>
+                    
+                    <article class="gallery-card swiper-slide">
+                        <img src="assets/IMG/Gallery-image-2.png" alt="Gallery image 2" class="gallery-card-image">
+                        <div class="gallery-card-info isBlurred"><a href="#" class="gallery-card-info-title"><p>Featured pools</p></a><i class="ri-arrow-right-s-line"></i></div>
+                    </article>
+
+                    <article class="gallery-card swiper-slide">
+                        <img src="assets/IMG/Gallery-image-3.png" alt="Gallery image 3" class="gallery-card-image">
+                        <div class="gallery-card-info isBlurred"><p class="gallery-card-info-title">River pools</p><i class="ri-arrow-right-s-line"></i></div>
+                    </article>
+
+                    <article class="gallery-card swiper-slide">
+                        <img src="assets/IMG/Gallery-image-4.png" alt="Gallery image 4" class="gallery-card-image">
+                        <div class="gallery-card-info isBlurred"><p class="gallery-card-info-title">Spas</p><i class="ri-arrow-right-s-line"></i></div>
+                    </article>
+
+                    <article class="gallery-card swiper-slide">
+                        <img src="assets/IMG/Gallery-image-5.png" alt="Gallery image 5" class="gallery-card-image">
+                        <div class="gallery-card-info isBlurred"><p class="gallery-card-info-title">Mini pools</p><i class="ri-arrow-right-s-line"></i></div>
+                    </article>
+
+                    <article class="gallery-card swiper-slide">
+                        <img src="assets/IMG/Gallery-image-6.png" alt="Gallery image 6" class="gallery-card-image">
+                        <div class="gallery-card-info isBlurred"><p class="gallery-card-info-title">Under construction</p><i class="ri-arrow-right-s-line"></i></div>
+                    </article>
+                    
+                </div>
+
+                <div class="gallery-grid-group grid">
+                    <div class="gallery-grid-group-image-container"><img src="assets/IMG/Gallery-main-image.png" alt="Gallery main image" class="gallery-main-image"></div>
+
+                    <div class="gallery-info-group flex-column">
+                        <p class="gallery-info-group-subtitle">Imagine having a 5-star resort in your backyard</p>
+                        <h2 class="gallery-info-group-title">At Terrazul we are making that a <span>reality</span></h2>
+                        <a href="#" class="primary-button gallery-info-group-button"><p>See our portfolio</p></a>
+                    </div>
+
+                    <div class="gallery-grid-group-image-container-secondary"><img src="assets/IMG/Gallery-secondary-image.png" alt="Gallery secondary image" class="gallery-main-image"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ====================================================================== -->
+
+        <!-- FEATURES SECTION ===================================================== -->
+        <section class="features section" id="features">
+
+            <div class="features-container container flex-column swiper">
+                <div class="features-header flex-column">
+                    <h4 class="features-subtitle section-subtitle">If you can dream it, we can make it</h4>
+                    <h2 class="features-title section-title">Explore our features and <span>designs</span></h2>
+                </div>
+
+                <ul class="swiper-wrapper">
+
+                    <li class="feature-card swiper-slide">
+                        <img src="assets/IMG/Feature-card-image-1.png" alt="We Build ininifty pools" class="feature-card-image">
+                        <div class="feature-card-info isBlurred"><h4 class="feature-card-info-title">Infinity Pools</h4></div>
+                    </li>
+
+                    <li class="feature-card swiper-slide">
+                        <img src="assets/IMG/Feature-card-image-2.png" alt="We Build ininifty pools" class="feature-card-image">
+                        <div class="feature-card-info isBlurred"><h4 class="feature-card-info-title">Lazy Rivers</h4></div>
+                    </li>
+
+                    <li class="feature-card swiper-slide">
+                        <img src="assets/IMG/Feature-card-image-5.png" alt="We Build ininifty pools" class="feature-card-image">
+                        <div class="feature-card-info isBlurred"><h4 class="feature-card-info-title">Lighting</h4></div>
+                    </li>
+
+                    <li class="feature-card swiper-slide">
+                        <img src="assets/IMG/Feature-card-image-4.png" alt="We Build ininifty pools" class="feature-card-image">
+                        <div class="feature-card-info isBlurred"><h4 class="feature-card-info-title">Automation</h4></div>
+                    </li>
+
+                    <li class="feature-card swiper-slide">
+                        <img src="assets/IMG/Feature-card-image-3.png" alt="We Build ininifty pools" class="feature-card-image">
+                        <div class="feature-card-info isBlurred"><h4 class="feature-card-info-title">Water / Fire</h4></div>
+                    </li>
+
+                    <li class="feature-card swiper-slide">
+                        <img src="assets/IMG/Feature-card-image-6.png" alt="We Build ininifty pools" class="feature-card-image">
+                        <div class="feature-card-info isBlurred"><h4 class="feature-card-info-title">Spas</h4></div>
+                    </li>
+                </ul>
+
+                <div class="feature-buttons-container responsive-container">
+
+                    <div class="feature-swiper-buttons">
+                        <button class="feature-prev"><i class="ri-arrow-left-s-line"></i></button>
+                        <button class="feature-next"><i class="ri-arrow-right-s-line"></i></button>
+                    </div>
+
+                    <div class="feature-buttons responsive-container">
+                        <a href="#" class="primary-button"><p>View all features</p></a>
+                        <a href="#" class="secondary-button"><p>See our portfolio</p></a>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="feature-background"></div>
+        </section>
+        <!-- ====================================================================== -->
+
+        <!-- TIMELINE SECTION ===================================================== -->
+        <section class="timeline section" id="timeline">
+            <div class="timeline-container container flex-column">
+
+                <h2 class="timeline-title-mobile section-title">From concept to <span>completion</span></h2>
+
+                <ul class="timeline-cards-container-mobile grid">
+
+                    <li class="timeline-card-mobile">
+                        <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                        <div class="timeline-card-mobile-info flex-column">
+                            <h4 class="timeline-card-title">Initial consolation & design</h4>
+                            <p class="timeline-card-description">
+                                We will discuss your vision and preferences with our expert team of engineers and designers.
+                            </p>
+
+                            <div class="sml-line"></div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-card-mobile">
+                        <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                        <div class="timeline-card-mobile-info flex-column">
+                            <h4 class="timeline-card-title">Permitting & Planning</h4>
+                            <p class="timeline-card-description">
+                                We will handle all necessary permits and approvals from local authorities as well as handling all aspects of project management
+                            </p>
+
+                            <div class="sml-line"></div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-card-mobile">
+                        <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                        <div class="timeline-card-mobile-info flex-column">
+                            <h4 class="timeline-card-title">Construction</h4>
+                            <p class="timeline-card-description">
+                                Site prep with excavation and foundation work. Construct the pool, install plumbing, electrical, and finishes. Install custom features like waterfalls and lighting.
+                            </p>
+
+                            <div class="sml-line"></div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-card-mobile">
+                        <div class="progress-bar-container"><div class="progress-bar"></div></div>
+                        <div class="timeline-card-mobile-info flex-column">
+                            <h4 class="timeline-card-title">Final touches and handover</h4>
+                            <p class="timeline-card-description">
+                                Conduct final inspections for quality and compliance. Complete landscaping and finishing touches. Provide a detailed walkthrough and maintenance instructions. Officially hand over the pool, ensuring client satisfaction.
+                            </p>
+
+                            <div class="sml-line"></div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="sticky-container">
+
+                    <div>
+                        <h2 class="timeline-title section-title">From concept to <span>design</span></h2>
+                        <h4 class="timeline-subtitle section-subtitle">Keep scrolling down</h4>
+                    </div>
+
+                    <div class="timeline-overflow-container" id="scroll-this">
+
+                        <div class="timeline-card flex-column">
+                            <h4 class="timeline-card-title">Initial consolation & design </h4>
+                            <p class="timeline-card-description">
+                                We will discuss your vision and preferences with our expert team of engineers and designers.
+                            </p>
+
+                            <div class="timeline-line-alt l-1"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+
+                        <div class="timeline-card flex-column">
+                            <h4 class="timeline-card-title">Permitting & Planning</h4>
+                            <p class="timeline-card-description">
+                                We will handle all necessary permits and approvals from local authorities as well as handling all aspects of project management
+                            </p>
+
+                            <div class="timeline-line-alt l-2"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+
+                        <div class="timeline-card flex-column">
+                            <h4 class="timeline-card-title">Construction</h4>
+                            <p class="timeline-card-description">
+                                Site prep with excavation and foundation work. Construct the pool, install plumbing, electrical, and finishes. Install custom features like waterfalls and lighting.
+                            </p>
+
+                            <div class="timeline-line-alt l-3"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+
+                        <div class="timeline-card flex-column">
+                            <h4 class="timeline-card-title">Final touches and handover</h4>
+                            <p class="timeline-card-description">
+                                Conduct final inspections for quality and compliance. Complete landscaping and finishing touches. Provide a detailed walkthrough and maintenance instructions. Officially hand over the pool, ensuring client satisfaction.
+                            </p>
+
+                            <div class="timeline-line-alt l-4"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-spacer" id="trigger-here"></div>
+            </div>
+        </section>
+        <!-- ====================================================================== -->
+
+        <!-- CTA SECTION ========================================================== -->
+        <section class="cta section" id="cta-home">
+
+            <div class="cta-container container flex-column">
+                <h2 class="CTA-title">Ready to transform your backyard ?</h2>
+                <h4 class="CTA-subtitle">Fill out the form to get started.</h4>
+
+                <div class="cta-buttons-container responsive-container">
+                    <a href="#" class="primary-button">Lets get started</a>
+                    <a href="#" class="secondary-button">View more projects</a>
+                </div>
+            </div>
+
+
+            <div class="section-background-container cta-background-image-container">
+                <img src="assets/IMG/CTA-background-image.png" alt="CTA background image" class="section-background-image cta-background-image ">
+            </div>
+        </section>
+        <!-- ====================================================================== -->
+
+
+    </main>
+    <!-- ========================================================================== -->
+
+    <!-- FOOTER =================================================================== -->
+    <!-- ========================================================================== -->
+
+    <!-- JAVASCRIPT =============================================================== -->
+    <!-- SCROLL REVEAL JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- COMPONENT JS -->
+    <script src="assets/Components/main.js"></script>
+    <!-- PAGE SPECIFIC JS -->
+    <script src="assets/Home/home.js"></script>
+    <!-- ========================================================================== -->
+
+</body>
+</html>
