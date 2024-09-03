@@ -609,7 +609,6 @@ img{
     gap: 2rem;
     padding: 10rem 2rem 2rem 2rem;
     background-color: var(--body-color-w);
-    color: var(--text-color-b);
     border-radius: var(--border-radius);
 }
 
@@ -625,7 +624,7 @@ img{
 }
 
 .services-cards-container .services-card:nth-child(4){
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: #ffffff;
 }
 
@@ -638,6 +637,10 @@ img{
     width: 100%;
     z-index: 0;
     border-radius: 0 0 3rem 3rem;
+}
+
+.alt-card-title{
+    color: var(--text-color-w);
 }
 /* -============================================================================- */
 

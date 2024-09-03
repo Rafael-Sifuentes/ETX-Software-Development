@@ -23,19 +23,20 @@ const navMenu = document.getElementById('nav-list')
 navlink.forEach(n => n.addEventListener('click', linkAction))
 
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   gsap.registerPlugin(ScrollTrigger);
+// });
 
-/*=============== HOME PARALLAX ===============*/
- document.addEventListener('DOMContentLoaded', function () {
- 	// Initialize Rellax
- 	var rellax = new Rellax('.home-background-img');
+// gsap.to(".projects-bkgr-2", {
+//   y: "300px",
+//   scrollTrigger: {
+//       trigger: "#projects",
+//       start: "top bottom",
+//       end : "bottom top",
+//       scrub: true
+//   }
+// })
 
-  var contactParallax = new Rellax('.contact-img')
-
-  var projectsParallax = new Rellax('.projects-bkgr')
-
-  var projectsParallaxalt = new Rellax('.projects-bkgr-2')
-
- });
 
 
 
