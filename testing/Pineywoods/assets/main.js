@@ -54,11 +54,49 @@ const scrollActive = () =>{
 window.addEventListener('scroll', scrollActive)
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(ScrollTrigger);
+});
+
+gsap.to(".home-background-image", {
+  y: "500px",
+  scrollTrigger: {
+      trigger: "#home",
+      start: "center",
+      end : "bottom top",
+      scrub: true
+  }
+})
+
+
+gsap.to(".faq-background-image", {
+  y: "500px",
+  scrollTrigger: {
+      trigger: "#faq",
+      start: "center",
+      end : "bottom top",
+      scrub: true
+  }
+})
+
+gsap.to(".water", {
+  height: "50%", // Target height
+  ease: "none", // Smooth animation
+  scrollTrigger: {
+    trigger: ".reviews-container",
+    start: "top 75%",  // Start animation when element hits 75% down viewport
+    end: "bottom 5%",    // End when it hits 25% from the top
+    scrub: true,       // Scrub the animation to sync with scroll
+  }
+});
+
+
 
 
 var swiper = new Swiper('.reviews-container', {
   slidesPerView: 1,
   spaceBetween: 32,
+  speed: 800,
   loop: true,
 
   autoplay: {
@@ -90,10 +128,11 @@ var gallerySwiper = new Swiper('.gallery-swiper-container',{
 
   effect: "coverflow",
   spaceBetween: 0,
-      loop: true,
+  loop: true,
+  speed: 1000,
 
       coverflowEffect: {
-        rotate: 80,
+        rotate: 50,
         stretch: 0,
         depth: 100,
         modifier: 1,
@@ -114,7 +153,9 @@ var gallerySwiper = new Swiper('.gallery-swiper-container',{
       breakpoints: {
 
         600:{
-          slidesPerView: 3,
+          effect: "none",
+          spaceBetween: 24,
+          slidesPerView: 2,
         }
       }
 
