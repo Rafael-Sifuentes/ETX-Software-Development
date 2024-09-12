@@ -59,10 +59,20 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 gsap.to(".home-background-image", {
-  y: "500px",
+  y: "200px",
   scrollTrigger: {
       trigger: "#home",
-      start: "center",
+      start: "top 25%",
+      end : "bottom top",
+      scrub: true
+  }
+})
+
+gsap.to(".wcu-image", {
+  y: "-100px",
+  scrollTrigger: {
+      trigger: "#wcu-image-trigger",
+      start: "top bottom",
       end : "bottom top",
       scrub: true
   }
@@ -70,7 +80,7 @@ gsap.to(".home-background-image", {
 
 
 gsap.to(".faq-background-image", {
-  y: "500px",
+  y: "300px",
   scrollTrigger: {
       trigger: "#faq",
       start: "center",

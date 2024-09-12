@@ -108,7 +108,7 @@ button{
 }
 
 img{
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
 }
 /*-============================================================================================- */
@@ -463,8 +463,8 @@ img{
 
 .home-section-spacer{
     position: absolute;
-    bottom: -3px;
-    left: -10px;
+    bottom: 0;
+    left: 0;
     width: 2800px;
     z-index: -1;
     transition: all 1s ease-in-out;
@@ -474,7 +474,7 @@ img{
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 100%;
+    height: 110%;
     width: 100%;
     z-index: -5;
     object-fit: cover;
@@ -584,7 +584,7 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 130%;
     width: 100%;
     z-index: -5;
     object-fit: cover;
@@ -701,7 +701,7 @@ img{
 .faq-questions-container{
     position: relative;
     background-color: var(--body-color);
-    max-width: 528px;
+    /* max-width: 528px; */
     height: 720px;
     padding: var(--mar-5) var(--mar-3);
     border-radius: var(--border-radius);
@@ -875,6 +875,89 @@ img{
 }
 /*-============================================================================================- */
 
+/* CONTACT SECTION=============================================================================- */
+.contact-container{
+    gap: var(--mar-5);
+}
+.contact-images-container{
+    gap: var(--mar-1);
+}
+
+.contact-image-one,
+.contact-image-two{
+    position: relative;
+    height: 272px;
+    width: 326px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.contact-image-one img,
+.contact-image-two img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-info-container{
+    gap: var(--mar-3);
+}
+
+.contact-buttons-container{
+    gap: var(--mar-1);
+}
+
+.contact-button{
+    border: 4px solid var(--primary-color);
+    color: var(--text-color-b);
+}
+
+.contact-button:hover{
+    color: var(--text-color-w);
+}
+
+.contact-socials-list{
+    display: flex;
+    gap: var(--mar-1);
+}
+
+.contact-socials-list > li{
+    height: 48px;
+    width: 48px;
+    border: 2px solid var(--container-color);
+    display: grid;
+    place-items: center;
+    border-radius: var(--border-radius);
+}
+
+.contact-socials-link i{
+    color: var(--text-color-b);
+    font-size: 1.5rem;
+}
+
+.contact-extra-info{
+    gap: var(--mar-1);
+}
+
+.contact-title-alt{
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+
+.extra-info-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mar-1);
+}
+
+.extra-info-item p{
+    font-weight: var(--font-medium);
+}
+/*-============================================================================================- */
+
+
+
 
 @media screen and (min-width: 1024px){
 
@@ -883,13 +966,13 @@ img{
         margin-left: auto;
     }
 
+    .home-background-image{
+        height: 150%;
+    }
+
     .responsive-container{
         flex-direction: row;
         align-items: center;
-    }
-
-    .home-section-spacer{
-        animation: waveAnimation 2s ease-in-out 0s infinite alternate;
     }
 
     .services-container{
