@@ -189,6 +189,10 @@ const sr = ScrollReveal({
 	origin: 'bottom',
   })
 
+  sr.reveal(`.section-title`,{
+    origin: 'bottom',
+    })
+
   sr.reveal(`.bottom-delayed`,{
     origin: 'bottom',
     delay: 400,
