@@ -54,3 +54,30 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
+
+var reviewSwiper = new Swiper('.reviews-swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 32,
+	speed: 800,
+	loop: true,
+  
+	autoplay: {
+		delay: 2000,
+		disableOnInteraction: true,
+	  },
+  
+	  navigation: {
+		nextEl: '.review-next',
+		prevEl: '.review-prev',
+	},
+	
+	//   breakpoints: {
+	//     600: {
+	//         slidesPerView: 2,
+	//     },
+  
+	//     1000: {
+	//       slidesPerView: 3,
+	//     },
+	// },
+  });

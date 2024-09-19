@@ -71,16 +71,15 @@ var swiper = new Swiper('.projects-swiper-container', {
 		nextEl: '.project-next',
 		prevEl: '.project-prev',
 	},
+
+	breakpoints: {
+		600: {
+			slidesPerView: 2,
+			spaceBetween: 16,
+		}
+	}
+
 	
-	//   breakpoints: {
-	//     600: {
-	//         slidesPerView: 2,
-	//     },
-  
-	//     1000: {
-	//       slidesPerView: 3,
-	//     },
-	// },
   });
 
   var reviewSwiper = new Swiper('.reviews-swiper-container', {
