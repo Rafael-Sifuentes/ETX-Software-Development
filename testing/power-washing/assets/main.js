@@ -1,88 +1,80 @@
 
 
-var swiper = new Swiper('.services-container', {
+var swiper = new Swiper('.services-swiper', {
     slidesPerView: 1,
     spaceBetween: 24,
-    loop: true,
-
-//     navigation: {
-//       nextEl: '.gallery-next',
-//       prevEl: '.gallery-prev',
-//   },
-
-     autoplay: {
-         delay: 1800,
-         disableOnInteraction: true,
-       },
-    
-      breakpoints: {
-        600: {
-            slidesPerView: 2,
-        },
-
-        1000: {
-          slidesPerView: 3,
-        },
-    },
-});
-
-var swiper = new Swiper('.gallery-container', {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  loop: true,
-
-//     navigation: {
-//       nextEl: '.gallery-next',
-//       prevEl: '.gallery-prev',
-//   },
-
-   autoplay: {
-       delay: 1800,
-       disableOnInteraction: true,
-     },
+    speed: 800,
+    loop: false,
   
-    breakpoints: {
-      600: {
-          slidesPerView: 2,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
       },
-  },
-});
-
-
-
-/*=============== SCROLL REVEAL JS ===============*/
-const sr = ScrollReveal({
-	distance: '50px',
-	duration: 2000,
-  })
   
-  sr.reveal(`.top`,{
-	origin: 'top',
-  })
-
-  sr.reveal(`.bottom`,{
-	origin: 'bottom',
-  })
-
-  sr.reveal(`.bottom-delayed`,{
-    origin: 'bottom',
-    delay: 400,
-    interval: 350,
-
-  })
-
-  sr.reveal(`.left`,{
-    origin: 'left',
-  })
-
-  sr.reveal(`.left-delayed`,{
-    origin: 'left',
-    delay: 400,
-    interval: 350,
-
-  })
-
-  sr.reveal(`.right`,{
-    origin: 'right',
-  })
+      navigation: {
+        nextEl: '.review-next',
+        prevEl: '.review-prev',
+    },
+    
+       breakpoints: {
   
+         1000: {
+           slidesPerView: 3,
+         },
+     },
+  });
+
+  var gallerySwiper = new Swiper('.gallery-swiper', {
+    
+    slidesPerView: 1,
+    spaceBetween: 24,
+    speed : 800,
+    loop: true,
+    centeredSlides: true,
+
+    navigation: {
+        nextEl: '.gallery-next',
+        prevEl: '.gallery-prev'
+    },
+
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: true,
+      },
+
+    breakpoints: {
+
+        1000:{
+            slidesPerView : 3
+        },
+    }
+  })
+
+
+
+
+  let container = document.querySelector('.project-card-container');
+  var mixer;
+  
+  if (container) {
+    mixer = mixitup('.project-card-container', {
+      selectors: {
+        target: '.project-card'
+      },
+      animation: {
+        duration: 300
+      }
+    });
+  }
+  
+  const linkProducts = document.querySelectorAll('.project-selection-item'); // Select the filter items
+  
+  linkProducts.forEach(l => l.addEventListener('click', activeProduct)); // Add event listeners to each filter item
+  
+  function activeProduct() {
+    linkProducts.forEach(l => l.classList.remove('active-featured')); // Remove bold from all filter items
+    this.classList.add('active-featured'); // Add bold to the clicked filter item
+  
+    // This part remains the same, but make sure 'activeFeatured' function is correctly defined
+    // linkProducts.forEach(l=> l.addEventListener('click', activeFeatured))
+  }
