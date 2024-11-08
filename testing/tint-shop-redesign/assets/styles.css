@@ -1,0 +1,432 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+@font-face {
+    font-family: 'main';
+    src: url("font.TTF");
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+/* VARIABLE CSS================================================================================- */
+/*-============================================================================================- */
+:root{
+
+    /* COLORS=---------------- */
+    --primary-color: #FF0000;
+    --accent-color: #212121;
+    --text-color-w: #D9D9D9;
+    --text-color-b: #212121;
+    --container-color: #9A9A9A;
+    --body-color: #F5F5F5;
+    /* ======================= */
+
+
+    /* FONT & TYPOGRAPHY====== */
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'main', sans-serif;
+
+    --big-font-size: 4rem;
+    --h1-font-size: 2.986rem;
+    --h2-font-size: 2.488rem;
+    --h3-font-size: 2.074rem;
+    --h4-font-size: 1.728rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .75em;
+
+    --icon-size: 2rem;
+    --icon-size-small: 1rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    /* ======================= */
+
+
+    /* MARGINS & PADDING ===== */
+    --mar-sml: .5rem;
+    --mar-1: 1rem;
+    --mar-2: 1.5rem;
+    --mar-3: 2rem;
+    --mar-4: 3rem;
+    --mar-5: 4rem;
+
+    --gap-1: 1rem;
+    --gap-2: 1.5rem;
+    --gap-3: 3rem;
+    --gap-4: 4rem;
+    --gap-5: 5rem;
+    /* ======================= */
+
+
+    /* MISC=================== */
+    --z-fixed: 15;
+    --outer-radius: 32px;
+    --inner-radius: 8px;
+    /* ======================= */
+
+}
+/*-============================================================================================- */
+
+/* HTML BASE===================================================================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+
+h3{
+    font-size: var(--h3-font-size);
+}
+
+h4{
+    font-size: var(--h4-font-size);
+}
+
+p{
+    font-size: var(--normal-font-size);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s ease-in-out;
+}
+/*-============================================================================================- */
+
+/* RESPONSIVE BREAKPOINTS======================================================================- */
+
+/* FOR SML MOBILE */
+@media screen and (max-width : 389px){
+    .container{
+        margin: 0 1rem;
+    }
+}
+
+/* FOR MOBILE */
+@media screen and (min-width: 390px){
+    .container{
+        max-width: 326px;
+        margin: 0 auto;
+    }
+}
+
+/* FOR TABLE  */
+@media screen and (min-width: 744px){
+    .container{
+        max-width: 648px;
+        margin: 0 auto;
+    }
+}
+
+/* FOR DESKTOP */
+@media screen and (min-width: 1100px){
+    .container{
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+/*-============================================================================================- */
+
+/* REUSABLE CSS CLASSES========================================================================- */
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid{
+    display: grid;
+}
+
+.section{
+    position: relative;
+    padding-bottom: 8rem;
+    overflow: hidden;
+}
+
+.section-title{
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+}
+
+.section-subtitle{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.p-text{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.transition{
+    transition: all .4s ease-in-out;
+}
+
+.img-container{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--container-color);
+}
+/*-============================================================================================- */
+
+/* CSS COMPONENTS =============================================================================- */
+
+/* BUTTONS */
+button{
+    width: 252px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--body-font);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+}
+/* -------- */
+
+/* SECTION HEADER */
+.section-header{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+}
+
+.section-header-line{
+    content: '';
+    height: 1px;
+    width: 64px;
+    background-color: var(--accent-color);
+}
+/* -------------- */
+
+/* CARD COMPONENT 1 */
+.card-component-1{
+    height: 288px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    border: 2px solid var(--accent-color);
+    border-radius: var(--outer-radius);
+    padding: 24px;
+}
+
+.card-component-1 .img-container{
+    height: 176px;
+    width: 252px;
+    border-radius: var(--inner-radius);
+}
+
+.card-component-1 p{
+    font-weight: var(--font-semi-bold);
+}
+/* ---------------- */
+
+/* CARD COMPONENT 2 */
+.card-component-2{
+    height: 452px;
+    width: 326px;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--outer-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-component-2 .img-container{
+    height: 404px;
+    width: 278px;
+    border-radius: var(--inner-radius);
+}
+/* ---------------- */
+
+/* CARD COMPONENT 3 */
+.card-component-3{
+    height: 384px;
+    width: 326px;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--outer-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-component-3 .img-container{
+    height: 336px;
+    width: 278px;
+    border-radius: var(--inner-radius);
+}
+/* ---------------- */
+
+/* CARD COMPONENT 4 */
+.card-component-4{
+    height: 416px;
+    width: 326px;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--outer-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-component-4 .img-container{
+    height: 368px;
+    width: 278px;
+    border-radius: var(--inner-radius);
+}
+/* ---------------- */
+
+/*-============================================================================================- */
+
+/* HOME SECTION ===============================================================================- */
+.home{
+    color: var(--text-color-w);
+    padding-bottom: 5rem;
+}
+
+.home-container{
+    padding-top: 226px;
+    gap: var(--gap-4);
+}
+
+.home-frame-one{
+    gap: var(--gap-2);
+}
+
+.home-title{
+    font-family: var(--title-font);
+    font-size: var(--big-font-size);
+    height: 80px;
+}
+
+.home-subtitle{
+    font-weight: var(--font-light);
+    color: #BABABA;
+}
+
+.home-button{
+    border: 4px solid var(--primary-color);
+    color: var(--text-color-w);
+}
+
+.home-list-component{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mar-3);
+}
+
+.home-list-item{
+    display: flex;
+    align-items: center;
+    gap: var(--gap-1);
+    padding-bottom: var(--gap-1);
+    border-bottom: 1px solid var(--body-color);
+    max-width: 219px;
+}
+
+.squr-icon{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background-color: var(--body-color);
+    border-radius: 4px;
+}
+
+.home-background-container{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+/*-============================================================================================- */
+
+/* SERVICES SECTION ===========================================================================- */
+.services{
+    padding-top: 8rem;
+}
+
+.services-container{
+    gap: var(--gap-4);
+}
+
+.services-cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.services-button-container{
+    align-self: center;
+    align-items: center;
+}
+
+.service-button-fill{
+    background-color: var(--accent-color);
+    color: var(--text-color-w);
+    font-family: var(--body-font);
+}
+
+.service-button-fill:hover{
+    background-color: var(--primary-color);
+    width: 284px;
+}
+
+.service-button-outline{
+    border: 2px solid var(--accent-color);
+}
+/*-============================================================================================- */
