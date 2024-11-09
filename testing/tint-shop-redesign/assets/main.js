@@ -14,6 +14,10 @@ function scrollToSection(sectionId) {
     }
 }
 
+function toggleQuestion(questionElement) {
+    questionElement.classList.toggle("is-active");
+}
+
 
 
 // GALLERY SWIPER JS CONTROLS
@@ -25,7 +29,7 @@ var swiper = new Swiper('.gallery-swiper-container', {
   
      autoplay: {
          delay: 2000,
-         disableOnInteraction: false,
+         disableOnInteraction: true,
        },
   
       navigation: {
@@ -34,8 +38,12 @@ var swiper = new Swiper('.gallery-swiper-container', {
     },
     
        breakpoints: {
+
+        744:{
+            slidesPerView: 2,
+        },
   
-         1000: {
+         1080: {
            slidesPerView: 3,
          },
      },
