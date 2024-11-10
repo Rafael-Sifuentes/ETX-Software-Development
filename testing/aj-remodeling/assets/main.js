@@ -79,7 +79,7 @@ var swiper = new Swiper('.services-swiper', {
         target: '.project-card'
       },
       animation: {
-        duration: 300
+        duration: 400
       }
     });
   }

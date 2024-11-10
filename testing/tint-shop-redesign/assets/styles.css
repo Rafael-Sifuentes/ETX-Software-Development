@@ -10,7 +10,6 @@
 
 
 /* VARIABLE CSS================================================================================- */
-/*-============================================================================================- */
 :root{
 
     /* COLORS=---------------- */
@@ -149,7 +148,7 @@ img{
     }
 }
 
-/* FOR TABLE  */
+/* FOR TABLET */
 @media screen and (min-width: 744px){
     .container{
         max-width: 648px;
@@ -342,12 +341,24 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .4s ease-in-out;
 }
 
 .card-component-4 .img-container{
     height: 368px;
     width: 278px;
     border-radius: var(--inner-radius);
+    transition: all .4s ease-in-out;
+}
+
+.card-component-4:hover{
+    border: .5px solid var(--body-color);
+}
+
+.card-component-4:hover .img-container{
+    height: 416px;
+    width: 326px;
+    border-radius: var(--outer-radius);
 }
 /* ---------------- */
 
@@ -396,7 +407,12 @@ button{
     gap: var(--gap-1);
     padding-bottom: var(--gap-1);
     border-bottom: 1px solid var(--body-color);
-    max-width: 219px;
+    width: 299px;
+}
+
+.home-list-item p{
+    font-size: 24px;
+    color: var(--text-color-w);
 }
 
 .squr-icon{
@@ -620,5 +636,116 @@ button{
 .about-button-outline{
     border: 2px solid var(--accent-color);
     color: var(--text-color-b);
+}
+/*-============================================================================================- */
+
+/* CONTACT SECTION ============================================================================- */
+.cta-banner{
+    position: relative;
+    height: 408px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3);
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: var(--text-color-w);
+    margin-bottom: var(--gap-5);
+}
+
+.cta-buttons-container{
+    align-items: center;
+}
+
+.cta-button-fill{
+    background-color: var(--primary-color);
+    color: var(--text-color-w);
+}
+
+.cta-button-fill:hover{
+    width: 284px;
+}
+
+.cta-button-outline{
+    border: 2px solid var(--text-color-w);
+    color: var(--text-color-w);
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--gap-2);
+}
+
+.contact-responsive-container{
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--gap-2);
+    row-gap: var(--gap-4);
+    margin-bottom: var(--gap-4);
+}
+
+.contact-frame-one{
+    gap: var(--gap-4);
+}
+
+.contact-list-component{
+    gap: var(--gap-2);
+}
+
+.contact-list-item{
+    display: flex;
+    gap: var(--gap-1);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: var(--gap-1);
+    max-width: 219px;
+    color: var(--text-color-b);
+}
+
+.contact-list-item p{
+    font-weight: var(--font-bold);
+}
+
+.contact-list-item .squr-icon{
+    background-color: var(--accent-color);
+}
+
+.contact-button-fill{
+    background-color: var(--accent-color);
+    color: var(--text-color-w);
+}
+
+.contact-button-outline{
+    border: 2px solid var(--accent-color);
+}
+
+.contact-frame-three{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-2);
+    align-items: center;
+    justify-self: center;
+}
+
+.contact-frame-item{
+    height: 48px;
+    width: 151px;
+    border: 2px solid var(--accent-color);
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.contact-frame-item p{
+    font-family: var(--title-font);
+    font-size: var(--normal-font-size);
+}
+
+.contact-frame-item:nth-child(4){
+    width: 278px;
+    background-color: var(--primary-color);
+    color: var(--text-color-w) !important;
+    border: none;
 }
 /*-============================================================================================- */

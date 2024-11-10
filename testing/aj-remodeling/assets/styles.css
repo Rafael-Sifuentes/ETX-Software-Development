@@ -315,7 +315,7 @@ nav{
 
 .home{
     padding-top: 12rem;
-    color: var(--text-color-w);
+    /* color: var(--text-color-w); */
 }
 
 .home-container{
@@ -350,8 +350,8 @@ nav{
 }
 
 .home-button-outline{
-    border: 4px solid var(--text-color-w);
-    color: var(--text-color-w);
+    border: 4px solid var(--text-color-b);
+    color: var(--text-color-b);
 }
 
 .home-cards-list{
@@ -723,10 +723,6 @@ nav{
 
     .nav-list-item:hover a{
         font-weight: var(--font-semi-bold);
-    }
-
-    .home{
-        height: 100vh;
     }
 
     .home-title{
