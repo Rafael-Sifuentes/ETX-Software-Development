@@ -4,6 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "AutomotiveBusiness",
+          "name": "The Tint Shop",
+          "image": "https://thetintshoptx.com/assets/IMG/Favicon.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "602 S Timberland Dr.",
+            "addressLocality": "Lufkin",
+            "addressRegion": "TX",
+            "postalCode": "75901" 
+          },
+          "telephone": "(936) 639-8468",
+          "url": "https://thetintshoptx.com",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00", 
+        
+            "closes": "17:00"
+          },
+          "sameAs": [
+            "https://www.instagram.com/thetintshoptx/", 
+        
+            "https://www.tiktok.com/search?q=thetintshopguy&t=1694467332575"
+          ],
+          "makesOffer": {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": [
+              "Automotive Window Tinting (Cars, Trucks, SUVs)",
+              "Commercial Window Tinting (Offices, Storefronts)",
+              "Custom Vehicle Wraps (Design & Installation)",
+              "Tail Light Tinting (Smoke & Color Options)",
+              "Free Tint Consultations & Quotes"
+              ]
+            }
+          }
+        }
+    </script>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon">
     <!-- REMIX ICONS -->
@@ -37,20 +85,40 @@
 
 
         <div class="home-background-container">
-            <img loading="lazy" src="assets/IMG/home-img.png" alt="Image of a car window being tinted" class="home-background-img">
+            <!-- <img loading="lazy" src="assets/IMG/home-img.png" alt="Image of a car window being tinted" class="home-background-img">-->
+            <video class="home-background-video" src="assets/IMG/car-tinting-optimized.webm" autoplay muted playsinline loop></video>
         </div>
         
     </header>
+
+    <nav class="nav" id="nav">
+        <div class="nav-left-side">
+            <button onclick="scrollToSection('home')" class="nav-button"><i class="ri-home-4-fill"></i></button>
+            <button onclick="scrollToSection('services')" class="nav-button"><i class="ri-tools-fill"></i></button>
+
+        </div>
+
+        <div onclick="toggleNavBtn(this)" class="nav-main-button">
+            <button><i class="ri-add-line"></i></button>
+        </div>
+        <div class="nav-right-side">
+            <button onclick="scrollToSection('gallery')" class="nav-button"><i class="ri-camera-fill"></i></button>
+            <button onclick="scrollToSection('about')" class="nav-button"><i class="ri-question-fill"></i></button>
+
+        </div>
+
+        <button onclick="callNumber()" class="nav-call" id="nav-call"><p>CAll NOW</p><i class="ri-phone-fill"></i></button>
+    </nav>
 
     <main>
 
         <!-- SERVICES SECTION ===================================================================== -->
         <section class="services section" id="services">
             <div class="services-container container flex-column">
-                <div class="section-header">
+                <div class="section-header services-section-header">
                     <h2 class="services-title section-title">Our tinting services</h2>
                     <div class="section-header-line"></div>
-                    <p class="section-subtitle services-subtitle">Enhance your vehicle's appearance and comfort with our professional tinting window tinting services.</p>
+                    <p class="section-subtitle services-subtitle">Enhance your vehicle's appearance and comfort with our professional window tinting services.</p>
                 </div>
 
                 <div class="services-cards-container">
@@ -86,7 +154,7 @@
                 </div>
 
                 <div class="button-container services-button-container">
-                    <button onclick="scrollToSection('home')" class="service-button-fill transition">View previous work</button>
+                    <button onclick="scrollToSection('gallery')" class="service-button-fill transition">View previous work</button>
                     <button onclick="callNumber()" class="service-button-outline">Call the shop</button>
                 </div>
             </div>
@@ -103,6 +171,11 @@
 
             <div class="gallery-swiper-container container">
                 <ul class="swiper-wrapper gallery-swiper-wrapper">
+                    <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-5.png" loading="lazy" alt=""></div></li>
+                    <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-2.png" loading="lazy" alt=""></div></li>
+                    <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-3.png" loading="lazy" alt=""></div></li>
+                    <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-4.png" loading="lazy" alt=""></div></li>
+                    <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-1.png" loading="lazy" alt=""></div></li>
                     <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-5.png" loading="lazy" alt=""></div></li>
                     <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-2.png" loading="lazy" alt=""></div></li>
                     <li class="card-component-2 swiper-slide"><div class="img-container transition"><img src="assets/IMG/gallery-img-3.png" loading="lazy" alt=""></div></li>
@@ -178,7 +251,7 @@
                 <h2 class="section-title cta-title">Get your <span>free</span> quote</h2>
                 <div class="button-container cta-buttons-container">
                     <button onclick="callNumber()" class="cta-button-fill transition"><p>936.639.8468</p></button>
-                    <button class="cta-button-outline"><p>Get directions</p></button>
+                    <button onclick="getDirections()" class="cta-button-outline"><p>Get directions</p></button>
                 </div>
             </div>
 
@@ -197,7 +270,7 @@
     
                         <div class="button-container contact-buttons-container">
                             <button onclick="callNumber()" class="contact-button-fill"><p>Call ahead</p></button>
-                            <button onclick="" class="contact-button-outline"><p>Get direction</p></button>
+                            <button onclick="getDirections()" class="contact-button-outline"><p>Get direction</p></button>
                         </div>
                     </div>
     
