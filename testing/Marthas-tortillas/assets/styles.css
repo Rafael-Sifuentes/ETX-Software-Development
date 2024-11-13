@@ -288,6 +288,10 @@ img{
     font-weight: var(--font-medium);
 }
 
+.card-component-3 .item-name span{
+    font-size: var(--small-font-size);
+}
+
 .card-component-3 .item-price{
     font-size: var(--normal-font-size);
     font-weight: var(--font-semi-bold);
@@ -513,7 +517,7 @@ img{
 }
 
 .menu-selection{
-    margin-top: 8px;
+    margin-top: var(--gap-2);
     display: flex;
     flex-wrap: wrap;
     gap: var(--mar-3);
@@ -537,6 +541,10 @@ img{
 
 .menu-catagory-title{
     font-family: var(--title-font);
+}
+
+.menu-catagory-title span{
+    font-size: var(--normal-font-size);
 }
 
 .menu-catagory-list{
@@ -642,6 +650,11 @@ img{
 
 /* TABLET */
 @media screen and (min-width: 744px){
+
+    .button-fill{
+        width: 252px;
+    }
+
     .card-component-1 .img-container{
         width: 312px;
         height: 288px;
@@ -706,7 +719,9 @@ img{
     }
 
     .menu-selection{
+        margin-top: var(--gap-4);
         justify-content: center;
+        max-width: 744px;
     }
 
     .card-component-3 .img-container{
@@ -714,15 +729,11 @@ img{
         height: 256px;
     }
 
-    .options-card{
-        width: 648px;
-    }
-
     .options-list{
         justify-content: center;
     }
 
-    .option-item{
+    /* .option-item{
         width: 200px;
         border-right: 2px solid var(--accent-color);
         padding-right: 8px;
@@ -730,7 +741,7 @@ img{
 
     .options-list{
         flex-direction: row;
-    }
+    } */
 
     .menu-buttons-container{
         align-self: center;

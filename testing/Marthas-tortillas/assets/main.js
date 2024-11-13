@@ -8,10 +8,10 @@ var swiper = new Swiper('.featured-swiper-container', {
     speed: 800,
     loop: true,
   
-     autoplay: {
-         delay: 2000,
-         disableOnInteraction: true,
-       },
+      autoplay: {
+          delay: 2000,
+          disableOnInteraction: true,
+        },
   
       navigation: {
         nextEl: '.featured-next',
