@@ -17,7 +17,24 @@
     <title>Martha's Tortillas | Home</title>
     <meta name="description" content=""> 
     <meta title="keywords" content="">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQEBkvJzJBIl3qhWivrIAdkpjuGhgLpjs&callback=initMap" async defer></script>
 </head>
+<script>
+     function initMap() {
+        const myLatLng = { lat: 30.047709, lng: -95.79774 };
+
+        const map = new google.maps.Map(document.getElementById("map-container"), {
+            center: myLatLng,
+            zoom: 16 // Adjusted zoom
+        });
+
+        new google.maps.Marker({ // Marker added
+            position: myLatLng,
+            map: map,
+            title: "Martha's Tortillas"
+        });
+        }
+</script>
 <body>
 
     <!-- HOME SECTION ============================================================================= -->
@@ -28,7 +45,7 @@
             <h1 class="home-title">Authentic Mexican food & cuisine</h1>
             <h4 class="home-subtitle">"El verdadero sabor mexicano"</h4>
 
-            <button class="button-fill home-button-fill"><p>View menu</p></button>
+            <button onclick="scrollToSection('menu')" class="button-fill home-button-fill"><p>View menu</p></button>
         </div>
 
 
@@ -88,8 +105,8 @@
                     <p class="p-text">We have fresh made corn tortillas ! Each tortilla is crafted with care, using the finest ingredients.</p>
 
                     <div class="info-buttons-container">
-                        <button class="button-fill info-button-fill"><p>VIEW MENU</p></button>
-                        <button class="info-call-button"><i class="ri-phone-fill"></i></button>
+                        <button onclick="scrollTosection('menu')" class="button-fill info-button-fill"><p>VIEW MENU</p></button>
+                        <button onclick="callNumber()" class="info-call-button"><i class="ri-phone-fill"></i></button>
                     </div>
                 </div>
             </div>
@@ -143,10 +160,10 @@
                         <h4 class="menu-catagory-title">TORTAS</h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">EL CHAVO</p><p class="item-price">8.50</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">SOY REGIA</p><p class="item-price">9.50</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CUBANA</p><p class="item-price">9.50</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">COCHINITA PIBILL</p><p class="item-price">8.50</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/torta-img-1.png" loading="lazy" alt=""></div><p class="item-name">EL CHAVO</p><p class="item-price">8.50</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/torta-img-2.png" loading="lazy" alt=""></div><p class="item-name">SOY REGIA</p><p class="item-price">9.50</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/torta-img-3.png" loading="lazy" alt=""></div><p class="item-name">CUBANA</p><p class="item-price">9.50</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/torta-img-4.png" loading="lazy" alt=""></div><p class="item-name">COCHINITA PIBILL</p><p class="item-price">8.50</p></li>
                         </ul>
                     </article>
 
@@ -154,11 +171,11 @@
                         <h4 class="menu-catagory-title">QUESADILLAS</h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">BEEF FAJITA</p><p class="item-price">3.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHICKEN FAJITA</p><p class="item-price">3.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">DE PASTOR</p><p class="item-price">3.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/quesadilla-img-1.png" loading="lazy" alt=""></div><p class="item-name">BEEF FAJITA</p><p class="item-price">3.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/quesadilla-img-2.png" loading="lazy" alt=""></div><p class="item-name">CHICKEN FAJITA</p><p class="item-price">3.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/quesadilla-img-3.png" loading="lazy" alt=""></div><p class="item-name">DE PASTOR</p><p class="item-price">3.99</p></li>
                             <li class="card-component-3"><div class="img-container"></div><p class="item-name">VOLCAN</p><p class="item-price">8.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHEESE ONLY</p><p class="item-price">1.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/quesadilla-img-4.png" loading="lazy" alt=""></div><p class="item-name">CHEESE ONLY</p><p class="item-price">1.99</p></li>
                         </ul>
                     </article>
 
@@ -166,8 +183,8 @@
                         <h4 class="menu-catagory-title">TAMALES</h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">PORK IN RED SALSA</p><p class="item-price"></p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHICKEN IN GREEN SALSA</p><p class="item-price"></p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/tamal-img-1.png" loading="lazy" alt=""></div><p class="item-name">PORK IN RED SALSA</p><p class="item-price"></p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/tamal-img-2.png" loading="lazy" alt=""></div><p class="item-name">CHICKEN IN GREEN SALSA</p><p class="item-price"></p></li>
                             <li class="card-component-3"><div class="img-container"></div><p class="item-name">GREEN PEPPER</p><p class="item-price"></p></li>
 
                             <li class="options-card flex-column">
@@ -185,12 +202,12 @@
                         <h4 class="menu-catagory-title">LUNCH PLATES<br><span>Served with rice and beans</span></h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHICKEN FLAUTAS</p><p class="item-price">10.49</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">GREEN CHICKEN ENCHILADAS</p><p class="item-price">10.49</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">BISTECK RANCHERO</p><p class="item-price">10.49</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/lunch-img-1.png" loading="lazy" alt=""></div><p class="item-name">CHICKEN FLAUTAS</p><p class="item-price">10.49</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/lunch-img-2.png" loading="lazy" alt=""></div><p class="item-name">GREEN CHICKEN ENCHILADAS</p><p class="item-price">10.49</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/lunch-img-3.png" loading="lazy" alt=""></div><p class="item-name">BISTECK RANCHERO</p><p class="item-price">10.49</p></li>
                             <li class="card-component-3"><div class="img-container"></div><p class="item-name">BEEF / CHICKEN PLATE</p><p class="item-price">10.49</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHILE RELLENO</p><p class="item-price">10.49</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">NACHOS BEEF OR CHICKEN</p><p class="item-price">10.49</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/lunch-img-4.png" loading="lazy" alt=""></div><p class="item-name">CHILE RELLENO</p><p class="item-price">10.49</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/lunch-img-5.png" loading="lazy" alt=""></div><p class="item-name">NACHOS BEEF OR CHICKEN</p><p class="item-price">10.49</p></li>
                         </ul>
                     </article>
 
@@ -198,10 +215,10 @@
                         <h4 class="menu-catagory-title">STREET TACOS<br><span>W/ cilantro and onions</span></h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">5-mini tacos & a can soda</p><p class="item-price">8.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">BEEF FAJITA</p><p class="item-price">2.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHICKEN FAJITA</p><p class="item-price">2.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">DE PASTOR</p><p class="item-price">2.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/tacos-img-1.png" loading="lazy" alt=""></div><p class="item-name">5-mini tacos & a can soda</p><p class="item-price">8.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/tacos-img-2.png" loading="lazy" alt=""></div><p class="item-name">BEEF FAJITA</p><p class="item-price">2.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/tacos-img-3.png" loading="lazy" alt=""></div><p class="item-name">CHICKEN FAJITA</p><p class="item-price">2.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/tacos-img-4.png" loading="lazy" alt=""></div><p class="item-name">DE PASTOR</p><p class="item-price">2.99</p></li>
                         </ul>
                     </article>
 
@@ -209,10 +226,10 @@
                         <h4 class="menu-catagory-title">ROTISSERIE CHICKEN<br><span>W/ rice bean tortillas & salsa</span></h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">WHOLE CHICKEN</p><p class="item-price">19.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">HALF CHICKEN</p><p class="item-price">9.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">WHOLE CHICKEN<span> (no beans, no rice)</span></p><p class="item-price">14.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">HALF CHICKEN<span> (no beans, no rice)</span></p><p class="item-price">8.00</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/chicken-img-1.png" loading="lazy" alt=""></div><p class="item-name">WHOLE CHICKEN</p><p class="item-price">19.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/chicken-img-2.png" loading="lazy" alt=""></div><p class="item-name">HALF CHICKEN</p><p class="item-price">9.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/chicken-img-4.png" loading="lazy" alt=""></div><p class="item-name">WHOLE CHICKEN<span> (no beans, no rice)</span></p><p class="item-price">14.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/chicken-img-3.png" loading="lazy" alt=""></div><p class="item-name">HALF CHICKEN<span> (no beans, no rice)</span></p><p class="item-price">8.00</p></li>
                         </ul>
                     </article>
 
@@ -220,9 +237,9 @@
                         <h4 class="menu-catagory-title">BURRITOS<br><span>W/ rice, beans, lettuce, tomato, cheese, and sour cream</span></h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">BEEF FAJITA</p><p class="item-price">8.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CHICKEN FAJITA</p><p class="item-price">8.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">PORK</p><p class="item-price">8.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/burrito-img-1.png" loading="lazy" alt=""></div><p class="item-name">BEEF FAJITA</p><p class="item-price">8.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/burrito-img-2.png" loading="lazy" alt=""></div><p class="item-name">CHICKEN FAJITA</p><p class="item-price">8.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/burrito-img-3.png" loading="lazy" alt=""></div><p class="item-name">PORK</p><p class="item-price">8.99</p></li>
                         </ul>
                     </article>
 
@@ -248,8 +265,8 @@
                         <h4 class="menu-catagory-title">ANTOJITOS<br><span>Choice of meat with bean lettuce tomato cheese sour cream and avocado</span></h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">SOPES</p><p class="item-price">3.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">GORDITAS</p><p class="item-price">3.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/antojo-img-1.png" loading="lazy" alt=""></div><p class="item-name">SOPES</p><p class="item-price">3.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/antojo-img-2.png" loading="lazy" alt=""></div><p class="item-name">GORDITAS</p><p class="item-price">3.99</p></li>
 
                             <li class="options-card flex-column">
                                 <h4 class="options-card-title">Options</h4>
@@ -268,16 +285,16 @@
                         <h4 class="menu-catagory-title">WEEKEND ONLY</h4>
 
                         <ul class="menu-catagory-list">
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">BARBACOA</p><p class="item-price">13.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">MENUDO</p><p class="item-price">12.99</p></li>
-                            <li class="card-component-3"><div class="img-container"></div><p class="item-name">CARNITAS</p><p class="item-price">14.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/weekends-img-1.png" loading="lazy" alt=""></div><p class="item-name">BARBACOA</p><p class="item-price">13.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/weekends-img-2.png" loading="lazy" alt=""></div><p class="item-name">MENUDO</p><p class="item-price">12.99</p></li>
+                            <li class="card-component-3"><div class="img-container"><img src="assets/imgs/weekends-img-3.png" loading="lazy" alt=""></div><p class="item-name">CARNITAS</p><p class="item-price">14.99</p></li>
                         </ul>
                     </article>
                 </div>
 
                 <div class="menu-buttons-container">
                     <button class="button-fill menu-button-fill"><p>ORDER ONLINE</p></button>
-                    <button class="button-call menu-button-call"><i class="ri-phone-fill"></i></button>
+                    <button onclick="callNumber()" class="button-call menu-button-call"><i class="ri-phone-fill"></i></button>
                 </div>
 
             </div>
@@ -296,11 +313,11 @@
 
                     <div class="contact-buttons-container">
                         <button class="button-fill contact-button-fill"><p>Get Directions</p></button>
-                        <button class="button-call contact-button-call"><i class="ri-phone-fill"></i></button>
+                        <button onclick="callNumber()" class="button-call contact-button-call"><i class="ri-phone-fill"></i></button>
                     </div>
                 </div>
 
-                <div class="contact-img-container"><div class="img-container"></div></div>
+                <div class="contact-img-container"><div id="map-container" class="map-container"></div></div>
             </div>
         </section>
         <!-- ====================================================================================== -->

@@ -54,3 +54,22 @@ if (container) {
     linkProducts.forEach(l => l.classList.remove('active-featured')); 
     this.classList.add('active-featured'); 
   }
+
+
+
+// ALL ONCLICK FUNCTION
+
+function callNumber() {
+  var phoneNumber = "2815478543";
+  window.location.href = "tel:" + phoneNumber;
+}
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' }); 
+  }
+}
+
+
+// GOOGLE MAPS JS
