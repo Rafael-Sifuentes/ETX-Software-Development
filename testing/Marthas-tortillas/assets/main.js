@@ -1,4 +1,18 @@
 
+// PARALLAX EFFECT JS
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.registerPlugin(ScrollTrigger);
+});  
+
+gsap.to(".home-background-container", {
+  y: "300px",
+  scrollTrigger: {
+      trigger: "#home",
+      start: "top top",
+      end : "bottom top",
+      scrub: true
+  }
+})
 
 // SWIPER JS
 
@@ -71,5 +85,45 @@ function scrollToSection(sectionId) {
   }
 }
 
+function goToUber(){
+  var url = 'https://www.ubereats.com/feed?diningMode=PICKUP&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlVTJTIwUG9zdCUyME9mZmljZSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMmY5ODkzODY2LWNiNGUtZjRjYi02ZmE4LTg0ZjM5MGRkZTZjYiUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBMzAuMDI1NzM4MyUyQyUyMmxvbmdpdHVkZSUyMiUzQS05NS44NDU4NDI3JTdE'
+  window.open(url, '_blank')
+}
 
-// GOOGLE MAPS JS
+function goToDoor(){
+  var url = 'https://www.doordash.com/store/martha%E2%80%99s-tortillas-hockley-24861321/'
+  window.open(url, '_blank')
+}
+
+function goToGrub(){
+  var url = 'https://www.grubhub.com/'
+  window.open(url, '_blank')
+}
+
+
+// SCROLL REVEAL JS
+const sr = ScrollReveal({
+  distance: '50px',
+  duration: 2000,
+})
+
+sr.reveal(`.section-title, .home-title`,{
+  origin: 'top',
+})
+
+sr.reveal(`.section-subtitle, .home-subtitle, .home-logo-container`, {
+  origin: 'top',
+  delay: 400,
+  interval: 350,
+})
+
+sr.reveal(`.cta-img`, {
+  origin: 'bottom',
+  delay: 700,
+})
+
+sr.reveal(`.order-button`, {
+  origin: 'bottom',
+  delay: 400,
+  interval: 200,
+})
