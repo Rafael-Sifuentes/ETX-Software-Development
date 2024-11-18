@@ -14,6 +14,28 @@ gsap.to(".home-background-container", {
   }
 })
 
+// HIDE NAV ON SCROLL
+let isNavOpen = false;
+
+function hideHeaderOnScroll() {
+  let prevScrollPos = window.pageYOffset;
+  const header = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    if (!isNavOpen) { 
+      const currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        header.style.top = '0';
+      } else {
+        header.style.top = '-100px';
+      }
+
+      prevScrollPos = currentScrollPos;
+    }
+  });
+}
+
 // SWIPER JS
 
 var swiper = new Swiper('.featured-swiper-container', {
@@ -73,6 +95,16 @@ if (container) {
 
 // ALL ONCLICK FUNCTION
 
+function toggleNav(){
+  const navPage =  document.querySelector('.nav-page')
+  const toggleBtn = document.querySelector('.nav-button')
+  navPage.classList.toggle('is-active')
+  toggleBtn.classList.toggle('rotate')
+  isNavOpen = !isNavOpen
+}
+
+hideHeaderOnScroll();
+
 function callNumber() {
   var phoneNumber = "2815478543";
   window.location.href = "tel:" + phoneNumber;
@@ -82,11 +114,15 @@ function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' }); 
+
+    if (isNavOpen) { 
+      toggleNav(); // Call toggleNav() to close the nav
+    }
   }
 }
 
 function goToUber(){
-  var url = 'https://www.ubereats.com/feed?diningMode=PICKUP&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlVTJTIwUG9zdCUyME9mZmljZSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMmY5ODkzODY2LWNiNGUtZjRjYi02ZmE4LTg0ZjM5MGRkZTZjYiUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBMzAuMDI1NzM4MyUyQyUyMmxvbmdpdHVkZSUyMiUzQS05NS44NDU4NDI3JTdE'
+  var url = 'https://www.ubereats.com/store/marthas-taqueria/lqVLEDzOWLOkc3gFXcLGfQ?diningMode=PICKUP&ps=1&sc=SEARCH_SUGGESTION'
   window.open(url, '_blank')
 }
 
@@ -122,7 +158,7 @@ sr.reveal(`.cta-img`, {
   delay: 700,
 })
 
-sr.reveal(`.order-button`, {
+sr.reveal(`.move-button`, {
   origin: 'bottom',
   delay: 400,
   interval: 200,

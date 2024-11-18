@@ -6,6 +6,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "Martha's Tortillas",
+          "image": "https://www.marthastortillas.com/assets/imgs/Home-logo.png",
+          "description": "Authentic Mexican food & cuisine. El verdadero sabor mexicano.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18700 Beaker Road",
+            "addressLocality": "Hockley",
+            "addressRegion": "TX",
+            "postalCode": "77447"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "30.047709",
+            "longitude": "-95.79774"
+          },
+          "url": "https://www.marthastortillas.com", 
+          "telephone": "2815478543",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "18:30"
+          },
+          "servesCuisine": "Mexican",
+          "hasMenu": "https://www.marthastortillas.com/#menu",
+          "potentialAction": [
+            {
+              "@type": "OrderAction",
+              "target": [
+                "https://www.ubereats.com/store/marthas-taqueria/lqVLEDzOWLOkc3gFXcLGfQ?diningMode=PICKUP&ps=1&sc=SEARCH_SUGGESTION",  
+                "'https://www.doordash.com/store/martha%E2%80%99s-tortillas-hockley-24861321/", 
+              ]
+            },
+            {
+              "@type": "ReserveAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "tel:2815478543"
+              }
+            }
+          ]
+        }
+    </script>
     <!-- FAVICON -->
     <!-- <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon"> -->
     <!-- REMIX ICONS -->
@@ -36,6 +91,35 @@
        }
 </script>
 <body>
+
+    <!-- SITE NAVIGATION ========================================================================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-header container">
+            <div class="img-container"><img src="assets/imgs/nav-img.png" alt=""></div>
+            <button onclick="toggleNav()" class="nav-button"><i class="ri-menu-fold-line"></i></button>
+        </div>
+
+        <div class="nav-page" id="nav-page">
+            <div class="img-container"><img src="assets/imgs/nav-img.png" alt=""></div>
+
+            <ul class="nav-list">
+                <li class="nav-list-item"><a onclick="scrollToSection('featured')" href="#"><h4>FEATURED ITEMS</h4></a></li>
+                <li class="nav-list-item"><a onclick="scrollToSection('info-section')"><h4>CORN TORTILLAS</h4></a></li>
+                <li class="nav-list-item"><a onclick="scrollToSection('cta')"><h4>ORDER AHEAD</h4></a></li>
+                <li class="nav-list-item"><a onclick="scrollToSection('menu')"><h4>OUR MENU</h4></a></li>
+                <li class="nav-list-item"><a onclick="scrollToSection('contact')"><h4>LOCATION</h4></a></li>
+            </ul>
+
+            <div class="order-buttons-container">
+                <button onclick="goToUber()" class="order-button"><img src="assets/imgs/uber-button.png" alt=""></button>
+                <button onclick="goToDoor()" class="order-button"><img src="assets/imgs/doordash-button.png" alt=""></button>
+                <button onclick="goToGrub()" class="order-button"><img src="assets/imgs/grubhub-button.png" alt=""></button>
+            </div>
+            <button onclick="callNumber()" class="button-fill nav-call-button"><p>CALL AHEAD</p></button>
+
+        </div>
+    </nav>
+    <!-- ========================================================================================== -->
 
     <!-- HOME SECTION ============================================================================= -->
     <header class="home section" id="home">
@@ -127,9 +211,9 @@
                         <p class="p-text">Or call ahead to place an order</p>
                         <!-- <button class="cta-button-outline"><p>Place order</p></button> -->
                         <div class="order-buttons-container">
-                            <button onclick="goToUber()" class="order-button"><img src="assets/imgs/uber-button.png" alt=""></button>
-                            <button onclick="goToDoor()" class="order-button"><img src="assets/imgs/doordash-button.png" alt=""></button>
-                            <button onclick="goToGrub()" class="order-button"><img src="assets/imgs/grubhub-button.png" alt=""></button>
+                            <button onclick="goToUber()" class="order-button move-button"><img src="assets/imgs/uber-button.png" alt=""></button>
+                            <button onclick="goToDoor()" class="order-button move-button"><img src="assets/imgs/doordash-button.png" alt=""></button>
+                            <button onclick="goToGrub()" class="order-button move-button"><img src="assets/imgs/grubhub-button.png" alt=""></button>
                         </div>
                     </div>
                 </div>
@@ -204,7 +288,7 @@
                     </article>
 
                     <article class="menu-catagory lunch flex-column">
-                        <h4 class="menu-catagory-title">LUNCH PLATES<br><span>Served with rice and beans</span></h4>
+                        <h4 class="menu-catagory-title">LUNCH PLATES<br><span>Served with rice and beans.</span></h4>
 
                         <ul class="menu-catagory-list">
                             <li class="card-component-3"><div class="img-container"><img src="assets/imgs/lunch-img-1.png" loading="lazy" alt=""></div><p class="item-name">CHICKEN FLAUTAS</p><p class="item-price">10.49</p></li>
@@ -228,7 +312,7 @@
                     </article>
 
                     <article class="menu-catagory chicken flex-column">
-                        <h4 class="menu-catagory-title">ROTISSERIE CHICKEN<br><span>W/ rice bean tortillas & salsa</span></h4>
+                        <h4 class="menu-catagory-title">ROTISSERIE CHICKEN<br><span>W/ rice, beans, tortillas & salsa</span></h4>
 
                         <ul class="menu-catagory-list">
                             <li class="card-component-3"><div class="img-container"><img src="assets/imgs/chicken-img-1.png" loading="lazy" alt=""></div><p class="item-name">WHOLE CHICKEN</p><p class="item-price">19.99</p></li>
@@ -267,7 +351,7 @@
                     </article>
 
                     <article class="menu-catagory antojos flex-column">
-                        <h4 class="menu-catagory-title">ANTOJITOS<br><span>Choice of meat with bean lettuce tomato cheese sour cream and avocado</span></h4>
+                        <h4 class="menu-catagory-title">ANTOJITOS<br><span>Choice of meat with beans, lettuce, tomato, cheese, sour cream, and avocado</span></h4>
 
                         <ul class="menu-catagory-list">
                             <li class="card-component-3"><div class="img-container"><img src="assets/imgs/antojo-img-1.png" loading="lazy" alt=""></div><p class="item-name">SOPES</p><p class="item-price">3.99</p></li>
@@ -313,7 +397,7 @@
                     <div class="contact-header flex-column">
                         <h4 class="section-subtitle contact-subtitle">Location and hours</h4>
                         <h2 class="section-title contact-title">Find Martha's<br>tortillas</h2>
-                        <p class="p-text">18700 Beaker Road, Hockley TX 77447<br>Open 8:00am - 6:30pm</p>
+                        <p class="p-text">18700 Beaker Road, Hockley TX 77447<br>Open 8:00 AM - 6:30 PM</p>
                     </div>
 
                     <div class="contact-buttons-container">
@@ -328,6 +412,8 @@
         <!-- ====================================================================================== -->
 
     </main>
+
+    <p class="etx">Website designed and developed by ETX Design</p>
     
 
 
