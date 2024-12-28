@@ -25,26 +25,26 @@ function goToLinkTwo(){
 
 
 
-const saveContactBtn = document.getElementById('saveContactBtn');
-        const vcardData = `BEGIN:VCARD
-        VERSION:3.0
-        N:Rafael;Sifuentes
-        FN:Rafael Sifuentes
-        ORG:ETX Software Development.
-        TITLE:Web Developer
-        TEL;TYPE=work,voice:+1-936-221-8751
-        EMAIL;TYPE=work:rafaelsifuentes@etxsoftware.com
-        END:VCARD`;
+// const saveContactBtn = document.getElementById('saveContactBtn');
+//         const vcardData = `BEGIN:VCARD
+//         VERSION:3.0
+//         N:Rafael;Sifuentes
+//         FN:Rafael Sifuentes
+//         ORG:ETX Software Development.
+//         TITLE:Web Developer
+//         TEL;TYPE=work,voice:+1-936-221-8751
+//         EMAIL;TYPE=work:rafaelsifuentes@etxsoftware.com
+//         END:VCARD`;
 
-        saveContactBtn.addEventListener('click', () => {
-            const blob = new Blob([vcardData], { type: 'text/vcard' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'contact.vcf';
-            a.click();
-            window.URL.revokeObjectURL(url);
-        });
+//         saveContactBtn.addEventListener('click', () => {
+//             const blob = new Blob([vcardData], { type: 'text/vcard' });
+//             const url = window.URL.createObjectURL(blob);
+//             const a = document.createElement('a');
+//             a.href = url;
+//             a.download = 'contact.vcf';
+//             a.click();
+//             window.URL.revokeObjectURL(url);
+//         });
 
 
 // SCROLL REVEAL JS

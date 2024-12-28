@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Rafael;Sifuentes
+FN:Rafael Sifuentes
+ORG:ETX Software Development.
+TITLE:Web Developer
+TEL;TYPE=work,voice:+1-936-221-8751
+EMAIL;TYPE=work:rafaelsifuentes@etxsoftware.com
+END:VCARD
