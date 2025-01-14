@@ -8,11 +8,11 @@
 
     /* COLORS=---------------- */
     --primary-color: #9F6D4B;
-    --accent-color: #869489;
-    --text-color-w: #F7FBFC;
-    --text-color-b: #001D00;
-    --container-color: #BFC1AF;
-    --body-color: #F7FBFC;
+    --accent-color: #718EA3;
+    --text-color-w: #F7F9FC;
+    --text-color-b: #000E1D;
+    --container-color: #AFBCC1;
+    --body-color: #F7F9FC;
     /* ======================= */
 
 
@@ -397,7 +397,7 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #0F120F;
+    background-color: #000E1D;
     z-index: -1;
 }
 /*-============================================================================================- */
@@ -510,7 +510,7 @@ img{
 
 .about-button{
     color: var(--text-color-w);
-    background-color: var(--text-color-b);
+    background-color: var(--accent-color);
 }
 
 .about-img-container{
@@ -560,8 +560,8 @@ img{
 }
 
 .contact-button{
-    background-color: var(--text-color-w);
-    color: var(--text-color-b);
+    background-color: var(--accent-color);
+    color: var(--text-color-w);
 }
 
 .contact-img{
@@ -570,3 +570,164 @@ img{
 /*-============================================================================================- */
 
 
+/* RESPONSIVE BREAKPOINTS =====================================================================- */
+/* TABLET */
+@media screen and (min-width: 744px){
+
+    .home-title{
+        font-size: var(--big-font-size);
+    }
+
+    .home-subtitle{
+        font-size: var(--h2-font-size);
+    }
+
+    .button{
+        width: 252px;
+    }
+
+    .component-1{
+        width: 312px;
+        height: 352px;
+    }
+
+    .home-img{
+        top: 10%;
+        width: 444px;
+        height: 420px;
+    }
+
+    .featured-container{
+        flex-direction: row;
+        gap: var(--gap-2);
+    }
+
+    .featured-frame-one,
+    .featured-frame-two{
+        width: 381px;
+        overflow: hidden;
+    }
+
+    .featured-buttons-container{
+        align-self: flex-start;
+    }
+
+    .component-2{
+        width: 312px !important;
+        height: 381px !important;
+    }
+
+    .swiper-slide-next.component-2{
+        visibility: hidden !important;
+    }
+
+    .featured-thumbs-list-item{
+        width: 144px !important;
+        height: 160px !important;
+    }
+
+    .menu-selection-list{
+        column-gap: 8px;
+    }
+
+    .component-3 .img-container{
+        height: 320px;
+    }
+
+    .about-frame-one{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-frame-one div{
+        max-width: 344px;
+    }
+
+    .about-button{
+        align-self: flex-end;
+    }
+
+    .about-img-container{
+        height: 342px;
+    }
+
+    .contact-frame-two{
+        padding-top: 32px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1100px){
+
+    .home-container .p-text{
+        font-size: var(--h4-font-size);
+    }
+
+    .component-1{
+        width: 344px;
+        height: 352px;
+    }
+
+    .instruction-text{
+        display: none;
+    }
+
+    .home-img{
+        width: 540px;
+        height: 520px;
+    }
+
+    .featured-container{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .featured-frame-one{
+        width: 436px;
+    }
+
+    .featured-frame-two{
+        width: 528px;
+    }
+
+    .component-2{
+        width: 436px !important;
+        height: 472px !important;
+    }
+
+    .featured-thumbs-list-item{
+        width: 160px !important;
+    }
+
+    .menu-items-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .component-3 .img-container{
+        width: 344px;
+    }
+
+    .about-container{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--gap-2);
+    }
+
+    .about-frame-one{
+        flex-direction: column;
+        width: 528px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-button{
+        align-self: flex-start;
+        margin-left: 92px;
+    }
+
+    .about-img-container{
+        width: 528px;
+        height: 472px;
+    }
+
+}

@@ -20,12 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
 // SWIPER JS
 const featuredSwiper = new Swiper ('.featured-frame-one' , {
 
-    loop: true,
+    loop: false,
     spaceBetween: 24,
     watchSlidesProgress: true,
     touchRatio: 0, 
     simulateTouch: false, 
 
+    breakpoints: {
+      744:{
+        slidesPerView: 1,
+      }
+    }
 })
 
 const featuredThumbs = new Swiper ('.featured-frame-two', {
@@ -45,6 +50,18 @@ const featuredThumbs = new Swiper ('.featured-frame-two', {
         nextEl: ".featured-next",
         prevEl: ".featured-prev",
       },
+
+      breakpoints: {
+
+        744:{
+          slidesPerView: 2,
+          freeMode: false,
+        },
+
+        1100:{
+          slidesPerView: 3,
+        }
+      }
 })
 
 // MENU MIX IT UP JS
