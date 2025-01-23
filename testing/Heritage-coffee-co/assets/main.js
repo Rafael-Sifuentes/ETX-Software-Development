@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // SWIPER JS
 const featuredSwiper = new Swiper ('.featured-frame-one' , {
 
-    loop: false,
+    loop: true,
     spaceBetween: 24,
     watchSlidesProgress: true,
     touchRatio: 0, 
@@ -95,7 +95,7 @@ const sr = ScrollReveal({
     duration: 2000,
   })
   
-  sr.reveal(`.section-title, .home-title`,{
+  sr.reveal(`.section-title, .home-title, .home-img`,{
     origin: 'top',
   })
   
