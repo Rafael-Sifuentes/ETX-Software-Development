@@ -217,6 +217,12 @@ img{
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.button:hover{
+    transform: translateY(-10px);
 }
 
 .button p{
@@ -327,6 +333,11 @@ nav .container{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .4s ease-in-out;
+}
+
+.home-button:hover{
+    transform: translateY(-10px);
 }
 
 .home-button p{
@@ -591,12 +602,14 @@ nav .container{
     width: 326px;
     border-radius: 2rem;
     overflow: hidden;
+    transition: all .4s ease-in-out;
 }
 
 .gallery-swiper-card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .4s ease-in-out;
 }
 
 .gallery-swiper-buttons{
@@ -615,6 +628,12 @@ nav .container{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.gallery-swiper-button:hover{
+    transform: translateY(-10px);
 }
 
 .gallery-swiper-button i{
@@ -775,3 +794,192 @@ nav .container{
     font-size: var(--small-font-size);
 }
 /*-============================================================================================- */
+
+/* RESPONSIVE BREAKPOINTS =====================================================================- */
+
+/* TABLET */
+@media screen and (min-width: 744px){
+
+    .home-container{
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 80px;
+    }
+
+    .home-frame-one{
+        max-width: 326px;
+    }
+
+    .home-img{
+        width: 312px;
+        margin-bottom: 0;
+    }
+
+    .section-spacer-img{
+        width: 872px;
+    }
+
+    .services-list-item{
+        width: 312px;
+    }
+
+    .service-item-info{
+        width: 264px;
+    }
+
+    .services-frame-one{
+        align-self: center;
+        max-width: 494px;
+        flex-direction: row;
+    }
+
+    .services-header{
+        height: 371px;
+    }
+
+    .services-header h2{
+        max-width: 525px;
+    }
+
+    .services-button-container{
+        flex-direction: row;
+    }
+
+    .about-frame-one{
+        flex-direction: row;
+        gap: var(--gap-1);
+        align-items: center;
+    }
+
+    .about-frame-two{
+        max-width: 319px;
+    }
+
+    .about-img-container{
+        width: 320px;
+        height: 316px;
+    }
+
+    .about-img-container img{
+        object-fit: contain;
+    }
+
+    .about-frame-three{
+        flex-direction: row;
+    }
+
+    .gallery-swiper{
+        overflow: hidden;
+    }
+
+    .gallery-swiper-card.swiper-slide-active{
+        width: 312px !important;
+    }
+
+    .gallery-swiper-card.swiper-slide-next,
+    .gallery-swiper-card.swiper-slide-prev{
+        width: 144px !important;
+    }
+
+    .contact-buttons-container{
+        flex-direction: row;
+    }
+
+    .contact-frame-two h2{
+        max-width: 525px;
+    }
+
+    .footer-list{
+        max-width: 455px;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1100px){
+
+    .section-title{
+        font-size: var(--h1-font-size);
+    }
+
+    .button{
+        width: 276px;
+    }
+
+    .home-button{
+        width: 184px;
+    }
+
+    .home-title{
+        font-size: var(--big-font-size) !important;
+    }
+
+    .home-container{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+
+    .home-frame-one{
+        max-width: 487px;
+    }
+
+    .home-img{
+        width: 436px;
+        height: 542px;
+    }
+
+    .section-spacer-img{
+        width: 1764px;
+    }
+
+    .services-list-item{
+        width: 344px;
+        height: 352px;
+    }
+
+    .service-item-info{
+        width: 296px;
+    }
+
+    .services-header h2{
+        max-width: 600px;
+    }
+
+    .about-frame-one{
+        justify-content: space-between;
+    }
+
+    .about-frame-two{
+        max-width: 528px;
+    }
+
+    .about-img-container{
+        width: 528px;
+        height: 436px;
+    }
+
+    .gallery-frame-one{
+        align-self: center;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--gap-2);
+    }
+
+    .gallery-title{
+        width: 370px;
+    }
+
+    .gallery-swiper-card.swiper-slide-next,
+    .gallery-swiper-card.swiper-slide-prev{
+        width: 252px !important;
+        height: 434px !important;
+    }
+
+    .gallery-swiper-card.swiper-slide-active{
+        width: 528px !important;
+    }
+
+    .contact-frame-one{
+        width: 750px;
+    }
+}

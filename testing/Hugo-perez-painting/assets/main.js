@@ -31,12 +31,9 @@ var swiper = new Swiper('.gallery-swiper', {
        breakpoints: {
 
         744:{
-            slidesPerView: 2,
+            slidesPerView: 3,
+            centeredSlides: true,
         },
-  
-         1080: {
-           slidesPerView: 3,
-         },
      },
   });
 
@@ -51,7 +48,7 @@ const sr = ScrollReveal({
     origin: 'top',
   })
   
-  sr.reveal(`.section-subtitle, .home-subtitle, .p-text, .button, .home-img`, {
+  sr.reveal(`.section-subtitle, .home-subtitle, .p-text, .home-img, .button p`, {
     origin: 'top',
     delay: 400,
     interval: 300,
