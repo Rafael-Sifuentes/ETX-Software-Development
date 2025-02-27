@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon">
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- COMPONENT CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Gabriel's Mobile Detailing</title>
+    <meta name="description" content=""> 
+    <meta title="keywords" content="">
+</head>
+<body>
+
+    <!-- HOME SECTION ================================================================================== -->
+    <header class="home section" id="header">
+
+        <div class="home-container container flex-column">
+            <h1 class="home-title">Gabriel's Mobile Detailing</h1>
+
+            <div class="home-frame-one flex-column">
+                <h4 class="home-subtitle section-subtitle">Experience true detailing perfection backed by 5 years in the industry.</h4>
+                <a href="#" class="home-button"><h5>Book an appointment</h5></a>
+            </div>
+
+            <div class="home-frame-two">
+                <ul class="home-info-list">
+                    <li onclick="callNumber()" class="home-info-item"><p class="p-text">903 339 9017</p><i class="ri-smartphone-line"></i></li>
+                    <li class="home-info-item"><p class="p-text">info@gabrielsdetails.co</p><i class="ri-question-mark"></i></li>
+                </ul>
+
+                <button onclick="scrollToSection('about')" class="button home-button-second"><p>Scroll Down</p></button>
+            </div>
+        </div>
+
+        <div class="home-background-container">
+            <div class="linear-gradient"></div>
+            <img src="assets/IMG/Home-img.png" alt="" class="home-background-img">
+        </div>
+    </header>
+    <!-- =============================================================================================== -->
+
+    <main>
+
+        <!-- ABOUT SECTION ============================================================================= -->
+        <section class="about section" id="about">
+
+            <div class="about-container container">
+
+                <div class="about-frame-one flex-column">
+                    <h2 class="about-title section-title">Service that comes to <b>you.</b></h2>
+
+                    <div class="about-frame-two">
+                        <div class="about-subtitle-container"><h6 class="about-subtitle">We provide everything. Yes even the water.</h6></div>
+
+                        <div class="about-info-list">
+
+                            <div class="about-info-item">
+                                <div class="img-container"><img src="assets/IMG/house-icon.png" alt="Red house icon"></div>
+                                <h5>At home</h5>
+                                <p class="p-text">We can service your vehicle in the comfort of your home.</p>
+                            </div>
+
+                            <div class="about-info-item">
+                                <div class="img-container"><img src="assets/IMG/Office-icon.png" alt="Red house icon"></div>
+                                <h5>Or work</h5>
+                                <p class="p-text">Busy at work ? Not a problem, we come to your place of work.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="about-img-container"><img src="assets/IMG/about-img.png" alt="Red Bronco image"></div>
+
+            </div>
+
+        </section>
+        <!-- =========================================================================================== -->
+
+        <!-- REVIEWS SECTION =========================================================================== -->
+        <section class="reviews section" id="reviews">
+            <div class="reviews-container container">
+
+                <div class="reviews-frame-one flex-column">
+                    <h2 class="reviews-title section-title">Real reviews, from real results.</h2>
+                    <div class="swiper-buttons review-swiper-buttons">
+                        <button class="swiper-prev"><i class="ri-arrow-left-line"></i></button>
+                        <button class="swiper-next"><i class="ri-arrow-right-line"></i></button>
+                    </div>
+                </div>
+
+                <div class="reviews-frame-two">
+                    <ul class="swiper-wrapper">
+                        <li class="client-review-card swiper-slide">
+                            <div class="client-info-container">
+                                <h3>""</h3>
+                                <p class="p-text">Gabriel did an amazing job! He made my work truck that hasn't been washed in years look like new !</p>
+                                <p class="client-name"><b>- Enrique Villarreal</b></p>
+                            </div>
+                            <img src="assets/IMG/review-img-1.png" alt="Image of a clients vehicle interior">
+                        </li>
+
+                        <li class="client-review-card swiper-slide">
+                            <div class="client-info-container">
+                                <h3>""</h3>
+                                <p class="p-text">Gabriel did an amazing job! He made my work truck that hasn't been washed in years look like new !</p>
+                                <p class="client-name"><b>- Enrique Villarreal</b></p>
+                            </div>
+                            <img src="assets/IMG/review-img-2.png" alt="Image of a clients vehicle interior">
+                        </li>
+
+                        <li class="client-review-card swiper-slide">
+                            <div class="client-info-container">
+                                <h3>""</h3>
+                                <p class="p-text">Gabriel did an amazing job! He made my work truck that hasn't been washed in years look like new !</p>
+                                <p class="client-name"><b>- Enrique Villarreal</b></p>
+                            </div>
+                            <img src="assets/IMG/review-img-3.png" alt="Image of a clients vehicle interior">
+                        </li>
+
+                        <li class="client-review-card swiper-slide">
+                            <div class="client-info-container">
+                                <h3>""</h3>
+                                <p class="p-text">Gabriel did an amazing job! He made my work truck that hasn't been washed in years look like new !</p>
+                                <p class="client-name"><b>- Enrique Villarreal</b></p>
+                            </div>
+                            <img src="assets/IMG/review-img-4.png" alt="Image of a clients vehicle interior">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- =========================================================================================== -->
+
+        <!-- SERVICES SECTION ========================================================================== -->
+        <section class="services section" id="services">
+            <div class="services-container container">
+                <div class="services-frame-header"><h4 class="services-subtitle section-subtitle">Discover our services in detail here.</h4><span></span></div>
+
+                <ul class="services-list">
+                    <li class="services-list-item">
+                        <div class="list-header">
+                            <h2 class="services-title section-title">Exterior Detaling</h2>
+                            <div class="effect-container">
+                                <button onclick="toggleQuestion(this)" class="services-toggle-btn"><div class="btn-toggle"><i class="ri-arrow-right-down-line open-icon"></i><i class="ri-close-line close-icon"></i></div></button>
+                            </div>
+                        </div>
+
+                        <div class="list-info flex-column">
+                            <div class="list-img-container"><img src="assets/IMG/service-img-1.png" class="transition" alt="Exterior detail image"></div>
+                            <div class="list-frame-one">
+                                <div class="section-accent"><p>Inquire</p></div>
+                                <h3 class="service-list-title">Revitalize Your Car's Exterior & Unleash Its True Beauty.</h3>
+                            </div>
+                            <p class="p-text">
+                                Restore your car's showroom shine with our meticulous exterior detailing. We meticulously cleanse, polish, and protect your paint, trim, and wheels, removing contaminants and imperfections to reveal a dazzling finish that turns heads.  Experience the ultimate in exterior car care.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services-list-item">
+                        <div class="list-header">
+                            <h2 class="services-title section-title">Interior Detaling</h2>
+                            <div class="effect-container">
+                                <button onclick="toggleQuestion(this)" class="services-toggle-btn"><div class="btn-toggle"><i class="ri-arrow-right-down-line open-icon"></i><i class="ri-close-line close-icon"></i></div></button>
+                            </div>
+                        </div>
+
+                        <div class="list-info flex-column">
+                            <div class="list-img-container"><img src="assets/IMG/service-img-2.png" class="transition" alt="Interior detail image"></div>
+                            <div class="list-frame-one">
+                                <div class="section-accent"><p>Inquire</p></div>
+                                <h3 class="service-list-title">Indulge in a Pristine Interior: Experience Driving Comfort.</h3>
+                            </div>
+                            <p class="p-text">
+                                Transform your car's interior into a sanctuary of cleanliness and comfort.  Our expert interior detailing removes dirt, stains, and odors from every surface, leaving your car smelling fresh and looking its best.  Enjoy a driving experience that's both luxurious and inviting.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services-list-item">
+                        <div class="list-header">
+                            <h2 class="services-title section-title">Ceramic Coatings</h2>
+                            <div class="effect-container">
+                                <button onclick="toggleQuestion(this)" class="services-toggle-btn"><div class="btn-toggle"><i class="ri-arrow-right-down-line open-icon"></i><i class="ri-close-line close-icon"></i></div></button>
+                            </div>
+                        </div>
+
+                        <div class="list-info flex-column">
+                            <div class="list-img-container"><img src="assets/IMG/service-img-3.png" class="transition" alt="Ceramic coating image"></div>
+                            <div class="list-frame-one">
+                                <div class="section-accent"><p>Popular upgrade</p></div>
+                                <h3 class="service-list-title">Protect your ride with a coating that will last for years.</h3>
+                            </div>
+                            <p class="p-text">
+                                A ceramic treatment is a protective coating that bonds to your car's paint, enhancing shine while repelling water, dirt, and UV damage for long-lasting protection.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services-list-item">
+                        <div class="list-header">
+                            <h2 class="services-title section-title">Paint Correction</h2>
+                            <div class="effect-container">
+                                <button onclick="toggleQuestion(this)" class="services-toggle-btn"><div class="btn-toggle"><i class="ri-arrow-right-down-line open-icon"></i><i class="ri-close-line close-icon"></i></div></button>
+                            </div>
+                        </div>
+
+                        <div class="list-info flex-column">
+                            <div class="list-img-container"><img src="assets/IMG/service-img-4.png" class="transition" alt="Paint correction image"></div>
+                            <div class="list-frame-one">
+                                <div class="section-accent"><p>Inquire</p></div>
+                                <h3 class="service-list-title">Erase Imperfections: Achieve a Flawless Paint Finish.</h3>
+                            </div>
+                            <p class="p-text">
+                                Restore your car's paint to its original glory with our precision paint correction services. We expertly remove scratches, swirl marks, and other blemishes, revealing a mirror-like finish that enhances your car's value and appearance.  Experience the art of paint perfection.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="services-list-item">
+                        <div class="list-header">
+                            <h2 class="services-title section-title">Locally owned</h2>
+                            <div class="effect-container">
+                                <button onclick="toggleQuestion(this)" class="services-toggle-btn"><div class="btn-toggle"><i class="ri-arrow-right-down-line open-icon"></i><i class="ri-close-line close-icon"></i></div></button>
+                            </div>
+                        </div>
+
+                        <div class="list-info flex-column">
+                            <div class="list-img-container"><img src="assets/IMG/service-img-5.png" class="transition" alt="Exterior detail image"></div>
+                            <div class="list-frame-one">
+                                <div class="section-accent"><p>Jacksonville TX</p></div>
+                                <h3 class="service-list-title">Your Local Detailing Expert: Personalized Car Care.</h3>
+                            </div>
+                            <p class="p-text">
+                                Support local and treat your car to the best with our locally owned detailing service. We provide personalized care and attention to detail, ensuring your vehicle receives the highest quality treatment. Experience the difference of a trusted, community-focused business.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- =========================================================================================== -->
+
+        <!-- PACKAGES SECTION ========================================================================== -->
+        <section class="packages section" id="packages">
+           <div class="packages-header container">
+                <div class="section-accent packages-accent"><p>Packages</p></div>
+                <h2 class="packages-title section-title">Choose the service that is right for you.</h2>
+           </div>
+
+           <div class="packages-frame-one container">
+
+                <article class="packages-card">
+
+                    <div class="packages-card-header">
+                        <h3>Basic</h3>
+                        <h6>The Essentials.</h6>
+                    </div>
+
+                    <div class="packages-card-component flex-column">
+                        <div class="card-component-header">
+                            <h4>Exterior</h4>
+                            <div class="img-container"><img src="assets/IMG/bucket-icon-black.png" alt="Bucket icon"></div>
+                        </div>
+
+                        <ul class="card-list flex-column">
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Foam bath pre-soak</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">2 bucket hand wash</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Pneumatic air dry</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Deep clean rims & tires</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Clean door jambs</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">De-ionized water rinse</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="packages-card-component flex-column">
+                        <div class="card-component-header">
+                            <h4>Interior</h4>
+                            <div class="img-container"><img src="assets/IMG/seat-icon-black.png" alt="Seat icon"></div>
+                        </div>
+
+                        <ul class="card-list flex-column">
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Deep clean doors, dash, & plastics</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Vacuum seats & carpets</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Odor elimination</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Clean interior windows</p></li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <article class="packages-card">
+
+                    <div class="packages-card-header">
+                        <h3>Basic +</h3>
+                        <h6>The Essentials and more.</h6>
+                    </div>
+
+                    <div class="packages-card-component flex-column">
+                        <div class="card-component-header">
+                            <h4>Exterior</h4>
+                            <div class="img-container"><img src="assets/IMG/bucket-icon-black.png" alt="Bucket icon"></div>
+                        </div>
+
+                        <ul class="card-list flex-column">
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Foam bath pre-soak</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">2 bucket hand wash</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Pneumatic air dry</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Deep clean rims & tires</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Clean door jambs</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">De-ionized water rinse</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="packages-card-component flex-column">
+                        <div class="card-component-header">
+                            <h4>Interior</h4>
+                            <div class="img-container"><img src="assets/IMG/seat-icon-black.png" alt="Seat icon"></div>
+                        </div>
+
+                        <ul class="card-list flex-column">
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Deep clean doors, dash, & plastics</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Vacuum seats & carpets</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Odor elimination</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Clean interior windows</p></li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <article class="packages-card">
+
+                    <div class="packages-card-header">
+                        <h3>Premium</h3>
+                        <h6>Our most complete package.</h6>
+                    </div>
+
+                    <div class="packages-card-component flex-column">
+                        <div class="card-component-header">
+                            <h4>Exterior</h4>
+                            <div class="img-container"><img src="assets/IMG/bucket-icon-white.png" alt="Bucket icon"></div>
+                        </div>
+
+                        <ul class="card-list flex-column">
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Foam bath pre-soak</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">2 bucket hand wash</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Pneumatic air dry</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Deep clean rims & tires</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Clean door jambs</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">De-ionized water rinse</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="packages-card-component flex-column">
+                        <div class="card-component-header">
+                            <h4>Interior</h4>
+                            <div class="img-container"><img src="assets/IMG/seat-icon-white.png" alt="Seat icon"></div>
+                        </div>
+
+                        <ul class="card-list flex-column">
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Deep clean doors, dash, & plastics</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Vacuum seats & carpets</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Odor elimination</p></li>
+                            <li class="card-list-item"><div class="circle"></div><p class="p-text">Clean interior windows</p></li>
+                        </ul>
+                    </div>
+
+                </article>
+
+           </div>
+
+           <div class="packages-img container"><img src="assets/IMG/detailing-logo.png" alt="A red truck being detailed"></div>
+        </section>
+        <!-- =========================================================================================== -->
+
+        <!-- GALLERY SECTION =========================================================================== -->
+        <section class="gallery section" id="gallery">
+            <div class="gallery-container container flex-column">
+                <div class="gallery-header"><h2 class="gallery-title section-title">Yea, you're seeing that right.</h2><div class="section-accent gallery-section-accent"><p>Our gallery</p></div></div>
+
+                <div class="gallery-swiper-container flex-column">
+                    <ul class="swiper-wrapper">
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Basic PLUS package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-1.png" alt="Gallery image 1"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Premium package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-2.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Basic package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-3.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Basic package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-4.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Basic PLUS package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-5.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Premium package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-6.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Premium package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-7.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Basic package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-8.png" alt="Gallery image"></div>
+                        </li>
+
+                        <li class="gallery-card flex-column swiper-slide">
+                            <div class="gallery-card-header"><h6>Basic PLUS package</h6></div>
+                            <div class="gallery-card-img"><img src="assets/IMG/gallery-img-9.png" alt="Gallery image"></div>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-buttons gallery-swiper-buttons">
+                        <button class="swiper-prev"><i class="ri-arrow-left-line"></i></button>
+                        <button class="swiper-next"><i class="ri-arrow-right-line"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- =========================================================================================== -->
+
+        <!-- CONTACT SECTION =========================================================================== -->
+        <section class="contact section" id="contact">
+            <div class="contact-background">
+                <div class="contact-frame-one container flex-column">
+                    <h4 class="contact-subtitle section-subtitle">Lets get in touch.</h4>
+                    <h2 class="contact-title section-title">Ready to make your ride stand out.</h2>
+
+                    <div class="contact-button-container">
+                        <button onclick="callNumber()" class="button contact-button"><p>Book an appointment</p></button>
+                        <button onclick="openInsta()" class="contact-social-button"><i class="ri-instagram-fill"></i></button>
+                    </div>
+                </div>
+
+                <div class="contact-image-container container"><img src="assets/IMG/gallery-img-7.png" alt=""></div>
+            </div>
+        </section>
+        <!-- =========================================================================================== -->
+
+    </main>
+
+    <!-- FOOTER SECTION ================================================================================ -->
+    <footer class="footer section">
+        <div class="footer-container container flex-column">
+            <div class="footer-frame-one flex-column">
+                <h4 class="footer-title">Have questions ? Contact us !</h4>
+                <div class="footer-info-list flex-column">
+                    <h6>903.339.9017</h6>
+                    <h6>info@gabrielsdetails.co</h6>
+                </div>
+            </div>
+
+            <div class="contact-frame-two">
+                <button class="button footer-button"><p>Give us a call</p></button>
+                <ul class="social-button-list">
+                    <li onclick="openInsta()" class="contact-social-button"><i class="ri-instagram-fill"></i></li>
+                    <li onclick="openFacebook()" class="contact-social-button"><i class="ri-facebook-circle-fill"></i></li>
+                    <li onclick="openReview()" class="contact-social-button"><i class="ri-google-fill"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- =============================================================================================== -->
+
+
+    <!-- JAVASCRIPT =============================================================== -->
+    <!-- SCROLL REVEAL JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- PAGE SPECIFIC JS -->
+    <script src="assets/main.js"></script>
+</body>
+</html>
