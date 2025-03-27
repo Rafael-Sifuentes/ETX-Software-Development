@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,671 +5,264 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="assets/img/Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon">
     <!-- REMIX ICONS -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <title>OnDmand Auto details| Jacksonville Tx</title>
-    <meta title="description" content="">
+    <!-- COMPONENT CSS -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>ETX_LAMBDA(V1.2.8)</title>
+    <meta name="description" content=""> 
     <meta title="keywords" content="">
 </head>
 <body>
 
-    <!-- ========================================================== -->
-    <!-- =========================== HEADER / NAVIGATION =============================== -->
-    <header class="header" id="header">
+    <!-- HOME SECTION ================================================================================== -->
+    <header class="home section" id="home">
+        <div class="home-container container flex-column">
 
-        <nav class="nav container">
+            <ul class="home-list">
+                <li class="home-list-item"><p>Design</p></li>
+                <li class="home-list-item"><p>Engineering</p></li>
+                <li class="home-list-item"><p>3D Modeling</p></li>
+                <li class="home-list-item"><p>Construction</p></li>
+                <li class="home-list-item"><p>Maintenance</p></li>
+            </ul>
 
-            <a href="#home" class="nav__logo">
-                <img src="assets/img/Nav-logo.png" alt="OnDmand logo">
-            </a>
+            <h1 class="home-title">Terra<span>Blue</span></h1>
+            <h4 class="home-subtitle">Custom pools & landscaping in greater Houston Tx</h4>
 
-            <div class="nav__menu" id="nav-menu">
+            <button onclick="scrollToSection('gallery')" class="home-button"><p>View our projects</p></button>
 
-                <ul class="nav__list">
+            <div class="home-footer">
+                <div class="home-line"></div>
+                <h6>Explore</h6>
+                <button onclick="scrollToSection('services')" class="home-button-second"><i class="ri-arrow-down-s-line"></i></button>
+            </div>
+        </div>
 
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
-                    </li>
+        <img src="assets/img/Home-background-img.png" alt="Home Home background img" class="home-img">
+    </header>
+    <!-- =============================================================================================== -->
 
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
-                    </li>
+    <main>
 
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">Services</a>
-                    </li>
+        <!-- SERVICES SECTION =================================================================================== -->
+       <section class="services section" id="services">
+        <div class="services-container container flex-column">
 
-                    <li class="nav__item">
-                        <a href="#gallery" class="nav__link">Gallery</a>
-                    </li>
+            <h4 class="services-text">We are Terrablue. A Houston based custom pool building company that is committed to providing the best experience and unmatched client satisfaction.</h4>
 
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
-                    </li>
+            <h3 class="section-title services-title">Our Services.</h3>
+            <div class="services-flex-container">
 
+                <ul class="services-scroll-list">
+                    <li class="services-scroll-list-item"><p>Custom Pools</p></li>
+                    <li class="services-scroll-list-item"><p>Pool remodels</p></li>
+                    <li class="services-scroll-list-item"><p>Patios & decks</p></li>
+                    <li class="services-scroll-list-item"><p>Landscaping</p></li>
+                    <li class="services-scroll-list-item"><p>Special features</p></li>
+                    <li class="services-scroll-list-item"><p>Maintenance</p></li>
+                    <li class="services-scroll-list-item"><p>Custom Homes</p></li>
                 </ul>
 
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
+                <div class="service-cards-container">
+
+                    <div class="service-card-component flex-column">
+                        <div class="card-content">
+
+                            <div class="service-card-toggle"><i class="ri-add-line"></i></div>
+                            <p>A description will be provided right here for Design.</p>
+
+                            <img src="assets/img/services-img-1.png" alt="Design service image" class="service-card-img">
+                        </div>
+                        <h5>Design</h5>
+                    </div>
+
+                    <div class="service-card-component flex-column">
+                        <div class="card-content">
+
+                            <div class="service-card-toggle"><i class="ri-add-line"></i></div>
+                            <p>A description will be provided right here for 3D modeling.</p>
+
+                            <img src="assets/img/services-img-2.png" alt="3D Modeling service image" class="service-card-img">
+                        </div>
+                        <h5>3D Modeling</h5>
+                    </div>
+
+                    <div class="service-card-component flex-column">
+                        <div class="card-content">
+
+                            <div class="service-card-toggle"><i class="ri-add-line"></i></div>
+                            <p>A description will be provided right here for permit acquisition.</p>
+
+                            <img src="assets/img/services-img-3.png" alt="Permit acquisition service image" class="service-card-img">
+                        </div>
+                        <h5>Permit acquisition</h5>
+                    </div>
+
+                    <div class="service-card-component flex-column">
+                        <div class="card-content">
+
+                            <div class="service-card-toggle"><i class="ri-add-line"></i></div>
+                            <p>A description will be provided right here for construction.</p>
+
+                            <img src="assets/img/services-img-4.png" alt="Construction service image" class="service-card-img">
+                        </div>
+                        <h5>Construction</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+        <!-- =========================================================================================== -->
+
+        <!-- GALLERY SECTION =================================================================================== -->
+       <section class="gallery section" id="gallery">
+
+        <div class="gallery-container container flex-column swiper">
+            <div class="section-accent gallery-section-accent">
+                <div class="section-name"><p>Our portfolio</p></div>
+                <div class="section-line"></div>
+            </div>
+
+            <h3 class="gallery-title section-title">
+                Our work and our meticulous attention to detail is what truly sets us apart from the competition. See for yourself.
+            </h3>
+
+            <div class="gallery-flex-container">
+                <p class="p-text">Swipe through our incredible portfolio of uniquely crafted pools</p>
+                <div class="gallery-btns-container">
+                    <button class="gallery-swiper-btn gallery-swiper-prev"><i class="ri-arrow-left-s-line"></i></button>
+                    <button class="gallery-swiper-btn gallery-swiper-next"><i class="ri-arrow-right-s-line"></i></button>
                 </div>
 
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-menu-3-line"></i>
-            </div>
+            <ul class="gallery-swiper-wrapper swiper-wrapper">
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-1.png" alt="Project 1 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-        </nav>
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-2.png" alt="Project 2 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-    </header>
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-3.png" alt="Project 3 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-    <!-- ========================================================== -->
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-4.png" alt="Project 4 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-    <!-- ============================ MAIN ============================== -->
-    <main class="main">
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-5.png" alt="Project 5 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-        <!-- =========================== HOME SECTION 1 =============================== -->
-        <section class="home section" id="home">
-            <div class="home__container container">
-                <h1 class="home__title section__title">Give your car the wash it <span>Deserves !</span></h1>
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-6.png" alt="Project 6 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-                <p class="home__description description">
-                    We are not your typical auto detailing brand. Let us show
-                    you why we stand out.
-                </p>
-            </div>
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-7.png" alt="Project 7 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-            <div class="home__img-container">
-                <img src="assets/img/home-img.png" alt="Clean car photo" class="home-img">
-            </div>
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-8.png" alt="Project 8 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
 
-            <div class="streak-1"></div>
-            <div class="streak-2"></div>
+                <li class="gallery-card-component swiper-slide flex-column">
+                    <div class="gallery-card-img"><img src="assets/img/gallery-img-9.png" alt="Project 9 image"></div>
+                    <button class="gallery-card-button"><p>View project</p></button>
+                </li>
+            </ul>
+        </div>
+       </section>
+        <!-- =========================================================================================== -->
 
-            <div class="home__footer">
-                <div class="home__footer-container container">
-                    <div class="home__info-box">
-                        <i class="ri-phone-fill"></i>
-                        <p class="info__description">Call us at <br> <span>(903) 339 9017</span></p>
-                    </div>
-
-                    <div class="home__info-box">
-                        <i class="ri-map-pin-2-fill"></i>
-                        <p class="info__description">We are located at<br> <span>1641 N Bolton St <br> Jacksonville TX</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <img src="assets/img/texas.svg" alt="" class="texas">
-
-
-        </section>
-        <!-- ========================================================== -->
-
-        <!-- =========================== ABOUT SECTION 2 =============================== -->
+        <!-- ABOUT SECTION =================================================================================== -->
         <section class="about section" id="about">
+            <div class="about-container container flex-column">
 
-            <h1 class="about__title section__title">Based on <span>Experience</span></h1>
+                <div class="about-section-accent section-accent">
+                    <div class="section-line"></div>
+                    <div class="section-name"><p>About us</p></div>
+                </div>
 
-            <div class="about__container container">
+                <div class="about-flex-container-one">
+                    <h3 class="about-title section-title">Custom solutions, with real results at TerraBlue</h3>
+                    <p class="p-text">Terra Blue is a custom pool and landscaping company that specializes in creating beautiful outdoor living spaces. We are passionate about transforming your backyard into a luxurious oasis where you can relax, entertain, and create memories with your loved ones.</p>
+                </div>
 
-                <div class="about__info">
-
-                    <h2 class="about__subtitle section__subtitle">About us</h2>
-
-                    <p class="about__description description">
-                        We are an automotive detailing 
-                        company based in Jacksonville TX
-                        with over 7 years in the industry.
-                        We have recently moved into a
-                        new more established location
-                        to better serve our clients.
-                    </p>
-
-                    <p class="about__description-semi description">
-                        We encourage you to stop by and check us out !
-                    </p>
-
-                    <div class="about__buttons">
-
-                        <div class="button-fill">
-                            <a href="#services">See our services</a>
+                <div class="about-flex-container-two">
+                    <div class="about-img-one"><img src="assets/img/about-img-1.png" alt="About us image one"></div>
+                    <div class="about-flex-container-three">
+                        <div class="about-flex-container-four">
+                            <div class="about-img-two"><img src="assets/img/about-img-2.png" alt="About us image two"></div>
+                            <div class="about-flex-container-five"><h3>100 <span>+</span></h3><h6>Completed projects</h6></div>
                         </div>
 
-                        <div class="button-underline">
-                            <a href="#gallery">Previous work</a>
+                        <div class="about-flex-container-four">
+                            <div class="about-img-two"><img src="assets/img/about-img-3.png" alt="About us image three"></div>
+                            <div class="about-flex-container-five"><h3>10 <span>+</span></h3><h6>Years of experience</h6></div>
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="about__img-container">
-                    <img src="assets/img/about-img.png" alt="" class="about-img">
+                <div class="about-section-accent section-accent">
+                    <div class="section-name"><p>Time-lapse</p></div>
+                    <div class="section-line"></div>
                 </div>
+
+                <div class="video-container">
+                    <img src="assets/img/video-img.png" alt="Video placeholder">
+                    <button class="video-toggle"><i class="ri-pause-circle-fill"></i></button>
+                </div>
+
             </div>
 
-            <div class="work__container grid container">
-                <div class="work__box">
-                    <img src="assets/img/wash.png" alt="" class="work__icon">
-                    <p class="work__description">Exterior wash & wax</p>
-                </div>
-
-                <div class="work__box">
-                    <img src="assets/img/seat.png" alt="" class="work__icon">
-                    <p class="work__description">Seat & carpet extraction</p>
-                </div>
-
-                <div class="work__box">
-                    <img src="assets/img/ceramic.png" alt="" class="work__icon">
-                    <p class="work__description">Ceramic coatings</p>
-                </div>
-
-                <div class="work__box">
-                    <img src="assets/img/correction.png" alt="" class="work__icon">
-                    <p class="work__description">Paint correction</p>
-                </div>
-            </div>
-
-            <img src="assets/img/square-light.svg" alt="" class="about__bkgr-1">
-            <img src="assets/img/road.svg" alt="" class="about__bkgr-2">
+            <div class="about-background"></div>
         </section>
-        <!-- ========================================================== -->
+        <!-- =========================================================================================== -->
 
-        <!-- =========================== SERVICES SECTION 3 =============================== -->
-        <section class="services section" id="services">
-            <div class="services__container container">
+        <!-- SECTION =================================================================================== -->
+        
+        <!-- =========================================================================================== -->
 
-                <h1 class="services__title section__title">Our <span>Services</span></h1>
-                <h2 class="services__subtitle section__subtitle">Chose the service that is right for your vehicle</h2>
+        <!-- SECTION =================================================================================== -->
+        
+        <!-- =========================================================================================== -->
 
-                <div class="card__container grid">
+        <!-- SECTION =================================================================================== -->
+       
+        <!-- =========================================================================================== -->
 
-                    <article class="service__card">
-
-                        <header class="card__header">
-                            <h2 class="card__title">Deluxe care</h2>
-
-                            <p class="card__description description">
-                                Enhanced detailing to restore your
-                                vehicles appearance for a noticeable difference.
-                            </p>
-
-                            <h1 class="card__price">$250<span>/per vehicle</span></h1>
-
-                            <div class="line"></div>
-                        </header>
-
-                        <h3>Includes :</h3>
-
-                        <ul class="card__exterior">
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Foam bath pre-soak</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Deep clean wheels</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Gental hand wash</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">De-ionized water rinse</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Clean door jambs</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Pneumatic air dry</p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="card__interior">
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Deep clean doors dash & plastics</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">UV protection on plastics</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Scrub / shampoo floor mats</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Wipe down leather seats</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Vacuum all interior areas</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Condition all leather</p>
-                            </li>
-
-                        </ul>
-
-                    </article>
-
-                    <article class="service__card">
-
-                        <header class="card__header">
-                            <h2 class="card__title">Essential detail</h2>
-
-                            <p class="card__description description">
-                                Perfect for regular maintenance and keeping your vehicle looking clean and fresh.
-                            </p>
-
-                            <h1 class="card__price">$180<span>/per vehicle</span></h1>
-
-                            <div class="line"></div>
-                        </header>
-
-                        <h3>Includes :</h3>
-
-                        <ul class="card__exterior">
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Foam bath pre-soak</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Deep clean wheels</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Gental hand wash</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">De-ionized water rinse</p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="card__interior">
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Deep clean doors dash & plastics</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">UV protection on plastics</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Scrub / shampoo floor mats</p>
-                            </li>
-
-                        </ul>
-
-                    </article>
-
-                    <article class="service__card">
-
-                        <header class="card__header">
-                            <h2 class="card__title">Ultimate detail</h2>
-
-                            <p class="card__description description">
-                                Enhanced detailing to restore your
-                                vehicles appearance for a noticeable difference.
-                            </p>
-
-                            <h1 class="card__price">$380<span>/per vehicle</span></h1>
-
-                            <div class="line"></div>
-                        </header>
-
-                        <h3>Includes :</h3>
-
-                        <ul class="card__exterior">
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Foam bath pre-soak</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Deep clean wheels</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Gental hand wash</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">De-ionized water rinse</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Clean door jambs</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Pneumatic air dry</p>
-                            </li>
-
-                        </ul>
-
-                        <ul class="card__interior">
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Deep clean doors dash & plastics</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">UV protection on plastics</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Scrub / shampoo floor mats</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Wipe down leather seats</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Vacuum all interior areas</p>
-                            </li>
-
-                            <li class="card__feature">
-                                <i class="ri-checkbox-blank-circle-line feature__icon"></i>
-                                <p class="feature__description description">Condition all leather</p>
-                            </li>
-
-                        </ul>
-
-                    </article>
-
-                </div>
-
-                <h2 class="section__subtitle services__subtitle">Avaliable add-on's <i class="ri-add-fill"></i></h2>
-                <p class="description services__description">Please call or email for pricing</p>
-
-                <div class="service__extras grid">
-
-                    <div class="extras__box">
-                        <p>Ceramic coating</p>
-                    </div>
-
-                    <div class="extras__box">
-                        <p>Paint correction</p>
-                    </div>
-
-                    <div class="extras__box">
-                        <p>Clay bar decon</p>
-                    </div>
-
-                    <div class="extras__box">
-                        <p>Headlight restore</p>
-                    </div>
-
-                    <div class="extras__box">
-                        <p>Engine bay detail</p>
-                    </div>
-
-                    <div class="extras__box">
-                        <p>PPF</p>
-                    </div>
-
-                </div>
-
-                <div class="service__warning">
-                    <h3 class="warning__title">Prices shown is for coupes and sedans</h3>
-
-                    <div>
-                        <h2 class="vehicle__type">+$75 for trucks</h2>
-
-                        <h2 class="vehicle__type">+$100 for SUV's</h2>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <img src="assets/img/square-dark.svg" alt="" class="service__bkgr-1">
-            <img src="assets/img/circles.svg" alt="" class="service__bkgr-2">
-        </section>
-        <!-- ========================================================== -->
-
-        <!-- =========================== GALLERY SECTION 4 =============================== -->
-        <section class="gallery section" id="gallery">
-
-            <div class="gallery__container container">
-                <h1 class="gallery__title section__title">Before & <span>After</span></h1>
-                <h2 class="gallery__subtitle section__subtitle">Our work truly speaks for itself. Swipe through some of our detailed vehicles.</h2>
-
-                <div class="showcase__container grid">
-
-                    <div class="item1 gallery__img">
-                        <img src="assets/img/img-1.png" alt="">
-                    </div>
-
-                    <div class="item2 gallery__img">
-                        <img src="assets/img/img-2.png" alt="">
-                    </div>
-
-                    <div class="item3 gallery__img">
-                        <img src="assets/img/img-3.png" alt="">
-                    </div>
-
-                    <div class="item4 gallery__img">
-                        <img src="assets/img/img-4.png" alt="">
-                    </div>
-
-                    <div class="item5 gallery__img">
-                        <img src="assets/img/img-5.png" alt="">
-                    </div>
-                    
-                </div>
-            </div>
-
-            <img src="assets/img/square-light.svg" alt="" class="gallery__bkgr-1">
-            <img src="assets/img/square-light.svg" alt="" class="gallery__bkgr-2">
-        </section>
-        <!-- ========================================================== -->
-
-        <!-- =========================== CONTACT SECTION =============================== -->
-        <section class="contact section" id="contact">
-            <div class="contact__container container">
-                <h1 class="contact__title section__title">Lets get in <span>Touch</span></h1>
-                <h2 class="contact__subtitle section__subtitle">
-                    If you would like to book a wash with us,
-                    please fill out the form below and we
-                    will be in contact in under 24 hours ! 
-                </h2>
-
-                <div class="contact__info-container grid">
-
-                    <div class="contact__box-1">
-
-                        <ul class="contact__list">
-                            <li class="contact-info">
-                                <div class="icon-square">
-                                    <i class="ri-phone-fill"></i>
-                                </div>
-
-                                <p class="info__description-contact description">Call us at: <span>(903) 339 9017</span></p>
-                            </li>
-
-                            <li class="contact-info">
-                                <div class="icon-square">
-                                    <i class="ri-mail-send-fill"></i>
-                                </div>
-
-                                <p class="info__description-contact description">Email us at: <span>name@ondmand.com</span></p>
-                            </li>
-
-                            <li class="contact-info">
-                                <div class="icon-square">
-                                    <i class="ri-map-pin-2-fill"></i>
-                                </div>
-
-                                <p class="info__description-contact description">We are located at: <br> <span>1641 N Bolton St, Jacksonville TX</span></p>
-                            </li>
-                        </ul>
-
-                        <h2 class="section__subtitle">We are open weekdays from Monday - Friday from 8am to 6pm</h2>
-
-                    </div>
-
-                    <div class="contact__box-2">
-                        <img src="assets/img/map-img.png" alt="" class="map-img">
-
-                        <button class="open-icon" id="map-open">
-                            <i class="ri-upload-fill"></i>
-                        </button>
-
-                        <div class="map-bkgr">
-                            <div class="button-fill">
-                                <a href="#">Get directions</a>
-                            </div>
-
-                            <button class="open-icon" id="map-close">
-                                <i class="ri-download-fill"></i>
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <form class="contact-form grid" id="contact-form">
-
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="contact-name" class="form__text" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Phone number</label>
-                        <input type="tel" id="contact-phone" class="form__text" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Vehicle type</label>
-                        <input type="text" id="contact-vehicle" class="form__text" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Preffered services</label>
-                        <input type="text" id="contact-services" class="form__text" required>
-                    </div>
-
-                    <div class="contact__buttons">
-                        <button type="send" class="button-fill contact-button">
-                            Send form
-                            <i class="ri-send-plane-fill"></i>
-                        </button>
-
-                        <ul class="social-links">
-                            <li class="link-container">
-                                <a href="https://www.instagram.com/ondmandautodetailing/">
-                                    <i class="ri-instagram-line link-icon"></i>
-                                </a>
-                            </li>
-
-                            <li class="link-container">
-                                <a href="">
-                                    <i class="ri-facebook-fill link-icon"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </form>
-            </div>
-        </section>
-        <!-- ========================================================== -->
     </main>
 
-    <!-- ============================ FOOTER ============================== -->
-    <footer class="footer section">
-
-        <div class="footer__container container">
-
-            <img src="assets/img/Nav-logo.png" alt="" class="footer__logo">
-
-            <div class="footer__info-container">
-                
-                <ul class="footer__list">
-
-                    <li class="footer-list-item">
-                        <a href="#about">About us</a>
-                    </li>
-
-                    <li class="footer-list-item">
-                        <a href="#services">Our services</a>
-                    </li>
-
-                    <li class="footer-list-item">
-                        <a href="#contact">Booking a visit</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <p class="copyright">Website designed & developed by<br><span>ETX Software Development</span><br>&#169; All rights reserved</p>
-        </div>
-        
-
-    </footer>   
-    <!-- ========================================================== -->
+    <!-- FOOTER SECTION ================================================================================ -->
+   
+    <!-- =============================================================================================== -->
 
 
-    <!-- ========================================================== -->
-    <!-- =========================== JAVASCRIPT LINKS =============================== -->
+    <!-- JAVASCRIPT =============================================================== -->
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- MAIN JS -->
-    <script src="/assets/javascript/main.js"></script>
-    <!-- ========================================================== -->
+    <!-- PAGE SPECIFIC JS -->
+    <script src="assets/main.js"></script>
 </body>
 </html>
