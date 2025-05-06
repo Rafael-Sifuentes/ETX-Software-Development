@@ -242,7 +242,7 @@ window.addEventListener('resize', () => {
     ease: 'power2.inOut',
   }, "+=0.1");
 
-  // Split "Level" into individual characters for step effect
+  // Split "Together" into individual characters for step effect
   const stepSplit = new SplitType('.step-animate', { types: 'chars' });
 
   gsap.set('.step-animate .char', {
