@@ -138,40 +138,36 @@ window.addEventListener('resize', () => {
     interval: 250,
   });
 
-  // Split into words instead of lines
-  const subtitle = new SplitType(".services-subtitle", {
-    types: "words",
-    wordClass: "word-child"
-  });
+  // Split subtitle into words
+const subtitle = new SplitType(".services-subtitle", {
+  types: "words",
+  wordClass: "word-child"
+});
 
-  // Timeline for scroll-driven word reveal
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".services-subtitle",
-      start: "top center",
-      end: "+=1000",
-      scrub: true,
-      pin: true,
-      markers: false
-    }
-  })
-  .from(".word-child", {
-    opacity: 0,
-    y: 40,
-    stagger: 0.1,
-    ease: "power2.out"
-  });
+// Set initial state
+gsap.set(".word-child", {
+  opacity: 0,
+  y: 48
+});
 
-  gsap.to(".scroll-indicator", {
-    opacity: 0,
-    y: -20,
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: ".services-subtitle",
-      start: "top center",
-      once: true
-    }
-  });
+// Scroll-based animation
+gsap.to(".word-child", {
+  opacity: 1,
+  y: 0,
+  stagger: 0.1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".services-text-wrapper",
+    start: "top+=50% center",
+    end: "bottom+=80% center",
+    // start: "top top",
+    // end: "+=500", 
+    scrub: true,
+    pin: ".services-text-wrapper",
+    pinSpacing: true,
+    markers: false
+  }
+});
 
   // Split text into words
   const aboutText = new SplitType('.about-progress-text', { types: 'words' });

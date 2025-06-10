@@ -124,6 +124,11 @@ img{
     height: 100%;
     object-fit: cover;
 }
+
+::selection {
+    background-color: #050018;
+    color: #FDF8FF;
+  }
 /*-============================================================================================- */
 
 /* RESPONSIVE BREAKPOINTS======================================================================- */
@@ -152,7 +157,7 @@ img{
 }
 
 /* FOR DESKTOP */
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1440px){
     .container{
         max-width: 1392px;
         margin: 0 auto;
@@ -173,6 +178,7 @@ img{
 .section{
     position: relative;
     padding-bottom: 8rem;
+    overflow-x: hidden;
 }
 
 .p-text{
@@ -297,6 +303,11 @@ img{
         transform: translateY(0) rotate(360deg);
     }
 }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
 
 /* BUTTONS */
 .cta-button{
@@ -427,12 +438,22 @@ img{
 /* HOME SECTION ===============================================================================- */
 .home{
     color: var(--text-color-w);
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
+    
+    background-image: radial-gradient(
+    ellipse at center 190%, 
+    #FDF8FF 37%,
+    #4717F7 45%,
+    #050018 55%
+  );
+
+    background-repeat: no-repeat;
+    background-size: 500% 100%;
+    background-position: center;
 }
 
 .home-container{
-    padding-top: 328px;
-    /* display: block; */
+    padding-top: 278px;
 }
 
 .home-title{
@@ -445,11 +466,11 @@ img{
 }
 
 .home-subtitle{
-    margin-bottom: var(--gap-4);
+    margin-bottom: var(--gap-6);
 }
 
 .home-button{
-    background-color: var(--primary-color);
+    background-color: var(--text-color-b);
     align-self: center;
 }
 
@@ -482,12 +503,40 @@ img{
 
 /* SERVICES SECTION ===========================================================================- */
 .services{
-    padding-top: 128px;
+    /* padding-top: 128px; */
+    padding-top: 0;
+    margin-top: var(--gap-7);
 }
 
 .services-subtitle{
     text-align: center;
-    margin-bottom: 192px;
+    /* margin-bottom: 192px; */
+}
+
+.services-text-wrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--gap-3);
+    /* background-color: green; */
+}
+  
+  .services-subtitle {
+    line-height: 1.4;
+    /* padding: 0 1rem; */
+    /* background-color: blue; */
+}
+
+.scroll-notification {
+    font-size: 1rem;
+    color: #909090;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+    transition: opacity 0.3s ease;
 }
 
 .services-title{
@@ -1397,7 +1446,7 @@ img{
 
 
 /* DESKTOP */
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1440px){
 
     /* REUSABLE CLASSES */
     .cta-button{
@@ -1465,13 +1514,39 @@ img{
     /* HOME SECTION */
     .home{
         padding-bottom: 128px;
+
+        background-image: radial-gradient(
+        ellipse at center 170%, 
+        #FDF8FF 37%,
+        #4717F7 47%,
+        #050018 55%
+    );
+
+        background-repeat: no-repeat;
+        background-size: 300% 100%;
+        background-position: center;
         /* height: 100vh; */
+    }
+
+    .home-container{
+        padding-top: 250px;
+    }
+
+    .home-subtitle{
+        width: 685px;
+        margin-left: var(--gap-6);
+        margin-bottom: var(--gap-7);
     }
 
     /* SERVICES SECTION */
     .services-frame-one{
         flex-direction: row;
         justify-content: space-between;
+        padding-top: 0;
+    }
+
+    .services{
+        margin-top: 0;
     }
 
     .main-service-card{
