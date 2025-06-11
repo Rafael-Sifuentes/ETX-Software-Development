@@ -192,8 +192,9 @@ gsap.to(".word-child", {
     scrollTrigger: {
       trigger: '.about-progress-text',
       start: 'top 80%',
-      end: 'top 20%',
+      end: 'top 30%',
       scrub: true,
+      markers: false,
     },
   });
 
