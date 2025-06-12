@@ -38,7 +38,7 @@ class InteractiveGrid {
         this.setupWebGL();
         this.updateDimensions();
         this.createGrid();
-        this.bindEvents();
+        this.bindEvents(); // Changed this to call the modified bindEvents
         this.animate();
     }
 
@@ -294,19 +294,24 @@ class InteractiveGrid {
     
 
     bindEvents() {
-        document.addEventListener('mousemove', (e) => {
-            const rect = this.container.getBoundingClientRect();
-            this.mouseX = e.clientX - rect.left;
-            this.mouseY = e.clientY - rect.top;
-        });
+        // Only add mousemove for non-touch devices to optimize performance
+        if (!('ontouchstart' in window || navigator.maxTouchPoints)) {
+            document.addEventListener('mousemove', (e) => {
+                const rect = this.container.getBoundingClientRect();
+                this.mouseX = e.clientX - rect.left;
+                this.mouseY = e.clientY - rect.top;
+            });
+        }
 
+        // Handle touch events without preventing default scrolling
         document.addEventListener('touchmove', (e) => {
-            e.preventDefault();
+            // Remove e.preventDefault() to allow scrolling on touch devices
+            // e.preventDefault(); 
             const rect = this.container.getBoundingClientRect();
             const touch = e.touches[0];
             this.mouseX = touch.clientX - rect.left;
             this.mouseY = touch.clientY - rect.top;
-        }, { passive: false });
+        }, { passive: true }); // Changed to passive: true for better scroll performance
 
         window.addEventListener('resize', () => {
             this.updateDimensions();
