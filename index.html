@@ -77,6 +77,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <!-- COMPONENT CSS -->
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/grid.css">
   
     <title>ETX Software | Custom Code, No Templates</title>
     <meta name="description" content="ETX Software builds fast, reliable websites using custom code — no templates or builders. We focus on web development and offer supporting services like hosting, email setup, SEO, and drone photography.">
@@ -143,7 +144,7 @@
     <!-- =============================================================================================== -->
 
     <main>
-
+      <div class="grid-container" id="gridContainer"></div>
 
                 <div class="services-text-wrapper flex-column container">
 
@@ -158,126 +159,128 @@
 
         <!-- SERVICE SECTION =========================================================================== -->
        <section class="services section" id="services">
+        <div class="grid-container" id="gridContainer"></div>
 
-            <div class="services-container container">
-                
-                <div class="section-header">
-                    <div class="section-accent services-section-accent"><p>Our Expertise</p></div>
-                    <h2 class="section-title services-title">What we do.</h2>
-                </div>
+          <div class="services-container container">
+                  
+              <div class="section-header">
+                  <div class="section-accent services-section-accent"><p>Our Expertise</p></div>
+                  <h2 class="section-title services-title">What we do.</h2>
+              </div>
 
-                <div class="services-frame-one swiper">
-                    <div class="main-service-card flex-column transition">
-                        <div class="toggle-btn transition"><i class="ri-arrow-right-up-line"></i></div>
-                        <div class="card-icon"><img src="assets/img/icons/web-dev.png" alt="Custom website development"></div>
-                        <h3 class="main-service-card-title">Custom website development.</h3>
+              <div class="services-frame-one swiper">
+                  <div class="main-service-card flex-column transition">
+                      <div class="toggle-btn transition"><i class="ri-arrow-right-up-line"></i></div>
+                      <div class="card-icon"><img src="assets/img/icons/web-dev.png" alt="Custom website development"></div>
+                      <h3 class="main-service-card-title">Custom website development.</h3>
 
-                        <div class="main-service-card-modal transition">
-                            <p class="main-service-card-modal-description">Every website we build is coded from the ground up — no drag-and-drop builders, no bloated templates. Whether it's a single landing page or a fully featured site, we build it to be fast, scalable, and built to last.</p>
-                        </div>
-                    </div>
+                      <div class="main-service-card-modal transition">
+                          <p class="main-service-card-modal-description">Every website we build is coded from the ground up — no drag-and-drop builders, no bloated templates. Whether it's a single landing page or a fully featured site, we build it to be fast, scalable, and built to last.</p>
+                      </div>
+                  </div>
 
-                    <div class="service-cards-container flex-column">
-                        <ul class="swiper-wrapper">
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/redesign.png" alt="website re-designs"></div>
-                              <h5 class="service-card-title">Responsive & Mobile Friendly</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Mobile is the default experience for most people. We make sure your site looks and functions great across all screen sizes. No pinching, zooming, or guesswork required.</p>
-                              </div>
-                            </li>
+                  <div class="service-cards-container flex-column">
+                      <ul class="swiper-wrapper">
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/redesign.png" alt="website re-designs"></div>
+                            <h5 class="service-card-title">Responsive & Mobile Friendly</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Mobile is the default experience for most people. We make sure your site looks and functions great across all screen sizes. No pinching, zooming, or guesswork required.</p>
+                            </div>
+                          </li>
 
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/seo.png" alt="Search engine optimization"></div>
-                              <h5 class="service-card-title">Search Engine Optimization</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Good SEO starts with clean code and a solid structure. We build your site to be searchable, indexable, and readable by real people and search engines alike.</p>
-                              </div>
-                            </li>
-                          
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/hosting.png" alt="Web hosting"></div>
-                              <h5 class="service-card-title">Domain & Hosting Setup</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Don't want to deal with GoDaddy or DNS settings? We'll take care of domain setup, DNS configuration, and get your hosting environment ready so you can focus on your business.</p>
-                              </div>
-                            </li>
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/seo.png" alt="Search engine optimization"></div>
+                            <h5 class="service-card-title">Search Engine Optimization</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Good SEO starts with clean code and a solid structure. We build your site to be searchable, indexable, and readable by real people and search engines alike.</p>
+                            </div>
+                          </li>
+                        
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/hosting.png" alt="Web hosting"></div>
+                            <h5 class="service-card-title">Domain & Hosting Setup</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Don't want to deal with GoDaddy or DNS settings? We'll take care of domain setup, DNS configuration, and get your hosting environment ready so you can focus on your business.</p>
+                            </div>
+                          </li>
 
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/email-services.png" alt="Custom Business Emails"></div>
-                              <h5 class="service-card-title">Business Email Setup</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Get a custom email address (like you@yourcompany.com) set up to match your website domain. It's a small touch that goes a long way in professionalism.</p>
-                              </div>
-                            </li>
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/email-services.png" alt="Custom Business Emails"></div>
+                            <h5 class="service-card-title">Business Email Setup</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Get a custom email address (like you@yourcompany.com) set up to match your website domain. It's a small touch that goes a long way in professionalism.</p>
+                            </div>
+                          </li>
 
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/qr-code.png" alt="QR Codes"></div>
-                              <h5 class="service-card-title">QR Codes</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Need a smart way to connect your print materials to your website? We can generate QR codes that link to menus, contact pages, or custom landing pages — designed and tested to scan quickly and clearly.</p>
-                              </div>
-                            </li>
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/qr-code.png" alt="QR Codes"></div>
+                            <h5 class="service-card-title">QR Codes</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Need a smart way to connect your print materials to your website? We can generate QR codes that link to menus, contact pages, or custom landing pages — designed and tested to scan quickly and clearly.</p>
+                            </div>
+                          </li>
 
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/drone-photography.png" alt="Drone Photography"></div>
-                              <h5 class="service-card-title">Drone Photography</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Need high-quality aerial photos for your website? We offer drone photography services to showcase properties, projects, or storefronts from above.</p>
-                              </div>
-                            </li>
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/drone-photography.png" alt="Drone Photography"></div>
+                            <h5 class="service-card-title">Drone Photography</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Need high-quality aerial photos for your website? We offer drone photography services to showcase properties, projects, or storefronts from above.</p>
+                            </div>
+                          </li>
 
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/logo.png" alt="Logo Creation"></div>
-                              <h5 class="service-card-title">Logo clean up</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Already have a logo, but it's low-res or not web-ready? We can clean it up and prepare formats optimized for digital use.</p>
-                              </div>
-                            </li>
-                          
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/google-biz.png" alt="Google business profile management"></div>
-                              <h5 class="service-card-title">Google business profile management</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Boost your local visibility with Google Business Profile optimization. We help you connect with customers searching for your services on Google Maps and local search results.</p>
-                              </div>
-                            </li>
-                          
-                            <li class="service-card flex-column swiper-slide">
-                              <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                              <div class="card-icon"><img src="assets/img/icons/calendar.png" alt="Scheduling Software"></div>
-                              <h5 class="service-card-title">Scheduling Software</h5>
-                              <div class="service-card-modal transition">
-                                <p class="service-card-modal-description">Streamline your operations with our scheduling software solution. Easily manage appointments, availability, and bookings online to improve efficiency and customer satisfaction.</p>
-                              </div>
-                            </li>
-                        </ul>
-                          
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/logo.png" alt="Logo Creation"></div>
+                            <h5 class="service-card-title">Logo clean up</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Already have a logo, but it's low-res or not web-ready? We can clean it up and prepare formats optimized for digital use.</p>
+                            </div>
+                          </li>
+                        
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/google-biz.png" alt="Google business profile management"></div>
+                            <h5 class="service-card-title">Google business profile management</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Boost your local visibility with Google Business Profile optimization. We help you connect with customers searching for your services on Google Maps and local search results.</p>
+                            </div>
+                          </li>
+                        
+                          <li class="service-card flex-column swiper-slide">
+                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                            <div class="card-icon"><img src="assets/img/icons/calendar.png" alt="Scheduling Software"></div>
+                            <h5 class="service-card-title">Scheduling Software</h5>
+                            <div class="service-card-modal transition">
+                              <p class="service-card-modal-description">Streamline your operations with our scheduling software solution. Easily manage appointments, availability, and bookings online to improve efficiency and customer satisfaction.</p>
+                            </div>
+                          </li>
+                      </ul>
+                        
 
-                        <div class="swiper-btns-container">
-                            <button class="swiper-prev transition"><i class="ri-arrow-left-s-line"></i></button>
-                            <button class="swiper-next transition"><i class="ri-arrow-right-s-line"></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
+                      <div class="swiper-btns-container">
+                          <button class="swiper-prev transition"><i class="ri-arrow-left-s-line"></i></button>
+                          <button class="swiper-next transition"><i class="ri-arrow-right-s-line"></i></button>
+                      </div>
+                  </div>
+                  
+              </div>
 
-                <div class="services-image-container"><img src="assets/img/W680-H680.png" alt="ETX software custom websites"></div>
-            </div>
+              <div class="services-image-container"><img src="assets/img/W680-H680.png" alt="ETX software custom websites"></div>
+          </div>
 
        </section>
         <!-- =========================================================================================== -->
 
         <!-- PORTFOLIO SECTION ========================================================================= -->
        <section class="portfolio section" id="portfolio">
+
             <div class="portfolio-container container">
                 <div class="section-header">
                     <div class="section-accent portfolio-accent"><p>Portfolio</p></div>
@@ -374,6 +377,7 @@
                       <button onclick="scrollToSection('about')" class="portfolio-cta-button cta-button transition"><p>Find out how</p></button>
                     </li>
                 </ul>
+
             </div>
        </section>
         <!-- =========================================================================================== -->
@@ -528,5 +532,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- PAGE SPECIFIC JS -->
     <script src="assets/main.js"></script>
+    <script src="assets/grid.js"></script>
 </body>
 </html>
