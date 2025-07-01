@@ -440,9 +440,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Example of updating configuration
      grid.updateConfig({
-         spacing: 100,
-         maxDistance: 600,
-         falloffStrength : .5,
+         spacing: 40,
+         maxDistance: 1000,
+         falloffStrength : 1,
         //  enableRipple: false
         //  rippleAmplitude: 10.0,
         //  rippleFrequency: 10,
