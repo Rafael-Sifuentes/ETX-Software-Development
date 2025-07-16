@@ -17,6 +17,8 @@ function openInsta(){
   window.open(instaUrl, '_blank')
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // --- SELECTORS ---
   const nav = document.getElementById('nav');
@@ -58,16 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- SCROLL-BASED BEHAVIOR ---
 
   // Logic to hide nav on scroll down and show on scroll up
-  // let lastScrollY = window.scrollY;
-  // window.addEventListener('scroll', () => {
-  //     if (navContainer.classList.contains('toggled')) return;
-  //     if (lastScrollY < window.scrollY && window.scrollY > 100) {
-  //         nav.classList.add('hidden');
-  //     } else {
-  //         nav.classList.remove('hidden');
-  //     }
-  //     lastScrollY = window.scrollY;
-  // });
+  let lastScrollY = window.scrollY;
+  window.addEventListener('scroll', () => {
+      if (navContainer.classList.contains('toggled')) return;
+      if (lastScrollY < window.scrollY && window.scrollY > 100) {
+          nav.classList.add('hidden');
+      } else {
+          nav.classList.remove('hidden');
+      }
+      lastScrollY = window.scrollY;
+  });
 
   // Intersection Observer for Active Link Highlighting
   const activeLinkObserverOptions = {
@@ -92,16 +94,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const themeObserverOptions = {
       root: null,
-      rootMargin: "-110px 0px -90% 0px", // A thin trigger zone near the top
+      rootMargin: "-110px 0px -85% 0px", 
       threshold: 0
   };
 
   const themeObserver = new IntersectionObserver((entries) => {
+    console.log('--- Observer Fired ---'); // See when it runs
       entries.forEach(entry => {
           // Add or remove sections from our map of visible sections
           if (entry.isIntersecting) {
               visibleSections.set(entry.target, entry);
-          } else {
+          }
+          if (entry.isIntersecting) {
+            console.log(entry.target.id, 'is intersecting.'); // See which section is triggering
+        } else {
               visibleSections.delete(entry.target);
           }
       });
@@ -140,8 +146,10 @@ document.addEventListener('DOMContentLoaded', function() {
   sections.forEach(section => themeObserver.observe(section));
 });
 
-  // --- Count Up Animation ---
-  document.querySelectorAll('.count-up').forEach((element) => {
+
+
+// --- Count Up Animation ---
+document.querySelectorAll('.count-up').forEach((element) => {
     const target = parseInt(element.dataset.target);
     let current = 0;
     const span = element.querySelector('span');
