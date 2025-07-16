@@ -18,20 +18,46 @@
 </head>
 <body>
 
-    <!-- HOME SECTION ================================================================================== -->
-    <header class="home section" id="home">
+    <nav class="nav transition" id="nav">
+        <div class="nav-header container flex transition">
+            <a href="#home" class="nav-logo"><img src="assets/img/Nav-logo.png" alt="Main logo"></a>
 
-        <nav class="nav" id="nav">
-            <div class="nav-header container flex">
-                <a href="#home" class="nav-logo"><img src="assets/img/Nav-logo.png" alt="Main logo"></a>
+            <div class="nav-toggle-container">
+                <div class="nav-word-toggle-container transition flex-column">
+                    <p class="nav-word">Open</p>
+                    <p class="nav-word">Close</p>
+                </div>
+                <p class="nav-word nav-word-alt">menu</p>
+                <div class="nav-icon-container transition flex-column">
+                    <i class="ri-menu-line"></i>
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-        </nav>
+        </div>
+
+        <div class="nav-contents-container transition">
+
+            <div class="container">
+                <ul class="nav-links flex-column">
+                    <li class="nav-link"><a href="#home">Home</a></li>
+                    <li class="nav-link"><a href="#about">Company</a></li>
+                    <li class="nav-link"><a href="#services">Sectors</a></li>
+                    <li class="nav-link"><a href="#gallery">Portfolio</a></li>
+                    <li class="nav-link"><a href="#contact">Work with us</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- HOME SECTION ================================================================================== -->
+    <header class="home section" data-nav-theme="light" id="home">
 
         <div class="home-container container flex">
             <div class="home-frame-one flex-column">
-                <p class="home-subtitle">Houston's premier luxury residential contractor.</p>
-                <h2 class="section-title home-title">J&A Residential <b>Company</b></h2>
-                <button class="button home-button"><a href="#about">Explore</a></button>
+                <p class="home-subtitle left">Houston's premier luxury residential contractor.</p>
+                <h2 class="section-title home-title left">J&A Residential <b>Company</b></h2>
+                <button onclick="scrollToSection('about')" class="button home-button left"><a href="#about">Explore</a></button>
             </div>
         </div>
 
@@ -42,94 +68,94 @@
     <main>
 
         <!-- ABOUT SECTION ============================================================================= -->
-        <section class="about section" id="about">
+        <section class="about section" data-nav-theme="dark"  id="about">
 
             <div class="about-container container flex-column">
-                <h2 class="section-title about-title"><span>Uncompromising</span> quality, end-to-end <b>solutions.</b></h2>
+                <h2 class="section-title about-title left"><span>Uncompromising</span> quality, end-to-end <b>solutions.</b></h2>
 
                 <div class="about-frame-one flex-column">
-                    <h6 class="about-description">
+                    <h6 class="about-description right">
                         J&A Residential Company has been the hallmark of luxury residential construction in Houston for over a decade. We specialize in bringing architectural visions to life, delivering turnkey solutions with an unwavering commitment to quality and precision for both individual clients and large-scale contracting partners.
                     </h6>
 
                     <ul class="about-frame-two flex">
                         <li class="about-card flex-column">
-                            <h3 class="about-card-title">$27M</h3>
+                            <h3 class="about-card-title count-up" data-target="27">0<span>M</span></h3>
                             <h6 class="about-card-description">In contracts</h6>
                         </li>
 
                         <li class="about-card flex-column">
-                            <h3 class="about-card-title">150+</h3>
+                            <h3 class="about-card-title count-up" data-target="250" >0<span>+</span> </h3>
                             <h6 class="about-card-description">Completed projects</h6>
                         </li>
 
                         <li class="about-card flex-column">
-                            <h3 class="about-card-title">10+</h3>
+                            <h3 class="about-card-title count-up" data-target="10">0<span>+</span></h3>
                             <h6 class="about-card-description">Years in the industry.</h6>
                         </li>
                     </ul>
                 </div>
 
                 <div class="about-images-container flex">
-                    <div class="about-img-container-1"><img src="assets/img/About-img-one.png" alt="About image one"></div>
-                    <div class="about-img-container-2"><img src="assets/img/About-img-two.png" alt="About image two"></div>
-                    <div class="about-img-container-3"><img src="assets/img/About-img-three.png" alt="About image two"></div>
+                    <div class="about-img-container-1 bottom"><img src="assets/img/About-img-one.png" alt="About image one"></div>
+                    <div class="about-img-container-2 bottom"><img src="assets/img/About-img-two.png" alt="About image two"></div>
+                    <div class="about-img-container-3 bottom"><img src="assets/img/About-img-three.png" alt="About image two"></div>
                 </div>
 
-                <button class="button about-button"><a href="#services">Our services</a></button>
+                <button onclick="scrollToSection('services')" class="button about-button"><a href="#services">Our services</a></button>
             </div>
         </section>
         <!-- =========================================================================================== -->
 
         <!-- SERVICES SECTION ========================================================================== -->
-        <section class="services section" id="services">
+        <section class="services section" data-nav-theme="light" id="services">
                 <div class="services-container container flex-column">
 
-                    <h2 class="section-title services-title">Our <b>Sectors.</b></h2>
+                    <h2 class="section-title services-title right">Our <b>Sectors.</b></h2>
 
                     <ul class="service-cards-container grid">
                         <li class="service-card flex-column">
                             <div class="service-card-img"><img src="assets/img/service-img-1.png" alt="Service image"></div>
-                            <h5 class="service-card-title">General Contracting</h5>
+                            <h5 class="service-card-title top">General Contracting</h5>
                         </li>
 
                         <li class="service-card flex-column">
                             <div class="service-card-img"><img src="assets/img/service-img-2.png" alt="Service image"></div>
-                            <h5 class="service-card-title">Project Management</h5>
+                            <h5 class="service-card-title top">Project Management</h5>
                         </li>
 
                         <li class="service-card flex-column">
                             <div class="service-card-img"><img src="assets/img/service-img-3.png" alt="Service image"></div>
-                            <h5 class="service-card-title">Site supervision</h5>
+                            <h5 class="service-card-title top">Site supervision</h5>
                         </li>
 
 
                         <li class="service-card flex-column">
                             <div class="service-card-img"><img src="assets/img/service-img-4.png" alt="Service image"></div>
-                            <h5 class="service-card-title">Specialized craftsmanship</h5>
+                            <h5 class="service-card-title top">Specialized craftsmanship</h5>
                         </li>
                     </ul>
 
                     <div class="services-frame-one flex-column">
 
                         <div class="services-frame-two flex">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-right"><i class="ri-arrow-right-up-line"></i><span>See services</span></button>
                             <h6 class="services-description">
                                 Our comprehensive suite of services ensures a seamless and superior building experience, from conception to completion. Visit our services page to learn more.
                             </h6>
                         </div>
 
-                        <button class="button services-button"><a href="#gallery">Portfolio</a></button>
+                        <button onclick="scrollToSection('gallery')" class="button services-button"><a href="#gallery">Portfolio</a></button>
                     </div>
                 </div>
         </section>
         <!-- =========================================================================================== -->
 
         <!-- GALLERY SECTION =========================================================================== -->
-        <section class="gallery section" id="gallery">
+        <section class="gallery section" data-nav-theme="dark" id="gallery">
 
             <div class="gallery-container gallery-frame-one container">
-                <h2 class="section-title gallery-title">A Legacy of <b>Landmark</b> Residences.</h2>
+                <h2 class="section-title gallery-title left">A Legacy of <b>Landmark</b> Residences.</h2>
             </div>
 
             <div class="gallery-cards-container" id="gallery-cards-container">
@@ -139,7 +165,7 @@
                 <div class="gallery-card gallery-card-1">
                     <div class="gallery-card-container container flex">
                         <div class="gallery-card-button">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-left"><i class="ri-arrow-right-up-line"></i><span>View project</span></button>
                         </div>
 
                         <h3 class="gallery-card-title">45 Sterling Trace</h3>
@@ -153,7 +179,7 @@
                 <div class="gallery-card gallery-card-2">
                     <div class="gallery-card-container container flex">
                         <div class="gallery-card-button">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-left"><i class="ri-arrow-right-up-line"></i><span>View project</span></button>
                         </div>
 
                         <h3 class="gallery-card-title">88 Tanglewood Terrace</h3>
@@ -167,10 +193,10 @@
                 <div class="gallery-card gallery-card-3">
                     <div class="gallery-card-container container flex">
                         <div class="gallery-card-button">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-left"><i class="ri-arrow-right-up-line"></i><span>View project</span></button>
                         </div>
 
-                        <h3 class="gallery-card-title">7 Willow creek lane</h3>
+                        <h3 class="gallery-card-title">8834 cedarsupr</h3>
                     </div>
 
                     <div class="gallery-img-container">
@@ -181,10 +207,10 @@
                 <div class="gallery-card gallery-card-4">
                     <div class="gallery-card-container container flex">
                         <div class="gallery-card-button">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-left"><i class="ri-arrow-right-up-line"></i><span>View project</span></button>
                         </div>
 
-                        <h3 class="gallery-card-title">1910 Glosridge</h3>
+                        <h3 class="gallery-card-title">1914 Glosridge</h3>
                     </div>
 
                     <div class="gallery-img-container">
@@ -195,7 +221,7 @@
                 <div class="gallery-card gallery-card-5">
                     <div class="gallery-card-container container flex">
                         <div class="gallery-card-button">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-left"><i class="ri-arrow-right-up-line"></i><span>View project</span></button>
                         </div>
 
                         <h3 class="gallery-card-title">17 E Rivercrest</h3>
@@ -209,7 +235,7 @@
                 <div class="gallery-card gallery-card-6">
                     <div class="gallery-card-container container flex">
                         <div class="gallery-card-button">
-                            <button class="button-alt"><i class="ri-arrow-right-up-line"></i></button>
+                            <button class="button-alt button-alt-left"><i class="ri-arrow-right-up-line"></i><span>View project</span></button>
                         </div>
 
                         <h3 class="gallery-card-title">89 W Grand Regency</h3>
@@ -224,37 +250,37 @@
 
             <div class="gallery-container gallery-frame-two flex-column container">
 
-                <h2 class="section-title gallery-title-alt">The J&A Standard of <b>Excellence.</b></h2>
-                <h5 class="gallery-description">
+                <h2 class="section-title gallery-title-alt right">The J&A Standard of <b>Excellence.</b></h2>
+                <h5 class="gallery-description left">
                     Our leadership team brings a combined 25 years of experience, fostering a client-centric approach that has made us a trusted partner for large contractors and discerning homeowners alike. We are dedicated to building not just exceptional homes, but also lasting relationships.
                 </h5>
-                <button class="gallery-button button"><a href="#contact">Contact</a></button>
+                <button onclick="scrollToSection('contact')" class="gallery-button button"><a href="#contact">Contact</a></button>
             </div>
         </section>
         <!-- =========================================================================================== -->
 
         <!-- CONTACT SECTION =========================================================================== -->
-        <section class="contact section" id="contact">
+        <section class="contact section" data-nav-theme="light" id="contact">
 
             <div class="contact-container-one">
                 <div class="container flex-column contact-frame-one">
-                    <h2 class="section-title contact-title">Work with <b>us.</b></h2>
+                    <h2 class="section-title contact-title left">Work with <b>us.</b></h2>
                     <h5 class="contact-description">
                         We are seeking partnerships with discerning clients and premier contractors.
                     </h5>
 
                     <ul class="contact-list-container flex-column">
-                        <li class="contact-list-item"><h3 class="contact-list-item-description">info@<br>jaresidentialcompany.com</h3></li>
-                        <li class="contact-list-item"><h3 class="contact-list-item-description">5334 Prudence Dr, Houston TX 77045</h3></li>
-                        <li class="contact-list-item"><h3 class="contact-list-item-description">832.329.4855</h3></li>
+                        <li class="contact-list-item right"><h3 class="contact-list-item-description">info@<br>jaresidentialcompany.com</h3></li>
+                        <li class="contact-list-item right"><h3 class="contact-list-item-description">5334 Prudence Dr, Houston TX 77045</h3></li>
+                        <li class="contact-list-item right"><h3 class="contact-list-item-description">832.329.4855</h3></li>
                     </ul>
                 </div>
             </div>
 
             <div class="contact-container-two">
                 <div class="contact-frame-two container flex">
-                    <div class="contact-button"><button class="button-alt"><i class="ri-arrow-right-up-line"></i></button></div>
-                    <h3 class="contact-title-alt">See what sets us <b>apart.</b></h3>
+                    <div class="contact-button"><button class="button-alt button-alt-right"><i class="ri-arrow-right-up-line"></i><span>Go to gallery</span></button></div>
+                    <h3 class="contact-title-alt bottom">See what sets us <b>apart.</b></h3>
                 </div>
 
                 <img src="assets/img/Contact-img.png" alt="">
@@ -266,7 +292,66 @@
     </main>
 
     <!-- FOOTER SECTION ================================================================================ -->
-   
+    <footer class="footer section" data-nav-theme="dark" id="footer">
+        <div class="footer-container container flex-column">
+            <div class="footer-frame-one flex bottom">
+                <div class="footer-logo"><img src="assets/img/Main-logo.png" alt="Main logo"></div>
+                <div class="footer-name flex-column">
+                    <h4>J&A Residential <b>Company</b></h4>
+                    <p>Houston's premier luxury residential contractor.</p>
+                </div>
+            </div>
+
+            <div class="footer-frame-two flex">
+                <ul class="footer-info-list flex-column">
+                    <li class="footer-list-item"><a href="#">832.329.4855</a></li>
+                    <li class="footer-list-item"><a href="#">info@jaresidentialcompany.com</a></li>
+                    <li class="footer-list-item"><a href="#">5334 Prudence Dr. Houston TX</a></li>
+                    <li class="footer-list-item"><a href="#">Bonded & Insured</a></li>
+                    <li class="footer-list-item"><a href="#">Careers</a></li>
+                    <li class="footer-list-item"><a href="#">Client portal</a></li>
+                </ul>
+
+                <ul class="footer-links-list flex-column">
+                    <li class="footer-links-item flex-column">
+                        <p class="footer-links-title">Landing page</p>
+                        <div class="footer-links-container flex">
+                            <a href="#home" class="footer-link">Home</a>
+                            <a href="#about" class="footer-link">Company</a>
+                            <a href="#services" class="footer-link">Our Sectors</a>
+                            <a href="#gallery" class="footer-link">Portfolio</a>
+                            <a href="#contact" class="footer-link">Work with us</a>
+                        </div>
+                    </li>
+
+                    <li class="footer-links-item flex-column">
+                        <p class="footer-links-title">Services page</p>
+                        <div class="footer-links-container flex">
+                            <a href="#" class="footer-link">Core services</a>
+                            <a href="#" class="footer-link">Artisian steel</a>
+                            <a href="#" class="footer-link">Carpentry</a>
+                            <a href="#" class="footer-link">Drywall</a>
+                            <a href="#" class="footer-link">Paint</a>
+                            <a href="#" class="footer-link">Tile</a>
+                        </div>
+                    </li>
+
+                    <li class="footer-links-item flex-column">
+                        <p class="footer-links-title">Gallery page</p>
+                        <div class="footer-links-container flex">
+                            <a href="#" class="footer-link">Portfolio</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-signature flex">
+                <div class="flex"><p>Made by <b>ETX</b> Software</p> <div class="img-container"><img src="assets/img/code-logo.png" alt=""></div></div>
+
+                <p>2025</p>
+            </div>
+        </div>
+    </footer>
     <!-- =============================================================================================== -->
 
 
