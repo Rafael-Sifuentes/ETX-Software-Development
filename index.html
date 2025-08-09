@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/@mux/mux-player"></script>
     
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebPage",
-      "headline": "Custom Web Development — No Templates, No Builders",
-      "description": "ETX Software builds reliable, fully custom-coded websites for businesses in construction, food service, real estate, and more — no templates, no gimmicks. Just clean, modern code backed by supporting services like SEO, hosting, and email.",
+      "headline": "ETX Software | Web Solutions for Contractors, Restaurants & Real Estate",
+      "description": "ETX Software provides tailored web solutions that grow your business. We specialize in creating high-performing websites for contractors, restaurants, and real estate professionals, backed by SEO, hosting, and aerial photography services.",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.etxsoftware.com#home"
@@ -32,59 +34,49 @@
       "services": [
         {
           "@type": "Service",
-          "serviceType": "Custom Website Development",
-          "description": "Clean, functional websites built from scratch using real code. No page builders or templates—just fast, responsive, reliable sites tailored to your business."
+          "serviceType": "Web Design for Small Business",
+          "description": "We create tailored web solutions that grow your business. Our websites are designed to be fast, scalable, and perfectly fit your business needs."
         },
         {
           "@type": "Service",
           "serviceType": "Website Redesign",
-          "description": "We modernize outdated websites with better structure, design, and performance—without overcomplicating the user experience."
+          "description": "We modernize outdated websites with better structure, design, and performance, ensuring a seamless user experience."
         },
         {
           "@type": "Service",
           "serviceType": "Web Hosting",
-          "description": "Reliable and secure hosting for the sites we build. Optimized for speed, uptime, and long-term maintainability."
+          "description": "Reliable and secure hosting for your website, optimized for speed and uptime."
         },
         {
           "@type": "Service",
-          "serviceType": "Custom Business Emails",
+          "serviceType": "Business Email Setup",
           "description": "Professional email addresses for your domain to enhance communication and credibility."
         },
         {
           "@type": "Service",
           "serviceType": "Search Engine Optimization (SEO)",
-          "description": "Technical SEO to help your custom website rank. No gimmicks—just clean markup, speed, and structure that search engines like."
+          "description": "We improve your website's ranking in search results through technical SEO, keyword strategy, and on-page optimization."
         },
         {
           "@type": "Service",
-          "serviceType": "Drone Photography",
-          "description": "Aerial photography for businesses that want to showcase properties, spaces, or projects with clarity and style."
-        },
-        {
-          "@type": "Service",
-          "serviceType": "QR Codes",
-          "description": "Custom QR codes that link directly to your site, menu, contact form, or portfolio."
+          "serviceType": "Aerial Photography and Videography",
+          "description": "Stunning aerial shots and professional videos to showcase your properties, projects, or storefronts."
         }
       ]
     }
     </script>
   
-    <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/IMG/Favicon.png" type="image/x-icon">
-    <!-- REMIX ICONS -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <!-- COMPONENT CSS -->
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/grid.css">
   
-    <title>ETX Software | Custom Code, No Templates</title>
-    <meta name="description" content="ETX Software builds fast, reliable websites using custom code — no templates or builders. We focus on web development and offer supporting services like hosting, email setup, SEO, and drone photography.">
-    <meta name="keywords" content="custom website development, web developer Texas, SEO, drone photography, QR codes, business email setup, web hosting, no templates, code from scratch">
+    <title>ETX Software | Web Solutions for Contractors, Restaurants & Real Estate</title>
+    <meta name="description" content="ETX Software offers tailored web solutions for contractors, restaurants, and real estate professionals. We specialize in web design, SEO, and aerial photography to help your business grow.">
+    <meta name="keywords" content="web design for contractors, restaurant website design, real estate agent websites, local web designer Nacogdoches TX, aerial photography, SEO services">
   </head>
   
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2MTXEKG2B"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -95,12 +87,11 @@
 </script>
 <body>
 
-    <!-- HOME SECTION ================================================================================== -->
-   <header class="home section" id="home">
+    <header class="home section" id="home">
 
         <nav class="navigation transition">
             <div class="container">
-                <a href="#home" class="nav-logo"><div class="img-container"><img src="assets/img/icons/code-logo-nav.png" alt=""></div></a>
+                <a href="#home" class="nav-logo"><div class="img-container"><img src="assets/img/icons/code-logo-nav.png" alt="ETX Software Development Logo"></div></a>
 
                 <ul class="desktop-nav-list transition">
                         <li><a href="#home"><p>Home</p></a></li>
@@ -133,16 +124,11 @@
 
         <div class="home-container container flex-column">
             <h1 class="home-title section-title"><span>ETX</span> Software</h1>
-            <h3 class="alt-title home-subtitle">Beautiful custom built websites in Nacogdoches TX.</h3>
-            <button onclick="scrollToSection('scrollable')" class="cta-button home-button"><p>Scroll down</p></button>
+            <h3 class="alt-title home-subtitle">Tailored Web Solutions to Grow Your Business in Nacogdoches, TX.</h3>
+            <button onclick="scrollToSection('scrollable')" class="cta-button home-button"><p>Learn More</p></button>
         </div>
 
-        <!-- <div class="home-background-blur"></div> -->
-        <!-- <div class="home-background"><img src="assets/img/Home-background.png" alt=""></div> -->
-
    </header>
-    <!-- =============================================================================================== -->
-
     <main>
       <div class="grid-container" id="gridContainer"></div>
 
@@ -150,32 +136,30 @@
 
                   <div class="scroll-notification">Keep Scrolling ↓</div>
                     <h3 class="services-subtitle alt-title">
-                        At <b>ETX</b> Software we specialize in designing & developing custom websites and web-based tools tailored to your business.
-                        Every line of code is written from scratch to ensure speed, stability, and simplicity.
+                        At <b>ETX</b> Software, we create high-performing websites for contractors, restaurants, and real estate professionals. Our solutions are designed for speed, stability, and a seamless user experience.
                     </h3>
 
                     <span id="scrollable"></span>
                 </div>
 
-        <!-- SERVICE SECTION =========================================================================== -->
-       <section class="services section" id="services">
+        <section class="services section" id="services">
         <div class="grid-container" id="gridContainer"></div>
 
           <div class="services-container container">
                   
               <div class="section-header">
                   <div class="section-accent services-section-accent"><p>Our Expertise</p></div>
-                  <h2 class="section-title services-title">What we do.</h2>
+                  <h2 class="section-title services-title">What We Do.</h2>
               </div>
 
               <div class="services-frame-one swiper">
                   <div class="main-service-card flex-column transition">
                       <div class="toggle-btn transition"><i class="ri-arrow-right-up-line"></i></div>
-                      <div class="card-icon"><img src="assets/img/icons/web-dev.png" alt="Custom website development"></div>
-                      <h3 class="main-service-card-title">Custom website development.</h3>
+                      <div class="card-icon"><img src="assets/img/icons/web-dev.png" alt="Web Design for Small Business"></div>
+                      <h3 class="main-service-card-title">Web Design for Small Business.</h3>
 
                       <div class="main-service-card-modal transition">
-                          <p class="main-service-card-modal-description">Every website we build is coded from the ground up — no drag-and-drop builders, no bloated templates. Whether it's a single landing page or a fully featured site, we build it to be fast, scalable, and built to last.</p>
+                          <p class="main-service-card-modal-description">We build websites that are not only beautiful but also functional and scalable. Our focus is on creating a seamless experience for your customers, from the first click to the final conversion.</p>
                       </div>
                   </div>
 
@@ -183,82 +167,46 @@
                       <ul class="swiper-wrapper">
                           <li class="service-card flex-column swiper-slide">
                             <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/redesign.png" alt="website re-designs"></div>
-                            <h5 class="service-card-title">Responsive & Mobile Friendly</h5>
+                            <div class="card-icon"><img src="assets/img/icons/redesign.png" alt="Website Redesign"></div>
+                            <h5 class="service-card-title">Website Redesign</h5>
                             <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Mobile is the default experience for most people. We make sure your site looks and functions great across all screen sizes. No pinching, zooming, or guesswork required.</p>
+                              <p class="service-card-modal-description">We'll give your outdated website a modern and professional look, with improved functionality and a better user experience that drives results.</p>
                             </div>
                           </li>
 
                           <li class="service-card flex-column swiper-slide">
                             <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/seo.png" alt="Search engine optimization"></div>
+                            <div class="card-icon"><img src="assets/img/icons/seo.png" alt="Search Engine Optimization"></div>
                             <h5 class="service-card-title">Search Engine Optimization</h5>
                             <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Good SEO starts with clean code and a solid structure. We build your site to be searchable, indexable, and readable by real people and search engines alike.</p>
+                              <p class="service-card-modal-description">Our SEO services will help your website rank higher in search results, so you can attract more customers and grow your business.</p>
                             </div>
                           </li>
                         
                           <li class="service-card flex-column swiper-slide">
                             <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/hosting.png" alt="Web hosting"></div>
+                            <div class="card-icon"><img src="assets/img/icons/hosting.png" alt="Web Hosting"></div>
                             <h5 class="service-card-title">Domain & Hosting Setup</h5>
                             <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Don't want to deal with GoDaddy or DNS settings? We'll take care of domain setup, DNS configuration, and get your hosting environment ready so you can focus on your business.</p>
+                              <p class="service-card-modal-description">We'll handle all the technical details, so you can focus on what you do best. Our hosting services are reliable, secure, and optimized for speed.</p>
                             </div>
                           </li>
 
                           <li class="service-card flex-column swiper-slide">
                             <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/email-services.png" alt="Custom Business Emails"></div>
+                            <div class="card-icon"><img src="assets/img/icons/email-services.png" alt="Business Email Setup"></div>
                             <h5 class="service-card-title">Business Email Setup</h5>
                             <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Get a custom email address (like you@yourcompany.com) set up to match your website domain. It's a small touch that goes a long way in professionalism.</p>
+                              <p class="service-card-modal-description">A custom email address will give your business a professional edge and help you build trust with your customers.</p>
                             </div>
                           </li>
 
                           <li class="service-card flex-column swiper-slide">
                             <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/qr-code.png" alt="QR Codes"></div>
-                            <h5 class="service-card-title">QR Codes</h5>
+                            <div class="card-icon"><img src="assets/img/icons/drone-photography.png" alt="Aerial Photography and Videography"></div>
+                            <h5 class="service-card-title">Aerial Photography & Videography</h5>
                             <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Need a smart way to connect your print materials to your website? We can generate QR codes that link to menus, contact pages, or custom landing pages — designed and tested to scan quickly and clearly.</p>
-                            </div>
-                          </li>
-
-                          <li class="service-card flex-column swiper-slide">
-                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/drone-photography.png" alt="Drone Photography"></div>
-                            <h5 class="service-card-title">Drone Photography</h5>
-                            <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Need high-quality aerial photos for your website? We offer drone photography services to showcase properties, projects, or storefronts from above.</p>
-                            </div>
-                          </li>
-
-                          <li class="service-card flex-column swiper-slide">
-                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/logo.png" alt="Logo Creation"></div>
-                            <h5 class="service-card-title">Logo clean up</h5>
-                            <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Already have a logo, but it's low-res or not web-ready? We can clean it up and prepare formats optimized for digital use.</p>
-                            </div>
-                          </li>
-                        
-                          <li class="service-card flex-column swiper-slide">
-                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/google-biz.png" alt="Google business profile management"></div>
-                            <h5 class="service-card-title">Google business profile management</h5>
-                            <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Boost your local visibility with Google Business Profile optimization. We help you connect with customers searching for your services on Google Maps and local search results.</p>
-                            </div>
-                          </li>
-                        
-                          <li class="service-card flex-column swiper-slide">
-                            <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                            <div class="card-icon"><img src="assets/img/icons/calendar.png" alt="Scheduling Software"></div>
-                            <h5 class="service-card-title">Scheduling Software</h5>
-                            <div class="service-card-modal transition">
-                              <p class="service-card-modal-description">Streamline your operations with our scheduling software solution. Easily manage appointments, availability, and bookings online to improve efficiency and customer satisfaction.</p>
+                              <p class="service-card-modal-description">Our stunning aerial shots and professional videos will make your business stand out from the competition and attract more customers.</p>
                             </div>
                           </li>
                       </ul>
@@ -272,136 +220,142 @@
                   
               </div>
 
-              <div class="services-image-container"><img src="assets/img/W680-H680.png" alt="ETX software custom websites"></div>
+              <div class="services-image-container">
+                      <mux-player
+                              class="video"
+                              style="--controls: none;"
+                              stream-type="on-demand"
+                              playback-id="MavLtagDA1y3cG8FX7U8HpgbLED9HrAjeOEqSUHAzUE"
+                              loop
+                              muted
+                              autoplay
+                              accent-color="#AE44D5">
+                              
+                      </mux-player>
+              </div>
           </div>
 
        </section>
-        <!-- =========================================================================================== -->
-
-        <!-- PORTFOLIO SECTION ========================================================================= -->
        <section class="portfolio section" id="portfolio">
 
-            <div class="portfolio-container container">
-                <div class="section-header">
-                    <div class="section-accent portfolio-accent"><p>Portfolio</p></div>
-                    <h2 class="section-title portfolio-title">Client Success.</h2>
-                </div>
-
-                <ul class="portfolio-list">
-                    <li class="portfolio-card flex-column left">
-                        <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                        <h3 class="portfolio-card-title">TerraBlue Pools</h3>
-
-                        <div class="portfolio-card-modal flex-column transition">
-                            <p class="portfolio-card-modal-description">TerraBlue Pools & Landscaping, is an upcoming custom luxury pool builder in Houston, Texas. Their website was designed and built from the ground up to embody the modern and sleek aesthetic synonymous with their luxury pools.</p>
-                            <a href="https://terrabluepools.com" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                        </div>
-
-                        <img src="assets/img/TerraBlue-img.png" alt="TerraBlue Pools and landscaping">
-                    </li>
-
-                    <li class="portfolio-card flex-column right">
-                      <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                      <h3 class="portfolio-card-title">J&A Residential Co.</h3>
-
-                      <div class="portfolio-card-modal flex-column transition">
-                          <p class="portfolio-card-modal-description">With over 10 years of experience, J&A Residential is one of Houston's top luxury home contractors. From foundations to fine finishes, they handle every detail. Visit their website to see their work.</p>
-                          <a href="https://jaresidentialcompany.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                      </div>
-
-                      <img src="assets/img/JA-img.png" alt="J&A Residential Company">
-                    </li>
-
-                    <li class="portfolio-card flex-column left">
-                        <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                        <h3 class="portfolio-card-title">The Tint Shop</h3>
-
-                        <div class="portfolio-card-modal flex-column transition">
-                            <p class="portfolio-card-modal-description">Situated in Lufkin, Texas, The Tint Shop distinguishes itself as the area's premier automotive tinting and wrapping specialist. They offer a comprehensive range of services, setting the standard for quality and customer satisfaction.</p>
-                            <a href="https://thetintshoptx.com" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                        </div>
-
-                        <img src="assets/img/Tint-shop-img.png" alt="The Tint Shop">
-                    </li>
-
-                    <li class="portfolio-card flex-column right">
-                        <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                        <h3 class="portfolio-card-title">Hugo Perez painting</h3>
-
-                        <div class="portfolio-card-modal flex-column transition">
-                            <p class="portfolio-card-modal-description">Voted "Best of Nac" for four consecutive years, Hugo Perez Painting is Nacogdoches, Texas premier painting contractor. From residential to commercial projects, Hugo and his team handle it all. Check out their website to see their fantastic work.</p>
-                            <a href="https://hugoperezpainting.com" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                        </div>
-
-                        <img src="assets/img/Hugo-perez-img.png" alt="Hugo Perez painting">
-                    </li>
-
-                    <li class="portfolio-card flex-column left">
-                        <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                        <h3 class="portfolio-card-title">Pineywoods Pool Professionals</h3>
-
-                        <div class="portfolio-card-modal flex-column transition">
-                            <p class="portfolio-card-modal-description">Pinewoods pool professionals are Nacogdoches County's top rated pool maintenance team. From regular pool cleanings, to green pool restoration, Pineywoods does it all. Check out there website to see everything they have to offer.</p>
-                            <a href="https://pwpoolpros.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                        </div>
-
-                        <img src="assets/img/Pineywoods-img.png" alt="Pineywoods pool professionals">
-                    </li>
-
-                    <li class="portfolio-card flex-column right">
-                        <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                        <h3 class="portfolio-card-title">Martha's Tortillas</h3>
-
-                        <div class="portfolio-card-modal flex-column transition">
-                            <p class="portfolio-card-modal-description">Based in Hockley, TX, Martha's is an authentic Mexican restaurant offering classic dishes like Enchiladas Verdes and fresh, homemade tamales. Visit their website to view the full menu and experience the taste of tradition.</p>
-                            <a href="https://marthastortillas.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                        </div>
-
-                        <img src="assets/img/Marthas-img.png" alt="Martha's tortillas">
-                    </li>
-
-                    <li class="portfolio-card flex-column left">
-                      <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
-                      <h3 class="portfolio-card-title">The Spicy Palate</h3>
-
-                      <div class="portfolio-card-modal flex-column transition">
-                          <p class="portfolio-card-modal-description">Based in Cypress TX, The Spicy Palate creates homemade Mexican salsas that tell a story with every bite. Handcrafted in small batches using time-honored techniques and quality ingredients. Vist their website to see what they have to offer !</p>
-                          <a href="https://spicy-palate.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
-                      </div>
-
-                      <img src="assets/img/spicy-palate-image.png" alt="Martha's tortillas">
-                    </li>
-
-                    <li class="portfolio-card-alt flex-column right">
-                      <h2>Ready to <span>upgrade</span> your website ?</h2>
-                      <button onclick="scrollToSection('about')" class="portfolio-cta-button cta-button transition"><p>Find out how</p></button>
-                    </li>
-                </ul>
-
+        <div class="portfolio-container container">
+            <div class="section-header">
+                <div class="section-accent portfolio-accent"><p>Portfolio</p></div>
+                <h2 class="section-title portfolio-title">Client Success.</h2>
             </div>
-       </section>
-        <!-- =========================================================================================== -->
 
-        <!-- ABOUT SECTION ============================================================================= -->
+            <ul class="portfolio-list">
+                <li class="portfolio-card flex-column left">
+                    <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                    <h3 class="portfolio-card-title">TerraBlue Pools</h3>
+
+                    <div class="portfolio-card-modal flex-column transition">
+                        <p class="portfolio-card-modal-description">TerraBlue Pools & Landscaping, is an upcoming custom luxury pool builder in Houston, Texas. Their website was designed and built from the ground up to embody the modern and sleek aesthetic synonymous with their luxury pools.</p>
+                        <a href="https://terrabluepools.com" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                    </div>
+
+                    <img src="assets/img/TerraBlue-img.png" alt="TerraBlue Pools and landscaping">
+                </li>
+
+                <li class="portfolio-card flex-column right">
+                  <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                  <h3 class="portfolio-card-title">J&A Residential Co.</h3>
+
+                  <div class="portfolio-card-modal flex-column transition">
+                      <p class="portfolio-card-modal-description">With over 10 years of experience, J&A Residential is one of Houston's top luxury home contractors. From foundations to fine finishes, they handle every detail. Visit their website to see their work.</p>
+                      <a href="https://jaresidentialcompany.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                  </div>
+
+                  <img src="assets/img/JA-img.png" alt="J&A Residential Company">
+                </li>
+
+                <li class="portfolio-card flex-column left">
+                    <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                    <h3 class="portfolio-card-title">The Tint Shop</h3>
+
+                    <div class="portfolio-card-modal flex-column transition">
+                        <p class="portfolio-card-modal-description">Situated in Lufkin, Texas, The Tint Shop distinguishes itself as the area's premier automotive tinting and wrapping specialist. They offer a comprehensive range of services, setting the standard for quality and customer satisfaction.</p>
+                        <a href="https://thetintshoptx.com" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                    </div>
+
+                    <img src="assets/img/Tint-shop-img.png" alt="The Tint Shop">
+                </li>
+
+                <li class="portfolio-card flex-column right">
+                    <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                    <h3 class="portfolio-card-title">Hugo Perez painting</h3>
+
+                    <div class="portfolio-card-modal flex-column transition">
+                        <p class="portfolio-card-modal-description">Voted "Best of Nac" for four consecutive years, Hugo Perez Painting is Nacogdoches, Texas premier painting contractor. From residential to commercial projects, Hugo and his team handle it all. Check out their website to see their fantastic work.</p>
+                        <a href="https://hugoperezpainting.com" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                    </div>
+
+                    <img src="assets/img/Hugo-perez-img.png" alt="Hugo Perez painting">
+                </li>
+
+                <li class="portfolio-card flex-column left">
+                    <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                    <h3 class="portfolio-card-title">Pineywoods Pool Professionals</h3>
+
+                    <div class="portfolio-card-modal flex-column transition">
+                        <p class="portfolio-card-modal-description">Pinewoods pool professionals are Nacogdoches County's top rated pool maintenance team. From regular pool cleanings, to green pool restoration, Pineywoods does it all. Check out there website to see everything they have to offer.</p>
+                        <a href="https://pwpoolpros.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                    </div>
+
+                    <img src="assets/img/Pineywoods-img.png" alt="Pineywoods pool professionals">
+                </li>
+
+                <li class="portfolio-card flex-column right">
+                    <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                    <h3 class="portfolio-card-title">Martha's Tortillas</h3>
+
+                    <div class="portfolio-card-modal flex-column transition">
+                        <p class="portfolio-card-modal-description">Based in Hockley, TX, Martha's is an authentic Mexican restaurant offering classic dishes like Enchiladas Verdes and fresh, homemade tamales. Visit their website to view the full menu and experience the taste of tradition.</p>
+                        <a href="https://marthastortillas.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                    </div>
+
+                    <img src="assets/img/Marthas-img.png" alt="Martha's tortillas">
+                </li>
+
+                <li class="portfolio-card flex-column left">
+                  <div class="toggle-btn transition"><i class="ri-add-line"></i></div>
+                  <h3 class="portfolio-card-title">The Spicy Palate</h3>
+
+                  <div class="portfolio-card-modal flex-column transition">
+                      <p class="portfolio-card-modal-description">Based in Cypress TX, The Spicy Palate creates homemade Mexican salsas that tell a story with every bite. Handcrafted in small batches using time-honored techniques and quality ingredients. Vist their website to see what they have to offer !</p>
+                      <a href="https://spicy-palate.com/" target="_blank" class="portfolio-card-modal-btn flex-column"><p>Visit website</p></a>
+                  </div>
+
+                  <img src="assets/img/spicy-palate-image.png" alt="Martha's tortillas">
+                </li>
+
+                <li class="portfolio-card-alt flex-column right">
+                  <h2>Ready to <span>upgrade</span> your website ?</h2>
+                  <button onclick="scrollToSection('about')" class="portfolio-cta-button cta-button transition"><p>Find out how</p></button>
+                </li>
+            </ul>
+
+        </div>
+   </section>
         <section class="about section" id="about">
             <div class="about-container container">
                 <div class="section-header">
-                    <div class="section-accent about-section-accent"><p>About us</p></div>
-                    <h2 class="section-title about-title">Who we are.</h2>
+                    <div class="section-accent about-section-accent"><p>About Us</p></div>
+                    <h2 class="section-title about-title">Who We Are.</h2>
                 </div>
 
                 <h3 class="about-subtitle alt-title">
-                  ETX Software is a web development studio based in Nacogdoches Texas. We help contractors, service providers, restaurants, and real estate professionals get fast, clean, and purpose-built websites that are custom made to suit their business and their customers.
+                  ETX Software is a web development studio in Nacogdoches, TX, dedicated to helping businesses succeed online. We provide a seamless experience from start to finish, ensuring your website is perfectly tailored to your needs.
                 </h3>
 
                 <div class="about-frame-one">
                     <ul class="about-list flex-column">
                         <li class="about-list-item transition">
-                            <div class="about-wrapper"><span>1.</span><h3 class="about-list-item-title">Discover</h3></div>
+                            <div class="about-wrapper"><span>1.</span><h3 class="about-list-item-title">Discovery</h3></div>
                             <button class="about-list-item-toggle toggle-btn transition"><div class="transition"><i class="ri-add-line transition"></i></div></button>
 
                             <div class="about-list-item-modal transition">
-                                <p class="p-text">We start with a conversation to understand your goals, content, and customer base. From there, we build a clear plan for your website structure and functionality.</p>
+                                <p class="p-text">We start by understanding your business, goals, and customers to create a clear plan for your website's success.</p>
                             </div>
                         </li>
 
@@ -410,16 +364,16 @@
                             <button class="about-list-item-toggle toggle-btn transition"><div class="transition"><i class="ri-add-line transition"></i></div></button>
 
                             <div class="about-list-item-modal transition">
-                                <p class="p-text">We craft a design tailored to your business, focused on clarity, ease of use, and mobile responsiveness. Every element is intentional.</p>
+                                <p class="p-text">We design a website that is not only beautiful but also user-friendly and optimized for all devices.</p>
                             </div>
                         </li>
 
                         <li class="about-list-item transition">
-                            <div class="about-wrapper"><span>3.</span><h3 class="about-list-item-title">Develop</h3></div>
+                            <div class="about-wrapper"><span>3.</span><h3 class="about-list-item-title">Development</h3></div>
                             <button class="about-list-item-toggle toggle-btn transition"><div class="transition"><i class="ri-add-line transition"></i></div></button>
 
                             <div class="about-list-item-modal transition">
-                                <p class="p-text">We hand-code your website from scratch using modern web development practices. No templates. No bloated frameworks. Just fast, clean code.</p>
+                                <p class="p-text">Our developers bring your vision to life with clean, efficient code that ensures your website is fast, secure, and reliable.</p>
                             </div>
                         </li>
 
@@ -428,75 +382,69 @@
                             <button class="about-list-item-toggle toggle-btn transition"><div class="transition"><i class="ri-add-line transition"></i></div></button>
 
                             <div class="about-list-item-modal transition">
-                                <p class="p-text">Once approved, we launch your site with precision and care. We handle hosting setup, testing, performance optimization, and ensure your site is secure and ready for real-world use.</p>
+                                <p class="p-text">We handle the launch process and provide ongoing support to ensure your website continues to perform at its best.</p>
                             </div>
                         </li>
                     </ul>
 
-                    <div class="about-img-container"><img src="assets/img/About-img.png" alt="Custom websites in Nacogdoches Tx"></div>
+                    <div class="about-img-container"><img src="assets/img/About-img.png" alt="ETX Software Team"></div>
                 </div>
 
                 <div class="about-frame-two flex-column">
                     <h4 class="about-progress-text">
-                      We're <b>not</b> a marketing agency, and we don't pretend to be. We believe that great development is its own craft. Our goal is simple: to help you launch a website that works as hard as you do.
+                      Your success is our priority. We're here for the long haul, providing the support you need to thrive online.
                     </h4>
 
                     <button onclick="openCalendly()" class="about-button cta-button transition"><p>Set up a meeting</p></button>
                 </div>
             </div>
         </section>
-        <!-- =========================================================================================== -->
-
-        <!-- CONTACT SECTION =========================================================================== -->
         <section class="contact section" id="contact">
             <div class="contact-container container">
                 <div class="section-header">
-                    <div class="section-accent contact-accent"><p>Contact</p></div>
-                    <h2 class="section-title contact-title">Ready to start ?</h2>
+                    <div class="section-accent contact-accent"><p>Contact Us</p></div>
+                    <h2 class="section-title contact-title">Ready to Start?</h2>
                 </div>
 
                 <div class="contact-frame-one">
                     <div class="contact-blank-squr"></div>
 
                     <div class="contact-cta-frame flex-column">
-                        <h3 class="alt-title contact-subtitle">Take you business to new heights with a <span class="wave-trigger">BOLD</span> new website. Let's connect today !</h3>
+                      <h3 class="alt-title contact-subtitle">Take you business to new heights with a <span class="wave-trigger">BOLD</span> new website. Let's connect today !</h3>
                         <button onclick="scrollToSection('footer')" class="contact-button cta-button"><p>Let's do this !</p></button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- =========================================================================================== -->
+        </main>
 
-    </main>
-
-    <!-- FOOTER SECTION ================================================================================ -->
     <footer class="footer section" id="footer">
         <div class="footer-container container">
 
             <div class="footer-header">
-                <div class="footer-logo-container"><img src="assets/img/icons/code-logo-contact.png" alt="ETX Software Logo"></div>
+                <div class="footer-logo-container"><img src="assets/img/icons/code-logo-contact.png" alt="ETX Software Development Logo"></div>
 
                 <div class="footer-title-container">
                     <h2 class="section-title footer-title">Let's <span>Connect</span></h2>
-                    <div class="footer-img-container"><img src="assets/img/icons/handshake.png" alt="handshake icons"></div>
+                    <div class="footer-img-container"><img src="assets/img/icons/handshake.png" alt="Handshake Icon"></div>
                 </div>
 
             </div>
 
             <div class="footer-frame-one">
               <h3 class="footer-subtitle">
-                Ready for a website that works as hard as you do? Let's build it from the ground up —
+                Ready to take your business to the next level? Let's build something amazing
                 <span class="step-animate-wrapper"><span class="step-animate">TOGETHER</span></span>.
               </h3>
 
 
-                <button onclick="openCalendly()" class="cta-button footer-button"><p>Set up a meeting</p></button>
+                <button onclick="openCalendly()" class="cta-button footer-button"><p>Schedule a Consultation</p></button>
             </div>
 
             <ul class="footer-info-list">
                 <li class="footer-info-list-item"><a href="mailto:rafaelsifuentes@etxsoftware.com"><p>rafaelsifuentes<br>@etxsoftware.com</p></a></li>
                 <li class="footer-info-list-item"><a href="tel:+19362218751"><p>936.221.8751</p></a></li>
-                <li class="footer-info-list-item"><p>Nacogdoches TX.</p></li>
+                <li class="footer-info-list-item"><p>Nacogdoches, TX.</p></li>
             </ul>
 
             <div class="footer-frame-three">
@@ -505,32 +453,24 @@
                 <a href="#home" class="footer-nav-link"><p>Home</p></a>
                 <a href="#services" class="footer-nav-link"><p>Services</p></a>
                 <a href="#portfolio" class="footer-nav-link"><p>Portfolio</p></a>
-                <a href="#about" class="footer-nav-link"><p>About us</p></a>
+                <a href="#about" class="footer-nav-link"><p>About Us</p></a>
                 <a href="#home" class="footer-nav-link-alt"><i class="ri-arrow-up-s-line"></i></a>
               </div>
   
               <div class="footer-flex-container">
                 <p class="etx-copyright">&copy; 2025 <b>ETX</b> Software</p>
-                <div class="img-container"><img src="assets/img/icons/code-logo-sml.png" alt=""></div>
+                <div class="img-container"><img src="assets/img/icons/code-logo-sml.png" alt="ETX Software Development Small Logo"></div>
               </div>
 
             </div>
 
         </div>
     </footer>
-    <!-- =============================================================================================== -->
-
-
-    <!-- JAVASCRIPT =============================================================== -->
-    <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- GSAP JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- PAGE SPECIFIC JS -->
     <script src="assets/main.js"></script>
     <script src="assets/grid.js"></script>
 </body>
