@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creamy Tomato & Spinach Meatballs - Recipe</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary-color: #D9534F; /* Tomato Red */
+            --secondary-color: #F9F1E7; /* Cream/Beige Background */
+            --accent-color: #2F4F4F; /* Dark Slate Gray for Text */
+            --green-accent: #556B2F; /* Spinach Green */
+            --highlight: #FFF8DC; /* Cornsilk for Tip Box */
+            --font-heading: 'Pacifico', cursive;
+            --font-body: 'Work Sans', sans-serif;
+            --spacing-unit: 1rem;
+            --container-width: 800px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-family: var(--font-body);
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* --- Components --- */
+        .hero-placeholder {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            color: #888;
+            font-weight: 600;
+            background-image: linear-gradient(45deg, #f3f3f3 25%, transparent 25%, transparent 75%, #f3f3f3 75%, #f3f3f3), linear-gradient(45deg, #f3f3f3 25%, transparent 25%, transparent 75%, #f3f3f3 75%, #f3f3f3);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        .hero-placeholder img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background-color: #fafafa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- Steps Design --- */
+        .step-phase {
+            margin-bottom: 2rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+
+        .step-content strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+
+        /* --- Pro Tip Box --- */
+        .pro-tip {
+            background-color: var(--highlight);
+            border: 1px solid #EEDC82;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .pro-tip::before {
+            content: "💡 Chef's Tip";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-weight: bold;
+            color: #DAA520;
+            border: 1px solid #EEDC82;
+            border-radius: 4px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #888;
+            padding-bottom: 2rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .ingredients-grid { grid-template-columns: 1fr; }
+            .container { padding: 1rem; width: 95%; margin-top: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Creamy Tomato & Spinach Meatballs</h1>
+            <p class="intro-text">
+                Comfort food at its finest. Seared beef meatballs simmered in a rich, orange-pink creamy tomato sauce packed with fresh spinach and parmesan.
+            </p>
+        </header>
+
+        <section id="ingredients">
+            <h2>What You'll Need</h2>
+            <div class="ingredients-grid">
+                <div class="ing-col">
+                    <h3>The Meatballs</h3>
+                    <ul>
+                        <li><strong>Ground Beef:</strong> 1 lb (80/20 preferred)</li>
+                        <li><strong>Binder:</strong> 1 large egg + ½ cup breadcrumbs</li>
+                        <li><strong>Seasoning:</strong> Salt, pepper, garlic powder, parsley</li>
+                    </ul>
+                </div>
+                <div class="ing-col">
+                    <h3>The Sauce</h3>
+                    <ul>
+                        <li><strong>Fats:</strong> Olive oil & 2 Tbsp Butter</li>
+                        <li><strong>Aromatics:</strong> 1 onion (diced), 3-4 cloves garlic</li>
+                        <li><strong>Base:</strong> 2 Tbsp Tomato paste, pinch red pepper flakes</li>
+                        <li><strong>Liquid:</strong> 1½ cups Heavy Cream + Pasta water</li>
+                        <li><strong>Finish:</strong> Spinach, Parmesan, Flour (2 Tbsp)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="instructions">
+            <h2>Step-by-Step Instructions</h2>
+
+            <div class="hero-placeholder">
+                <img src="step-1.png" alt="Cheesecake Steps Infographic" onerror="this.style.display='none'"> 
+            </div>
+
+            <div class="step-phase">
+                <h3>Phase 1: Prep & Sear</h3>
+                
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Mix the Dough</strong>
+                        In a large glass bowl, combine beef, egg, breadcrumbs, and dry seasonings. Mix gently by hand until just combined.
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Roll & Sear</strong>
+                        Roll into golf-ball sizes. Heat oil in a deep skillet. Sear meatballs on all sides until browned (don't cook fully through). Remove and set aside.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-phase">
+                <h3>Phase 2: The Sauce Base</h3>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Sauté Aromatics</strong>
+                        In the same pan (keep the fat!), melt butter. Add onions and garlic. Sauté until soft.
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <strong>Cook the Paste</strong>
+                        Add tomato paste and red pepper flakes. Cook for 1-2 minutes to remove the raw metallic flavor.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-phase">
+                <h3>Phase 3: Cream & Simmer</h3>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <strong>Make the Roux</strong>
+                        Sprinkle flour over the onion mixture. Stir to coat. Slowly pour in heavy cream while whisking to create a smooth orange-pink sauce.
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <strong>Season & Thin</strong>
+                        Add herbs. Ladle in starchy boiling water from your pasta pot to reach desired consistency.
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <strong>Finish It Off</strong>
+                        Add meatballs back in. Add spinach and stir until wilted. Top with parmesan and simmer 5-10 mins until meatballs are cooked through.
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-placeholder">
+                <div class="hero-placeholder">
+                    <img src="step-3.png" alt="Cheesecake Steps Infographic" onerror="this.style.display='none'"> 
+                </div>
+            </div>
+        </section>
+
+        <div class="pro-tip">
+            <p><strong>Don't plate dry noodles!</strong> Toss your cooked drained pasta in a large bowl with two ladles of the finished sauce <em>before</em> plating. This ensures every bite is flavorful.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Home Kitchen Recipes</p>
+        </footer>
+    </div>
+
+</body>
+</html>
