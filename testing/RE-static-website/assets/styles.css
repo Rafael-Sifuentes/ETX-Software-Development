@@ -1,0 +1,709 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:opsz,wght@5..1200,300..900&display=swap');
+
+
+/* VARIABLE CSS================================================================================- */
+/*-============================================================================================- */
+:root{
+
+    /* COLORS=---------------- */
+    --primary-color: #003663;
+    --accent-color: #AAB2B7;
+    --text-color-w: #F7F4ED;
+    --text-color-b: #1B1A18;
+    --container-color: #AAB2B7;
+    --body-color: #F7F4ED;
+    /* ======================= */
+
+
+    /* FONT & TYPOGRAPHY====== */
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'Playfair', serif;
+
+    --h1-font-size: 5.61rem;
+    --h2-font-size: 4.209rem;
+    --h3-font-size: 3.157rem;
+    --h4-font-size: 2.369rem;
+    --h5-font-size: 1.777rem;
+    --h6-font-size: 1.333rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.75rem;
+
+    --font-light: 300;
+    --font-regular: 300;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-black: 900;
+    /* ======================= */
+
+
+    /* MARGINS & PADDING ===== */
+    --gap-1: 1rem; /*---------------16px*/
+
+    --gap-2: 1.5rem; /*-------------24px*/
+
+    --gap-3: 2rem; /*---------------32px*/
+
+    --gap-4: 3rem; /*---------------48px*/
+
+    --gap-5: 4rem; /*---------------64px*/
+
+    --gap-6: 5rem; /*---------------80px*/
+
+    --gap-7: 8rem; /*--------------128px*/
+    /* ======================= */
+
+
+    /* COLUMN WIDTHS ========= */
+    --col-1: 72px;
+    --col-2: 167px;
+    --col-3: 263px;
+    --col-4: 358px;
+    /* ======================= */
+
+
+    /* MISC=================== */
+    --z-fixed: 15;
+    /* ======================= */
+
+}
+/*-============================================================================================- */
+
+/* HTML BASE===================================================================================- */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color-b);
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+
+h3{
+    font-size: var(--h3-font-size);
+}
+
+h4{
+    font-size: var(--h4-font-size);
+}
+
+h5{
+    font-size: var(--h5-font-size);
+}
+
+h6{
+    font-size: var(--h6-font-size);
+}
+
+p{
+    font-size: var(--normal-font-size);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+}
+/*-============================================================================================- */
+
+/* RESPONSIVE BREAKPOINTS======================================================================- */
+
+/* FOR SML MOBILE */
+@media screen and (max-width : 389px){
+    .container{
+        max-width: 288px;
+        margin: 0 auto;
+    }
+
+    :root{
+        --col-1: 60px;
+        --col-2: 136px;
+        --col-3: 212px;
+        --col-4: 288px;
+    }
+}
+
+/* FOR MOBILE */
+@media screen and (min-width: 390px){
+    .container{
+        max-width: 358px;
+        margin: 0 auto;
+    }
+}
+
+/* FOR TABLET */
+@media screen and (min-width: 744px){
+    .container{
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    :root{
+        --col-1: 64px;
+        --col-2: 152px;
+        --col-3: 240px;
+        --col-4: 328px;
+        --col-5: 416px;
+        --col-6: 504px;
+        --col-7: 592px;
+        --col-8: 680px;
+    }
+}
+
+/* FOR DESKTOP */
+@media screen and (min-width: 1100px){
+    .container{
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    :root{
+        --col-1: 68px;
+        --col-2: 160px;
+        --col-3: 252px;
+        --col-4: 344px;
+        --col-5: 436px;
+        --col-6: 528px;
+        --col-7: 620px;
+        --col-8: 712px;
+        --col-9: 804px;
+        --col-10: 896px;
+        --col-11: 988px;
+        --col-12: 1080px;
+    }
+}
+/*-============================================================================================- */
+
+/*-REUSABLE CSS CLASSES========================================================================- */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.section{
+    position: relative;
+    padding-top: var(--gap-6);
+    padding-bottom: var(--gap-6);
+    overflow: hidden;
+}
+
+.section-title{
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-black);
+}
+
+.section-subtitle{
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-medium);
+}
+
+.transition{
+    transition: all .4s ease-in-out;
+}
+
+.section-title-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-3);
+}
+
+.shadow{
+    box-shadow:0 20px 30px rgba(0, 0, 0, 0.25), 
+    0 10px 10px rgba(0, 0, 0, 0.15);
+}
+/*-============================================================================================- */
+
+/* CSS COMPONENTS =============================================================================- */
+
+/* BUTTONS */
+.button{
+    position: relative;
+    height: 80px;
+    width: var(--col-3);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a{
+    font-family: var(--body-font);
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-medium);
+}
+/* -------- */
+
+/*-============================================================================================- */
+
+
+/* HOME SECTION =====================================================================================- */
+.home-container{
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-2);
+    color: var(--text-color-b);
+}
+
+.home-img-container{
+    width: var(--col-3);
+    height: 281px;
+    position: relative;
+    background-color: none;
+    justify-content: flex-end;
+}
+
+.home-img{
+    position: absolute;
+    bottom: 0;
+    height: 281px;
+    width: 243px;
+    object-fit: fill;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home-img-color-block{
+    width: var(--col-3);
+    height: 177px;
+    background-color: var(--primary-color);
+    position: relative;
+    border-radius: 16px 64px 16px 16px;
+}
+
+.home-title{
+    font-family: var(--title-font);
+    font-weight: var(--font-black);
+    font-size: var(--h3-font-size);
+    max-width: var(--col-3);
+    text-align: center;
+}
+
+.home-subtitle{
+    font-weight: var(--font-regular);
+    font-size: var(--h6-font-size);
+}
+
+.home-subtitle b{
+    font-family: var(--font-bold);
+}
+
+.home-button{
+    background-color: var(--primary-color);
+    border-radius: 40px;
+}
+
+.home-button:hover{
+    background-color: var(--accent-color);
+}
+
+.home-button a {
+    color: var(--text-color-w);
+}
+
+.home-background-img{
+    position: absolute;
+    top: 100%;
+    margin-top: -88px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: -1;
+    width: 877px;
+    height: 877px;  
+    max-width: 1440px;
+    max-height: 1440px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*-============================================================================================- */
+
+/* LISTINGS SECTION =====================================================================================- */
+.listings-container{
+    gap: var(--gap-5);
+}
+.listings-list{
+    gap: var(--gap-5);
+}
+
+.listing-card{
+    flex-direction: column;
+    gap: var(--gap-4);
+}
+
+.listing-img-container{
+    width: var(--col-4);
+    height: 406px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--gap-1);
+}
+
+.listing-img-container img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.listing-info-card{
+    gap: var(--gap-3);
+}
+
+.listing-price{
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--gap-1);
+}
+
+.listing-address{
+    font-size: var(--h5-font-size);
+    font-weight: var(--font-medium);
+}
+
+.listing-features{
+    gap: var(--gap-2);
+    margin: 0 auto;
+}
+
+.listing-features p{
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-medium);
+}
+
+.status-tag{
+    width: var(--col-2);
+    height: 48px;
+    background-color: var(--text-color-b);
+    border-radius: 8px;
+}
+
+.status-tag p{
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color-w);
+}
+
+.listing-card-button{
+    background-color: var(--accent-color);
+    align-self: flex-end;
+    margin-top: var(--gap-1);
+}
+
+.listing-card-button:hover{
+    background-color: var(--primary-color);
+}
+
+.listing-card-button a{
+    color: var(--text-color-w);
+    font-weight: var(--font-semi-bold);
+}
+/*-============================================================================================- */
+
+/* SECTION =====================================================================================- */
+
+/*-============================================================================================- */
+
+/* SECTION =====================================================================================- */
+
+/*-============================================================================================- */
+
+/* SECTION =====================================================================================- */
+
+/*-============================================================================================- */
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE BREAKPOINTS =====================================================================- */
+
+/* SML SCREENS */
+@media screen and (max-width : 389px){
+
+    /* REUSABLE CLASSES */
+    .button{
+        height: 64px;
+    }
+
+    .section{
+        padding-top: var(--gap-5);
+        padding-bottom: var(--gap-5);
+    }
+
+    .section-title{
+        font-size: var(--h4-font-size);
+    }
+
+    .section-accent p{
+        font-size: var(--normal-font-size);
+    }
+    
+
+    /* HOME SECTION */
+    .home-title{
+        font-size: var(--h3-font-size);
+    }
+
+    .home-subtitle{
+        font-size: var(--h6-font-size);
+    }
+
+    .home-img-container{
+        height: 199px;
+    }
+
+    .home-img{
+        height: 199px;
+        width: 172px;
+    }
+
+    .home-img-color-block{
+        height: 125px;
+    }
+
+    /* LISTINGS SECTION */
+    .listings-container{
+        gap: var(--gap-2);
+    }
+
+    .listing-info-card{
+        gap: var(--gap-2);
+    }
+
+    .listing-img-container{
+        height: 326px;
+    }
+
+    .listing-price{
+        font-size: var(--h5-font-size);
+    }
+
+    .listing-address{
+        font-size: var(--h6-font-size);
+    }
+
+    .listing-features p{
+        font-size: var(--normal-font-size);
+    }
+
+    .status-tag p{
+        font-size: var(--normal-font-size);
+    }
+    /* SERVICES SECTION */
+
+    /* FAQ SECTION */
+
+    /* GALLERY SECTION */
+
+    /* REVIEWS SECTION */
+
+    /* CONTACT SECTION */
+
+    /* FOOTER SECTION */
+
+}
+
+/* TABLET */
+@media screen and (min-width: 744px){
+
+    /* REUSABLE CLASSES */
+    .section{
+        padding-top: var(--gap-7);
+        padding-bottom: var(--gap-7);
+    }
+
+    .section-title{
+        font-size: var(--h2-font-size);
+    }
+    
+
+    /* HOME SECTION */
+    .home-container{
+        gap: var(--gap-2);
+    }
+
+    .home-title{
+        font-size: var(--h2-font-size);
+        max-width: var(--col-6);
+    }
+
+    .home-subtitle{
+        font-size: var(--h5-font-size);
+    }
+
+    .home-img-container{
+        width: var(--col-4);
+        height: 340px;
+        margin-bottom: var(--gap-2);
+    }
+
+    .home-img-color-block{
+        width: var(--col-4);
+        height: 260px;
+    }
+
+    .home-img{
+        height: 340px;
+        width: 294px;
+    }
+    /* LISTINGS SECTION */
+    .listing-card{
+        max-width: var(--col-6);
+        margin: 0 auto;
+    }
+
+    .listing-img-container{
+        width: var(--col-6);
+        height: 440px;
+    }
+
+    .listing-info-card{
+        gap: var(--gap-4);
+    }
+
+    .listing-price{
+        font-size: var(--h3-font-size);
+    }
+
+    .listing-address{
+        font-size: var(--h4-font-size);
+    }
+
+    .listing-features p{
+        font-size: var(--h5-font-size);
+    }
+
+    /* SERVICES SECTION */
+
+    /* FAQ SECTION */
+
+    /* GALLERY SECTION */
+
+    /* REVIEWS SECTION */
+
+    /* FOOTER SECTION */
+
+}
+/* DESKTOP */
+@media screen and (min-width: 1100px){
+
+    /* REUSABLE CLASSES */
+    
+    /* HOME SECTION */
+    .home-title{
+        font-size: var(--h1-font-size);
+        max-width: var(--col-7);
+    }
+
+    .home-container{
+        gap: var(--gap-3);
+    }
+
+    .home-background-img{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    /* LISTINGS SECTION */
+    .listings-container{
+        gap: var(--gap-6);
+    }
+
+    .listings-list{
+        gap: var(--gap-6);
+    }
+
+    .listing-card{
+        flex-direction: row;
+        max-width: var(--col-12);
+        margin: 0;
+    }
+
+    .listing-img-container{
+        width: var(--col-6);
+        height: 566px;
+    }
+
+    .listing-price{
+        font-weight: var(--font-semi-bold);
+    }
+
+    .listing-address{
+        font-size: var(--h5-font-size);
+        font-weight: var(--font-semi-bold);
+    }
+    
+    .listing-info-card{
+        width: var(--col-6);
+        padding-left: 56px;
+        padding-top: var(--gap-2);
+        justify-content: space-between;
+    }
+
+    .listing-card-button{
+        margin-top: 0;
+    }
+
+    /* SERVICES SECTION */
+
+    /* FAQ SECTION */
+
+    /* REVIEWS SECTION */
+
+    /* CONTACT SECTION */
+    
+    /* FOOTER SECTION */
+}
+
