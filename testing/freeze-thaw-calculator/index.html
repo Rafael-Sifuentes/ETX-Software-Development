@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freeze &amp; Thaw Date Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Top Header & Live Anchor Date -->
+    <header class="app-header">
+      <div class="brand-bar">
+        <span class="brand-badge">RETAIL OPS // F&amp;T</span>
+        <span class="tap-hint" id="global-copy-status">TAP ANY CARD TO COPY DATE</span>
+      </div>
+      
+      <div class="header-main">
+        <div class="title-block">
+          <h1>Freeze &amp; Thaw</h1>
+          <p class="subtitle">Shelf-Life &amp; Best-By Date Calculator</p>
+        </div>
+
+        <div class="anchor-box" id="anchor-box">
+          <div class="anchor-info">
+            <span class="anchor-status-tag" id="anchor-status-tag">TODAY</span>
+            <p class="anchor-display" id="anchor-date-display">Today: Tue, Nov 17, 2026</p>
+          </div>
+          <div class="anchor-controls">
+            <div class="date-input-wrapper">
+              <label for="anchor-date-input" class="date-input-label">
+                <svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2.2"/>
+                  <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2.2"/>
+                </svg>
+                <span>Override Date</span>
+              </label>
+              <input 
+                type="date" 
+                id="anchor-date-input" 
+                class="native-date-input" 
+                aria-label="Override start date for truck delivery calculation"
+              >
+            </div>
+            <button type="button" id="reset-today-btn" class="reset-today-btn" hidden>
+              Reset to Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- 6 High-Visibility Preset Shelf-Life Cards -->
+      <section class="presets-section" aria-labelledby="presets-heading">
+        <div class="section-header">
+          <h2 id="presets-heading">Standard Shelf-Life Presets</h2>
+          <span class="section-meta">MM/DD/YYYY GUN FORMAT</span>
+        </div>
+
+        <div class="presets-grid" id="presets-grid">
+          <!-- +5 Days -->
+          <button type="button" class="preset-card" data-days="5">
+            <div class="card-top">
+              <span class="day-badge">+5 DAYS</span>
+              <span class="copy-pill" data-copy-pill>COPY</span>
+            </div>
+            <div class="card-body">
+              <div class="human-date" data-human-date>Sun, Nov 22</div>
+              <div class="gun-date-row">
+                <span class="gun-label">LABEL</span>
+                <span class="gun-date" data-gun-date>11/22/2026</span>
+              </div>
+            </div>
+          </button>
+
+          <!-- +7 Days -->
+          <button type="button" class="preset-card" data-days="7">
+            <div class="card-top">
+              <span class="day-badge">+7 DAYS</span>
+              <span class="copy-pill" data-copy-pill>COPY</span>
+            </div>
+            <div class="card-body">
+              <div class="human-date" data-human-date>Tue, Nov 24</div>
+              <div class="gun-date-row">
+                <span class="gun-label">LABEL</span>
+                <span class="gun-date" data-gun-date>11/24/2026</span>
+              </div>
+            </div>
+          </button>
+
+          <!-- +10 Days -->
+          <button type="button" class="preset-card" data-days="10">
+            <div class="card-top">
+              <span class="day-badge">+10 DAYS</span>
+              <span class="copy-pill" data-copy-pill>COPY</span>
+            </div>
+            <div class="card-body">
+              <div class="human-date" data-human-date>Fri, Nov 27</div>
+              <div class="gun-date-row">
+                <span class="gun-label">LABEL</span>
+                <span class="gun-date" data-gun-date>11/27/2026</span>
+              </div>
+            </div>
+          </button>
+
+          <!-- +14 Days -->
+          <button type="button" class="preset-card" data-days="14">
+            <div class="card-top">
+              <span class="day-badge">+14 DAYS</span>
+              <span class="copy-pill" data-copy-pill>COPY</span>
+            </div>
+            <div class="card-body">
+              <div class="human-date" data-human-date>Tue, Dec 1</div>
+              <div class="gun-date-row">
+                <span class="gun-label">LABEL</span>
+                <span class="gun-date" data-gun-date>12/01/2026</span>
+              </div>
+            </div>
+          </button>
+
+          <!-- +21 Days -->
+          <button type="button" class="preset-card" data-days="21">
+            <div class="card-top">
+              <span class="day-badge">+21 DAYS</span>
+              <span class="copy-pill" data-copy-pill>COPY</span>
+            </div>
+            <div class="card-body">
+              <div class="human-date" data-human-date>Tue, Dec 8</div>
+              <div class="gun-date-row">
+                <span class="gun-label">LABEL</span>
+                <span class="gun-date" data-gun-date>12/08/2026</span>
+              </div>
+            </div>
+          </button>
+
+          <!-- +30 Days -->
+          <button type="button" class="preset-card" data-days="30">
+            <div class="card-top">
+              <span class="day-badge">+30 DAYS</span>
+              <span class="copy-pill" data-copy-pill>COPY</span>
+            </div>
+            <div class="card-body">
+              <div class="human-date" data-human-date>Thu, Dec 17</div>
+              <div class="gun-date-row">
+                <span class="gun-label">LABEL</span>
+                <span class="gun-date" data-gun-date>12/17/2026</span>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Custom Day Calculator (Bottom Section) -->
+      <section class="custom-section" aria-labelledby="custom-heading">
+        <div class="custom-card">
+          <div class="custom-header">
+            <div class="custom-title-group">
+              <span class="custom-badge">CUSTOM OFFSET</span>
+              <h2 id="custom-heading">Custom Day Calculator</h2>
+            </div>
+            <span class="custom-subtitle">Instant real-time calculation</span>
+          </div>
+
+          <div class="custom-grid">
+            <!-- Left/Top: Numeric Input with Clear Button -->
+            <div class="custom-input-area">
+              <label for="custom-days-input" class="custom-input-label">
+                ENTER SHELF-LIFE DAYS
+              </label>
+              <div class="numeric-field-group">
+                <span class="plus-prefix" aria-hidden="true">+</span>
+                <input 
+                  type="number" 
+                  id="custom-days-input" 
+                  class="custom-days-input" 
+                  inputmode="numeric" 
+                  min="1" 
+                  max="3650" 
+                  placeholder="e.g. 45"
+                  aria-describedby="custom-result-btn"
+                >
+                <button 
+                  type="button" 
+                  id="clear-custom-btn" 
+                  class="clear-custom-btn" 
+                  aria-label="Clear custom days input"
+                  hidden
+                >
+                  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                    <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/>
+                    <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2.8" stroke-linecap="square"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="quick-chips" role="group" aria-label="Quick custom day presets">
+                <button type="button" class="quick-chip" data-quick-days="3">+3d</button>
+                <button type="button" class="quick-chip" data-quick-days="12">+12d</button>
+                <button type="button" class="quick-chip" data-quick-days="45">+45d</button>
+                <button type="button" class="quick-chip" data-quick-days="60">+60d</button>
+                <button type="button" class="quick-chip" data-quick-days="90">+90d</button>
+              </div>
+            </div>
+
+            <!-- Right/Bottom: Tap-to-Copy Result Area -->
+            <button 
+              type="button" 
+              id="custom-result-btn" 
+              class="custom-result-area is-empty" 
+              disabled
+              aria-label="Copy custom target date"
+            >
+              <div class="custom-result-top">
+                <span class="custom-offset-pill" id="custom-offset-pill">WAITING FOR INPUT</span>
+                <span class="copy-pill" id="custom-copy-pill">TAP TO COPY</span>
+              </div>
+              <div class="custom-result-main">
+                <div class="custom-human-date" id="custom-human-date">Type days to calculate</div>
+                <div class="custom-gun-row">
+                  <span class="gun-label">LABEL</span>
+                  <span class="custom-gun-date" id="custom-gun-date">--/--/----</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Accessible Screen Reader Announcement & Top-Layer Popover Toast -->
+  <p class="visually-hidden">Screen reader announcements</p>
+  <div id="sr-announcer" class="visually-hidden" aria-live="assertive" aria-atomic="true"></div>
+
+  <div role="region" aria-label="Notifications" class="toast-region">
+    <div id="copy-toast" popover="manual" class="copy-toast">
+      <div class="toast-content">
+        <span class="toast-check" aria-hidden="true">✓</span>
+        <span class="toast-text" id="toast-text">Copied! 11/22/2026</span>
+      </div>
+      <button 
+        type="button" 
+        class="toast-close-btn" 
+        popovertarget="copy-toast" 
+        popovertargetaction="hide" 
+        aria-label="Close notification"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
